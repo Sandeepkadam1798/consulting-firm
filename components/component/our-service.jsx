@@ -23,6 +23,7 @@ import { Card } from "@/components/ui/card"
 import { Collapsible, CollapsibleTrigger, CollapsibleContent } from "@/components/ui/collapsible"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
+import Image from "next/image"
 
 export function OurService() {
   return (
@@ -65,7 +66,7 @@ export function OurService() {
                 </p>
               </div>
               <div className="animate-fade-up">
-                <img
+                <Image
                   src="/placeholder.svg"
                   width="550"
                   height="400"
@@ -194,7 +195,7 @@ export function OurService() {
                 </div>
               </div>
               <div className="animate-fade-up">
-                <img
+                <Image
                   src="/placeholder.svg"
                   width="550"
                   height="400"

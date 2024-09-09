@@ -25,6 +25,7 @@ To read more about using these font, please visit the Next.js documentation:
 **/
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import Image from "next/image";
 
 export function Hero() {
   return (
@@ -296,7 +297,7 @@ export function Hero() {
                 </div>
               </div>
               <div className="animate-fade-up">
-                <img
+                <Image
                   src="/placeholder.svg"
                   width="550"
                   height="400"
