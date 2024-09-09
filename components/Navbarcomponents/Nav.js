@@ -123,7 +123,7 @@ export default function Nav() {
       <NavbarBrand>
         <Link href="/" className="lg:w-24">
           <Image
-            className="md:w-14 md:h-14 lg:w-16 lg:h-16 h-12 -ml-4 w-12 md:flex lg:flex   object-contain"
+            className="md:w-14 md:h-14 lg:w-16 lg:h-16 h-14 -ml-4 w-14 md:flex lg:flex   object-contain"
             src={Logo}
             alt="logo"
           />

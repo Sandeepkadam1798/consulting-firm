@@ -2,6 +2,11 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { Providers } from "./Provider";
 import Nav from "@/components/Navbarcomponents/Nav";
+import { Poppins } from "next/font/google";
+
+
+
+const inter = Poppins({ subsets: ["latin"] ,weight: ['100','300','400','500','700','900']});
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -22,9 +27,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      <body className={inter.className}    
       >
+        {/* className={`${geistSans.variable} ${geistMono.variable} antialiased */}
         <Providers>
         <Nav/>
           {children}</Providers>
