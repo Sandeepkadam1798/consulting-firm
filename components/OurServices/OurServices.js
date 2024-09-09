@@ -9,8 +9,8 @@ const OurServices = () => {
         <div className="animate-fade-up">
           <h2 className="text-3xl font-bold text-black tracking-tighter sm:text-4xl">Our Services</h2>
           <p className="max-w-[600px] text-muted-foreground md:text-lg">
-            We offer a wide range of sustainability and risk assessment services to help organizations achieve
-            their goals.
+          {`We offer a wide range of sustainability and risk assessment services to help organizations achieve
+          their goals.`}
           </p>
         </div>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 animate-fade-up">
@@ -44,7 +44,7 @@ const OurServices = () => {
             <HazeIcon className="w-12 h-12 text-primary" />
             <h3 className="text-xl font-semibold">ESG Services</h3>
             <p className="text-muted-foreground">
-              Helping organizations achieve their environmental, social, and governance goals.
+              {`Helping organizations achieve their environmental, social, and governance goals.`}
             </p>
           </Card>
         </div>
