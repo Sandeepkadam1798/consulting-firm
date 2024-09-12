@@ -2,10 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+
 
 
 .back {
@@ -23,18 +20,14 @@
   background: linear-gradient(rgba(255, 240, 231, 0) 0%, rgba(219, 255, 246, 0.8) 19.27%, rgba(255, 232, 219, 0.8) 88.54%, rgba(255, 240, 231, 0) 100%);
 }
 
-@media (prefers-color-scheme: dark) {
+ @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
+
 
 @layer utilities {
   .text-balance {
@@ -43,15 +36,15 @@ body {
 }
 
 @layer base {
-  :root {
+   :root {
     --background: #fff;
     --foreground: 0 0% 3.9%;
     --card: 0 0% 100%;
     --card-foreground: 0 0% 3.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 3.9%;
-    --primary: 0 0% 9%;
-    --primary-foreground: 0 0% 98%;
+    --primary:  #0b8d7c;
+    --primary-foreground: #36a39e;
     --secondary: 0 0% 96.1%;
     --secondary-foreground: 0 0% 9%;
     --muted: 0 0% 96.1%;
@@ -69,15 +62,15 @@ body {
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
-  }
-  .dark {
+  } 
+   .dark {
     --background: 0 0% 3.9%;
     --foreground: 0 0% 98%;
     --card: 0 0% 3.9%;
     --card-foreground: 0 0% 98%;
     --popover: 0 0% 3.9%;
     --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
+    --primary: 5550 10% 98%;
     --primary-foreground: 0 0% 9%;
     --secondary: 0 0% 14.9%;
     --secondary-foreground: 0 0% 98%;
@@ -95,8 +88,8 @@ body {
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
-  }
-}
+  } 
+ }
 
 @layer base {
   * {
@@ -105,4 +98,4 @@ body {
   body {
     @apply bg-background text-foreground;
   }
-}
+} 

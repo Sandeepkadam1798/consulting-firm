@@ -3,6 +3,7 @@ import "./globals.css";
 import { Providers } from "./Provider";
 import Nav from "@/components/Navbarcomponents/Nav";
 import { Poppins } from "next/font/google";
+import Footer from "@/components/Footer/Footer";
 
 
 
@@ -32,7 +33,10 @@ export default function RootLayout({ children }) {
         {/* className={`${geistSans.variable} ${geistMono.variable} antialiased */}
         <Providers>
         <Nav/>
-          {children}</Providers>
+          {children}
+          
+          <Footer/>
+          </Providers>
       </body>
     </html>
   );

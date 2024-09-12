@@ -50,37 +50,26 @@ export default function Nav() {
   const Extendmenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-  const linkitem = ["HOME", "blog", "Payments","Packages - ",   "Domestic Trips","Upcoming trip","Weekend trip","Romantic Escapes", "CONTACT US"];
+  const linkitem = ["HOME","About Us" , "blog", "Services","Contact Us ", ];
 
   const handleredirect = (link) => {
     switch (link) {
       case "HOME":
         router.push("/");
         break;
-      case "Packages -":
+      case "About Us":
         router.push("/");
         break;
-      case "Domestic Trips":
-        router.push("/packages");
+      case "blogs":
+        router.push("/");
         break;
-      case "Upcoming trip":
-        router.push("/destination/upcomingTrip");
+      case "Services":
+        router.push("/");
         break;
-      case "Weekend trip":
-        router.push("/destination/weekendtrip");
+      case "Contact Us":
+        router.push("/");
         break;
-      case "Romantic Escapes":
-        router.push("/destination/honeymoonTrip");
-        break;
-      case "blog":
-        router.push("/Blogs");
-        break;
-      case "Payments":
-        router.push("/payment");
-        break;
-      case "CONTACT US":
-        router.push("/Contactus");
-        break;
+      
 
       default:
         break;
@@ -95,14 +84,17 @@ export default function Nav() {
       case "/Blogs":
         setactiveitem("blog");
         break;
-      case "/payment":
-        setactiveitem("Payments");
+      case "/About Us":
+        setactiveitem("About Us");
+        break;
+      case "/Services":
+        setactiveitem("Services");
         break;
       // case "/destination":
       //   setactiveitem("packages");
         break;
       case "/Contactus":
-        setactiveitem("CONTACT US");
+        setactiveitem("Contact Us");
         break;
 
       case pathname.startsWith("/Jobdetails"):
@@ -198,7 +190,7 @@ export default function Nav() {
                           onClick={() => router.push("/Contactus")}
                           className=" h-8 bg-[#36a39e] text-white rounded-full  w-52 font-bold"
                         >
-                          +91-9284205536
+                          +91-7038758993
                         </button>
                       </SheetClose>
                     </div>
@@ -241,7 +233,7 @@ export default function Nav() {
                   <div className="flex justify-around gap-2 items-center">
                     <Link
                       href={
-                        "https://www.instagram.com/vakratund_tours/?utm_source=ig_embed&ig_rid=22824f35-53c7-4967-8fe8-83f163b00532"
+                        "/"
                       }
                     >
                     <Link href={"/Blogs"}>
@@ -254,7 +246,7 @@ export default function Nav() {
                       </div>
                     </Link>
                     </Link>
-                    <Link href="https://www.facebook.com/people/Vakratund-Tours-Adventures/61564626934045/?mibextid=ZbWKwL">
+                    <Link href="/">
 
                     <div className="group transition-all duration-700 flex justify-center items-center rounded-md bg-[#4aaca8] w-12 h-12 hover:bg-white hover:text-[#36a39e]">
                       <SlSocialFacebook
@@ -263,7 +255,7 @@ export default function Nav() {
                       />
                     </div>
                     </Link>
-                    <Link href={"https://wa.link/f5qsnc"}>
+                    <Link href={"/"}>
                       <div className="group transition-all duration-700 flex justify-center items-center rounded-md bg-[#4aaca8] w-12 h-12 hover:bg-white hover:text-[#36a39e]">
                         <FaWhatsapp
                           size={24}
