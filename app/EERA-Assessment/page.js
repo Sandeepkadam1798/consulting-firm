@@ -273,7 +273,7 @@ This goal requires that facilities are available to rescue personnel who evacuat
                   {/* Preparatory Phase */}
                   <tr>
                     <td className="border border-gray-300 px-4 py-2 text-gray-800 font-semibold">
-                    "Achieved"
+                 {`   "Achieved"`}
                     </td>
                     <td className="border border-gray-300 px-4 py-2 text-gray-600">
                       <p className="">
@@ -286,7 +286,7 @@ This goal requires that facilities are available to rescue personnel who evacuat
                   {/* Execution/Examination Phase */}
                   <tr>
                     <td className="border border-gray-300 px-4 py-2 text-gray-800 font-semibold">
-                    "Limited"
+                  {`"Limited"`}
                     </td>
                     <td className="border border-gray-300 px-4 py-2 text-gray-600">
                       <p>{ `The intent is met for most credible cases but a number of credible cases exist where the intent is not met such that the goal cannot be regarded as being completely achieved.`}</p>
@@ -297,7 +297,7 @@ This goal requires that facilities are available to rescue personnel who evacuat
                   {/* Documentation Phase */}
                   <tr>
                     <td className="border border-gray-300 px-4 py-2 text-gray-800 font-semibold">
-                    "Not achieved"
+                    {`"Not achieved"`}
                     </td>
                     <td className="border border-gray-300 px-4 py-2 text-gray-600">
                       <p>{`The intent cannot be met for most of the credible cases and the goal to be considered as ‘not achieved’ for defined credible scenarios.`}</p>
