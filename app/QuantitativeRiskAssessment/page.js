@@ -242,12 +242,13 @@ export default function QRAssessment() {
                       </li>
                       <li>
                         <strong>Data collection:</strong>{" "}
-                        {`Available data/deliverables are collected from the design developer/Asset owner`}
+                        {`to gather off site population, ignition sources and on-site data collection `}
                       </li>
                       <li>
-                        <strong>Development of ToR:</strong>{" "}
-                        {`Terms of reference would include the details of collected data, SIF list, Drawings, required participants list, tentative schedule, agenda for workshop day, reporting format etc. 
-The session will be conducted only after the approval of ToR by the Subject Matter Expert (SME) from design developer/Asset owner
+                        <strong>3.	Development of Assumption register :</strong>{" "}
+                        {`include the details/assumptions in someplace of collected data, Isolatable sections, Drawings, methodology, failure frequency, probabilities of ignition, population data, manning, Risk limits, software package, Leak sizes, hazard end points, vulnerabilities etc. 
+The study will be performed only after the approval of Assumption register by the Subject Matter Expert (SME) from design developer/Asset owner
+
 `}
                       </li>
                     </ol>
@@ -262,20 +263,24 @@ The session will be conducted only after the approval of ToR by the Subject Matt
                   <td className="border border-gray-300 px-4 py-2 text-gray-600">
                     <ol className="list-decimal list-inside">
                       <li>
-                        <strong>Identification of hazards:</strong>
-                        {`Examination Phase begins with identification of all SIFs identified Aura Veritas’s Chairman/Facilitator and agreed by the forum `}
+                        <strong>Identification of hazards/Isolatable section marking: </strong>
+                        {`Examination Phase begins with Identification of hazards/Isolatable section marking identified Aura Veritas’s QRA expert`}
                       </li>
                       <li>
-                        <strong>Brainstorming:</strong>{" "}
-                        {`Each SIF will be studied for its initiating events, end consequence, independent protection layers are identified and brainstormed `}
+                        <strong>Consequence modelling :</strong>{" "}
+                        {`Each identified hazard will be modelled software to estimate the extent to which each of the consequence has effect  `}
                       </li>
                       <li>
-                        <strong>Recording:</strong>{" "}
-                        {`initiating events, end consequence, TMEL, independent protection layers, conditional modifiers, IMEL that are investigated by the forum and recorded parallelly by Aura Veritas’s Technical Scribe using specialized software`}
+                        <strong>Frequency estimation :</strong>{" "}
+                        {`Parts count method will be used to finalize the failure frequency for different leak sizes assumed in study based on international databases such as IOGP, SINTEF, OREDA, EGIG, UK HSE, UKOOA etc. `}
                       </li>
                       <li>
-                        <strong>Recommendations:</strong>{" "}
-                        {`that are raised by the forum will be displayed once all of the nodes that are brainstormed and the consensus of forum is ensured before session concludes. Recommendations will also include the details to whom it is delegated to finish and target dates. `}
+                        <strong>Risk Modelling:</strong>{" "}
+                        {`Assigning on and off-site population distribution, ignition probabilities, weather data, building details, vulnerabilities, congested areas etc. `}
+                      </li>
+                      <li>
+                        <strong>Recommendations :</strong>{" "}
+                        {`areas/ group risk where the risk falls under unacceptable limits that are identified benchmarked against the agreed limits and studied further to reduce the risk to acceptable/ALARP limits   `}
                       </li>
                     </ol>
                   </td>
@@ -290,7 +295,7 @@ The session will be conducted only after the approval of ToR by the Subject Matt
                     <ol className="list-decimal list-inside">
                       <li>
                         <strong>Reporting:</strong>{" "}
-                        {`A detailed report which includes the introduction, objectives, regulatory requirements, methodologies, findings, recommendations and appended with the utilized data, drawings, attendance sheet and any other additional data used in study, will be submitted for SME’s approval within stipulated time frame and with utmost quality `}
+                        {`A detailed report which includes the introduction, objectives, regulatory requirements, methodologies, findings, recommendations and appended with the utilized data, drawings, will be submitted for SME’s approval within stipulated time frame and with utmost quality. `}
                       </li>
                       <li>
                         {" "}
