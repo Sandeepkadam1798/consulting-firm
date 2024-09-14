@@ -4,6 +4,7 @@ import { Providers } from "./Provider";
 import Nav from "@/components/Navbarcomponents/Nav";
 import { Poppins } from "next/font/google";
 import Footer from "@/components/Footer/Footer";
+import SpeedDials from "./SpeedDials";
 
 
 
@@ -33,6 +34,9 @@ export default function RootLayout({ children }) {
         {/* className={`${geistSans.variable} ${geistMono.variable} antialiased */}
         <Providers>
         <Nav/>
+         <div className="fixed bottom-8 right-8 z-50">
+          <SpeedDials />
+        </div>
           {children}
           
           <Footer/>
