@@ -11,11 +11,21 @@ import { FcHome } from "react-icons/fc";
 import { FcCallback } from "react-icons/fc";
 import { FcComments } from "react-icons/fc";
 import Getintouch from "./Getintouch";
+// import AOS from "aos";
+// import 'aos/dist/aos.css';
+// import { useEffect } from 'react';
+
+
 
 const ContactFormMain = () => {
+
+//   useEffect(() => {
+//     AOS.init();
+// }, [])
+
   return (
     <div className="flex flex-col justify-center items-center w-full md:p-8 lg:p-8 p-2 gap-8 mx-auto back2 ">
-      <div className="py-10 flex flex-col justify-center items-center gap-4">
+      <div data-aos="fade-up" data-aos-duration="1500" className="py-10 flex flex-col justify-center items-center gap-4">
         <h2 className="font-bold md:text-4xl lg:text-4xl text-xl leading-8 capitalize">
           contact <span className="text-redtheme"> us!</span>
         </h2>
@@ -26,8 +36,8 @@ const ContactFormMain = () => {
       
       <div className="flex lg:flex-row flex-col md:w-11/12 w-full justify-center items-center gap-4 mx-auto">
        
-        <Card className="md:w-[30rem] w-11/12">
-          <CardBody className="flex justify-start items-center w-full flex-row gap-4 p-3">
+        <Card  data-aos="fade-right" data-aos-duration="1500" className="md:w-[30rem] w-11/12  transform shadow-md transition hover:scale-105 duration-300  ">
+          <CardBody className="  flex justify-start items-center w-full flex-row gap-4 p-3">
             <div className="flex justify-center items-center h-16 w-16 bg-greentheme rounded-full">
               <FcAddressBook size={24}/>
              </div>
@@ -39,7 +49,7 @@ const ContactFormMain = () => {
             </div>
           </CardBody>
         </Card>
-        <Card className="md:w-[30rem] w-11/12">
+        <Card data-aos="fade-left" data-aos-duration="1500" className="md:w-[30rem] w-11/12  transform shadow-md transition hover:scale-105 duration-300 ">
           <CardBody className="flex justify-start items-center w-full flex-row gap-4 p-3">
             <div className="flex justify-center items-center h-16 w-16 bg-greentheme rounded-full">
             <FcHome size={24}/>
