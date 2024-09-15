@@ -22,7 +22,7 @@ export default function SpeedDials() {
           label: "Mobile",
           icon: "pi pi-phone",
           command: () => {
-            window.open("tel:7038758993");
+            window.open("tel:9150547979 ");
           },
           className:
             "rounded-full transition-all duration-[0.2s] ease-out group-hover:-translate-x-1 group-hover:-translate-y-10 flex  bg-blue-500 hover:opacity-90 text-white p-3 text-2xl",

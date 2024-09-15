@@ -46,14 +46,14 @@ const Hero = () => {
         {/* Buttons */}
         <div className="flex  sm:flex-row gap-4 sm:gap-4 mt-4">
           <Link
-            href="#"
+            href="/Contactus"
             className="inline-flex items-center justify-center rounded-md bg-primary-foreground px-6 py-3 text-sm md:text-base font-medium text-white transition-colors hover:bg-primary/90 hover:text-white focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
             prefetch={false}
           >
             Contact Us
           </Link>
           <Link
-            href="#"
+            href="/aboutus"
             className="inline-flex items-center justify-center rounded-md border border-primary-foreground px-6 py-3 text-sm md:text-base font-medium text-white transition-colors hover:bg-primary-foreground hover:text-white focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
             prefetch={false}
           >
