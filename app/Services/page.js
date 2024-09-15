@@ -1,13 +1,8 @@
 "use client";
 import React from 'react';
-import { ard } from '../ui/card';
+import { card } from '../../components/ui/card';
 import Link from 'next/link';
 import { motion } from "framer-motion";
-
-import AOS from "aos";
-import 'aos/dist/aos.css';
-import { useEffect } from 'react';
-
 
 // Array of services with title, description, icon, and link
 const services = [
@@ -64,22 +59,17 @@ const services = [
 ];
 
 const OurServices = () => {
-
-  useEffect(() => {
-    AOS.init();
-}, [])
-
   return (
-    <section id="services" className="bg-slate-50 py-12 md:py-24 lg:py-32">
+    <section id="services" className="bg-slate-50 py-12 md:py-24 lg:py-10">
       <div className="container px-4 md:px-6">
         <div className="space-y-6">
-          <div data-aos="fade-up" data-aos-duration="1500" className="animate-fade-up">
+          <div className="animate-fade-up flex flex-col justify-center items-center">
             <p className="text-xl lg:text-3xl md:text-3xl font-semibold leading-7 -tracking-tight">
               Our Services
               <span className='lucide absolute -mt-3 lucide-sparkles h-4 w-4 text-[#36a39e] shrink-0'><i className="pi pi-sparkles" style={{ fontSize: '1rem' }}></i></span>
             </p>
 
-            <p className="max-w-[600px] text-muted-foreground md:text-lg lg:text-lg text-sm leading-7 text-gray-500">
+            <p className=" text-muted-foreground md:text-lg lg:text-lg text-sm leading-7 text-gray-500">
               {`We offer a wide range of sustainability and risk assessment services to help organizations achieve their goals.`}
             </p>
           </div>
@@ -98,8 +88,7 @@ const OurServices = () => {
               >
 
 {/* hover:bg-slate-50 */}
-{/*    hover:shadow-lg transition-shadow duration-300 */}
-                <div className="flex flex-col items-center   ">
+                <div className="flex flex-col items-center">
                   {service.icon}
                   <h3 className="text-xl font-semibold mt-4">{service.title}</h3>
                   <p className="text-muted-foreground mt-4">{service.description}</p>
@@ -111,6 +100,7 @@ const OurServices = () => {
                     rel="noopener noreferrer"
                   >
                     <div className="">
+
                     </div>
                     <p className='text-white transition-all duration-700 group-hover:text-[#36a39e]'>
                     Read More

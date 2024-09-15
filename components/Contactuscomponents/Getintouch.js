@@ -21,14 +21,14 @@ const Getintouch = () => {
       <div className="flex flex-col justify-start items-start gap-4">
         <div className="flex justify-between items-center gap-4">
           <MdOutlineEmail size={24} className="text-[#36a39e]" />
-          <p>Info@gmail.com</p>
+          <p>ceo@auraveritas.in</p>
         </div>
         <div className="flex justify-between items-center gap-4">
           <FiPhone size={24} className="text-[#36a39e]"/>
-          <p>+91-7038758993</p>
+          <p>+91-9150547979 | +91-8939204319</p>
         </div>
       </div>
-      <div className="md:flex hidden lg:flex justify-center items-center w-full rounded-lg lg:h-24 md:h-24 h-14 bg-[#36a39e] lg:mt-20 md:mt-20 mt-4">
+      <div className="md:flex hidden lg:flex justify-center items-center w-full rounded-lg lg:h-24 md:h-24 h-14 bg-primary-foreground lg:mt-20 md:mt-20 mt-4">
         <div className="flex justify-around gap-2 items-center">
         <Link
                       href={
