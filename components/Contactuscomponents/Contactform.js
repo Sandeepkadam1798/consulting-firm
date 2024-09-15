@@ -25,8 +25,13 @@ const Contactform = () => {
   });
 
   const services = [
-    { key: "Upcoming Trip", label: "Upcoming Trip" },
-    { key: "Domestic Trip", label: "Domestic Trip" },
+    { key: "Hazard Identification (HAZID)", label: "Hazard Identification (HAZID)" },
+    { key: "Hazard & Operability (HAZOP)", label: "Hazard & Operability (HAZOP)" },
+    { key: "Safety Integrity Level Assessment", label: "Safety Integrity Level Assessment" },
+    { key: "Quantitative Risk Assessment", label: "Quantitative Risk Assessment" },
+    { key: "Fire and Explosion Risk Assessment", label: "Fire and Explosion Risk Assessment" },
+    { key: "ESG & Climate Change Services", label: "ESG & Climate Change Services" },
+    { key: "Escape, Evacuation & Rescue Assessment", label: "Escape, Evacuation & Rescue Assessment" },
     { key: "Other", label: "Other" },
   ];
 
@@ -94,8 +99,8 @@ const Contactform = () => {
     });
   };
 
-  const locationname = "kakatiya hills, pragati nagar,Kukatpally-500090";
-  const location = `https://maps.google.com/maps?q=${locationname}&t=k&z=10&ie=UTF8&iwloc=&output=embed`;
+
+
 
   return (
     <>

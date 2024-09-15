@@ -1,6 +1,6 @@
 "use client";
 import React from 'react';
-import { card } from '../ui/card';
+import { card } from '../../components/ui/card';
 import Link from 'next/link';
 import { motion } from "framer-motion";
 
@@ -60,16 +60,16 @@ const services = [
 
 const OurServices = () => {
   return (
-    <section id="services" className="bg-slate-50 py-12 md:py-24 lg:py-32">
+    <section id="services" className="bg-slate-50 py-12 md:py-24 lg:py-10">
       <div className="container px-4 md:px-6">
         <div className="space-y-6">
-          <div className="animate-fade-up">
+          <div className="animate-fade-up flex flex-col justify-center items-center">
             <p className="text-xl lg:text-3xl md:text-3xl font-semibold leading-7 -tracking-tight">
               Our Services
               <span className='lucide absolute -mt-3 lucide-sparkles h-4 w-4 text-[#36a39e] shrink-0'><i className="pi pi-sparkles" style={{ fontSize: '1rem' }}></i></span>
             </p>
 
-            <p className="max-w-[600px] text-muted-foreground md:text-lg lg:text-lg text-sm leading-7 text-gray-500">
+            <p className=" text-muted-foreground md:text-lg lg:text-lg text-sm leading-7 text-gray-500">
               {`We offer a wide range of sustainability and risk assessment services to help organizations achieve their goals.`}
             </p>
           </div>

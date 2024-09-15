@@ -28,7 +28,7 @@ const Getintouch = () => {
           <p>+91-7038758993</p>
         </div>
       </div>
-      <div className="md:flex hidden lg:flex justify-center items-center w-full rounded-lg lg:h-24 md:h-24 h-14 bg-[#36a39e] lg:mt-20 md:mt-20 mt-4">
+      <div className="md:flex hidden lg:flex justify-center items-center w-full rounded-lg lg:h-24 md:h-24 h-14 bg-primary-foreground lg:mt-20 md:mt-20 mt-4">
         <div className="flex justify-around gap-2 items-center">
         <Link
                       href={

@@ -19,78 +19,7 @@ import { FaInstagram } from "react-icons/fa";
 import { SlSocialFacebook } from "react-icons/sl";
 import { FaWhatsapp } from "react-icons/fa";
 
-const components = [
-  {
-    title: "Trending Trips",
-    href: "/",
-    subLinks: [
-      {
-        title: "Upcoming Trips",
-        href: "/destination/upcomingTrip",
-      },
-      {
-        title: "Weekend Trips",
-        href: "/destination/weekendtrip",
-      },
-    ],
-  },
-  {
-    title: "International Trips - (comming soon)",
-    href: "/",
-    subLinks: [
-      {
-        title: "Dubai Trips",
-        href: "/",
-      },
-      {
-        title: "Maldives Trips",
-        href: "",
-      },
-    ],
-  },
 
-  {
-    title: "India Packages",
-    href: "/",
-    subLinks: [
-      {
-        title: "Ladakh",
-        href: "/destination/66b771c4c3b96d3174744776",
-      },
-      {
-        title: "Kashmir",
-        href: "destination/66b9051965474f052852a72b",
-      },
-      {
-        title: "Goa",
-        href: "/destination/66b77b61c3b96d317474477f",
-      },
-      {
-        title: "Kerla",
-        href: "/destination/66b76cc1c3b96d317474475b",
-      },
-      {
-        title: "Himachal",
-        href: "/destination/66b76fc7c3b96d3174744764",
-      },
-      {
-        title: "Kedarnath",
-        href: "/destination/66b7710bc3b96d317474476d",
-      },
-    ],
-  },
-
-  {
-    title: "Trending Romantic Journeys",
-    href: "/",
-    subLinks: [
-      {
-        title: "Honeymoon Packages",
-        href: "/destination/honeymoonTrip",
-      },
-    ],
-  },
-];
 
 export function NavigationMenuDemo() {
   return (
@@ -99,7 +28,7 @@ export function NavigationMenuDemo() {
       <NavigationMenuItem>
           <Link href="/" legacyBehavior passHref>
             <NavigationMenuLink
-              className={"text-sm font-medium text-white ml-5"}
+              className={"text-sm font-medium text-white ml-5 hover:underline"}
             >
               Home
             </NavigationMenuLink>
@@ -120,21 +49,21 @@ export function NavigationMenuDemo() {
                   >
                     <Image className="w-44" src={Logo} alt="logo" />
                     <div className="mb-2 mt-4 text-sm font-medium ">
-                      Vakratund - Tours and Adventure
+                      {`Aura Veritas Engineering & Consultancy Privte Limited`}
                     </div>
                     <p className="text-sm leading-tight text-muted-foreground">
-                     {`Founded in 2024, Vakratund Tours and Adventure offers heartfelt journeys that go beyond travel.`}
+                     {`Aura Veritas Company (AVC), an Engineering Contracting Organization managed by dedicated team.`}
                     </p>
                   </a>
                 </NavigationMenuLink>
               </li>
-              <ListItem href="/aboutus" title="Introduction">
-              {`Founded in 2024, Vakratund Tours and Adventure offers heartfelt journeys that go beyond travel.`}
+              <ListItem href="/" title="Introduction">
+              {`Aura Veritas Company (AVC), an Engineering Contracting Organization managed by dedicated team.`}
 
               </ListItem>
               <ListItem href="/Contactus" title=" Get in Touch">
-                <span> Email : vakratundtour@gmail.com</span>
-                <span> Phone :900000000000</span>
+                <span> Email : ceo@auraveritas.in</span>
+                <span> Phone :9150547979 </span>
               </ListItem>
               <ListItem
                 href="/docs/primitives/typography"
@@ -174,9 +103,18 @@ export function NavigationMenuDemo() {
                         />
                       </div>
                     </Link>
+                  
                   </div>
+
+               
+
                 </div>
+                <Link className="text-[#36a39e] hover:text-[#0b8d7c] flex justify-end" href="/">
+                  More
+                </Link>
+                
               </ListItem>
+              
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
@@ -204,25 +142,25 @@ export function NavigationMenuDemo() {
 
         <NavigationMenuItem>
           <Link href="/Blogs" legacyBehavior passHref>
-            <NavigationMenuLink className={"text-sm font-medium text-white "}>
+            <NavigationMenuLink className={"text-sm font-medium text-white hover:underline"}>
               Blogs
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-          <Link href="/" legacyBehavior passHref>
+          <Link href="/Services" legacyBehavior passHref>
             <NavigationMenuLink
-              className={"text-sm font-medium text-white ml-5"}
+              className={"text-sm font-medium text-white ml-5 hover:underline " }
             >
               Services
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="/" legacyBehavior passHref>
+          <Link href="/Contactus" legacyBehavior passHref>
             <NavigationMenuLink
-              className={"text-sm font-medium text-white ml-5"}
+              className={"text-sm font-medium text-white ml-5 hover:underline"}
             >
               Contact Us
             </NavigationMenuLink>
