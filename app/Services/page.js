@@ -82,13 +82,12 @@ const OurServices = () => {
             
             {services.map(service => (
               <card 
-                key={service.id} 
-                
-                className="p-4 flex flex-col justify-between h-[300px] w-full bg-white shadow-lg  transition"
+                key={service.id}  
+                className="transform rounded-lg duration-300  hover:scale-105   p-4 flex flex-col justify-between h-[300px] w-full bg-white shadow-lg  transition"
               >
 
 {/* hover:bg-slate-50 */}
-                <div className="flex flex-col items-center">
+                <div className="flex flex-col items-center  ">
                   {service.icon}
                   <h3 className="text-xl font-semibold mt-4">{service.title}</h3>
                   <p className="text-muted-foreground mt-4">{service.description}</p>
