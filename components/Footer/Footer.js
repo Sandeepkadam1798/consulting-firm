@@ -60,7 +60,7 @@ const Footer = () => {
               </h3>
               <p className="text-gray-500 dark:text-gray-400 text-xs leading-6 -tracking-tight">
               {`Discover the world with Aura Veritas Engineering – we integrate industry-leading practices, including Hazard Identification (HAZID) Studies, Hazard & Operability (HAZOP) Studies, Safety Integrity Level Assessments, and Quantitative Risk Assessments `}
-                <Link className="text-[#36a39e] hover:text-[#0b8d7c]" href="/">
+                <Link className="text-[#36a39e] hover:text-[#0b8d7c]" href="/aboutus">
                   More
                 </Link>{" "}
               </p>

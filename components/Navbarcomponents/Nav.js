@@ -81,7 +81,7 @@ export default function Nav() {
       case "/":
         setactiveitem("HOME");
         break;
-      case "/Blogs":
+      case "/blogs":
         setactiveitem("blog");
         break;
       case "/About Us":
@@ -92,7 +92,7 @@ export default function Nav() {
         break;
       // case "/destination":
       //   setactiveitem("packages");
-        break;
+        // break;
       case "/Services":
         setactiveitem("Services");
         break;
@@ -152,13 +152,13 @@ export default function Nav() {
                     <div className="bg-[#36a39e] rounded-full">
                       <Image className="w-14 h-14 rounded-full" src={Logo} alt="logo"  />
                     </div>
-                    <div className="w-8 h-8 bg-[#36a39e] rounded-full flex justify-center items-center">
-                    <SheetClose>
+                    {/* <div className="w-8 h-8 bg-[#36a39e] rounded-full flex justify-center items-center">
+                    <SheetClose > 
                       <span className="text-lg font-bold text-white p-2  text-center">
                         X
                       </span>
                     </SheetClose>
-                  </div>
+                  </div> */}
                   </div>
                 </SheetTitle>
                 <SheetDescription>
@@ -270,3 +270,5 @@ export default function Nav() {
     </Navbar>
   );
 }
+
+

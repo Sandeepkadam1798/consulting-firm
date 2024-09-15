@@ -141,7 +141,7 @@ export function NavigationMenuDemo() {
         </NavigationMenuItem> */}
 
         <NavigationMenuItem>
-          <Link href="/Blogs" legacyBehavior passHref>
+          <Link href="/blogs" legacyBehavior passHref>
             <NavigationMenuLink className={"text-sm font-medium text-white hover:underline"}>
               Blogs
             </NavigationMenuLink>
