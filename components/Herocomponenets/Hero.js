@@ -8,10 +8,10 @@ const Hero = () => {
   const [text] = useTypewriter({
     words: [
       "Connecting People.",
-      "Creating Memories.",
-      "Creating Stories.",
-      "Fulfilling Adventure.",
-      "Spreading Happiness.",
+      "Ensuring Safety at Every Step.",
+      "Identifying Potential Risks.",
+      "Mitigating Hazards for a Safer Future.",
+      "Achieving ESG & Sustainability Goals.",
     ],
     loop: false,
   });
@@ -30,9 +30,8 @@ const Hero = () => {
       {/* Overlay content */}
       <div className="absolute inset-0 flex flex-col justify-center items-center gap-4 px-4 text-center">
         {/* Main heading */}
-        <h1 className="text-white font-bold text-3xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl leading-tight md:leading-snug lg:leading-snug xl:leading-tight w-4/5 md:w-full lg:w-4/5">
-          Consulting Firm
-        </h1>
+        <h1 className="text-white font-bold text-2xl capitalize sm:text-3xl md:text-3xl lg:text-4xl xl:text-4xl leading-tight md:leading-snug lg:leading-snug xl:leading-tight w-4/5 md:w-full lg:w-4/5">
+        Aura Veritas Engineering & Consultancy Privte Limited    </h1>
 
         {/* Subheading */}
         <p className="text-white text-base sm:text-lg md:text-xl lg:text-xs xl:text-2xl max-w-4xl">

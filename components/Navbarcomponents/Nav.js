@@ -50,7 +50,7 @@ export default function Nav() {
   const Extendmenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-  const linkitem = ["HOME","About Us" , "blog", "Services","Contact Us ", ];
+  const linkitem = ["HOME","About Us" , "blog", "Services","Contactus ", ];
 
   const handleredirect = (link) => {
     switch (link) {
@@ -61,13 +61,13 @@ export default function Nav() {
         router.push("/");
         break;
       case "blogs":
-        router.push("/");
+        router.push("/blogs");
+        break;
+      case "Contactus":
+        router.push("/Contactus");
         break;
       case "Services":
-        router.push("/");
-        break;
-      case "Contact Us":
-        router.push("/");
+        router.push("/Services");
         break;
       
 
@@ -87,14 +87,14 @@ export default function Nav() {
       case "/About Us":
         setactiveitem("About Us");
         break;
-      case "/Services":
-        setactiveitem("Services");
+      case "/Contactus":
+        setactiveitem("Contactus");
         break;
       // case "/destination":
       //   setactiveitem("packages");
         break;
-      case "/Contactus":
-        setactiveitem("Contact Us");
+      case "/Services":
+        setactiveitem("Services");
         break;
 
       case pathname.startsWith("/Jobdetails"):
@@ -109,7 +109,8 @@ export default function Nav() {
   }, [pathname]);
 
   return (
-    <Navbar maxWidth="full" className="w-full shadow-md  bg-[#0b8d7c] "
+    <Navbar maxWidth="full" className="w-full shadow-md  bg-primary-foreground "
+    // #0b8d7c
      isMenuOpen={isMenuOpen}
      onMenuOpenChange={setIsMenuOpen}>
       <NavbarBrand>
@@ -132,7 +133,7 @@ export default function Nav() {
             href="#"
             variant="solid"
           >
-            <FaPhone className="text-white " /> +91-7038758993
+            <FaPhone className="text-white " /> +91-9150547979
           </Button>
         </NavbarItem>
 
@@ -190,7 +191,7 @@ export default function Nav() {
                           onClick={() => router.push("/Contactus")}
                           className=" h-8 bg-[#36a39e] text-white rounded-full  w-52 font-bold"
                         >
-                          +91-7038758993
+                          +91-9150547979
                         </button>
                       </SheetClose>
                     </div>
