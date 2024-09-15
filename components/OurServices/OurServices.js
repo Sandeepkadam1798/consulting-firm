@@ -1,6 +1,6 @@
 "use client";
 import React from 'react';
-import { card } from '../ui/card';
+import { ard } from '../ui/card';
 import Link from 'next/link';
 import { motion } from "framer-motion";
 

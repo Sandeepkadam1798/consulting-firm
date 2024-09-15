@@ -109,7 +109,7 @@ export function NavigationMenuDemo() {
                
 
                 </div>
-                <Link className="text-[#36a39e] hover:text-[#0b8d7c] flex justify-end" href="/">
+                <Link className="text-[#36a39e] hover:text-[#0b8d7c] flex justify-end" href="/aboutus">
                   More
                 </Link>
                 
