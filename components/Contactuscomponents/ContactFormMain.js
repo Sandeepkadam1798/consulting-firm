@@ -37,8 +37,8 @@ const ContactFormMain = () => {
           let’s get started! reach out to us, we will get the work done.
         </p>
       </div>
-      <div className="flex lg:flex-row flex-col md:w-11/12 w-full justify-center items-center gap-4 mx-auto">
-        <Card className="md:w-[30rem] w-11/12">
+      <div data-aos="fade-up" data-aos-duration="1500" className="flex lg:flex-row flex-col md:w-11/12 w-full justify-center items-center gap-4 mx-auto">
+        <Card  className="md:w-[30rem] w-11/12 transition hover:scale-105 transform  duration-300 shadow-md">
           <CardBody className="flex justify-start items-center w-full flex-row gap-4 p-3">
             <div className="flex justify-center items-center h-16 w-16 bg-greentheme rounded-full">
               <FcAddressBook size={24} />
@@ -48,12 +48,12 @@ const ContactFormMain = () => {
                 e-mail
               </h6>
               <p className="text-xs">
-                Info@gmail.com <br />
+              ceo@auraveritas.in <br />
               </p>
             </div>
           </CardBody>
         </Card>
-        <Card data-aos="fade-left" data-aos-duration="1500" className="md:w-[30rem] w-11/12  transform shadow-md transition hover:scale-105 duration-300 ">
+        <Card  className="md:w-[30rem] w-11/12  shadow-md transition hover:scale-105 transform  duration-300 ">
           <CardBody className="flex justify-start items-center w-full flex-row gap-4 p-3">
             <div className="flex justify-center items-center h-16 w-16 bg-greentheme rounded-full">
               <FcHome size={24} />
@@ -62,7 +62,7 @@ const ContactFormMain = () => {
               <h6 className="font-bold text-sm text-[#0b8d7c] capitalize">
                 address
               </h6>
-              <p className="text-xs">{`At-Kanhe Jambhul, Tal-Maval Dist-Pune, Maharashtra 412106`}</p>
+              <p className="text-xs">{`Plot No: 46G, Bel Nagar, Manapakkam Chennai- 600125`}</p>
             </div>
           </CardBody>
         </Card>

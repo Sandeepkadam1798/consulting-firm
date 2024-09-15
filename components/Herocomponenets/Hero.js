@@ -3,15 +3,15 @@ import Link from "next/link";
 import React from "react";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import { Card } from "@/components/ui/card"
-import AOS from "aos";
-import 'aos/dist/aos.css';
+// import AOS from "aos";
+// import 'aos/dist/aos.css';
 import { useEffect } from "react";
 
 const Hero = () => {
 
-  useEffect(() => {
-    AOS.init();
-}, [])
+//   useEffect(() => {
+//     AOS.init();
+// }, [])
 
   const [text] = useTypewriter({
     words: [
@@ -36,7 +36,7 @@ const Hero = () => {
       />
 
       {/* Overlay content */}
-      <div   data-aos="fade-up" data-aos-duration="800"  className="absolute inset-0 flex flex-col justify-center items-center gap-4 px-4 text-center">
+      <div   data-aos="fade-up" data-aos-duration="500"  className="absolute inset-0 flex flex-col justify-center items-center gap-4 px-4 text-center">
         {/* Main heading */}
         <h1 className="text-white font-bold text-2xl capitalize sm:text-3xl md:text-3xl lg:text-4xl xl:text-4xl leading-tight md:leading-snug lg:leading-snug xl:leading-tight w-4/5 md:w-full lg:w-4/5">
         Aura Veritas Engineering & Consultancy Privte Limited    </h1>
