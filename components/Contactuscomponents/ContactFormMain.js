@@ -15,6 +15,11 @@ import Getintouch from "./Getintouch";
 import { motion } from "framer-motion";
 
 const ContactFormMain = () => {
+
+//   useEffect(() => {
+//     AOS.init();
+// }, [])
+
   return (
     <motion.div
       initial={{ opacity: 0.5, y: 100 }}
@@ -48,7 +53,7 @@ const ContactFormMain = () => {
             </div>
           </CardBody>
         </Card>
-        <Card className="md:w-[30rem] w-11/12">
+        <Card data-aos="fade-left" data-aos-duration="1500" className="md:w-[30rem] w-11/12  transform shadow-md transition hover:scale-105 duration-300 ">
           <CardBody className="flex justify-start items-center w-full flex-row gap-4 p-3">
             <div className="flex justify-center items-center h-16 w-16 bg-greentheme rounded-full">
               <FcHome size={24} />
