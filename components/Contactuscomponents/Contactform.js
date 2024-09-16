@@ -180,7 +180,7 @@ const Contactform = () => {
                 label="inquiry"
                 variant="bordered"
                 labelPlacement="outside"
-                placeholder="Select inquiry type"
+                placeholder="Select inquiry type (one or multiple)"
                 size="lg"
                 radius="sm"
                 className="mt-4  w-full max-w-xl md:max-w-80 lg:max-w-xl xl:max-w-2xl 2xl:max-w-3xl mx-auto overflow-hidden"
