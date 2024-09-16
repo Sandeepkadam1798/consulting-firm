@@ -49,7 +49,7 @@ export function NavigationMenuDemo() {
                   >
                     <Image className="w-44" src={Logo} alt="logo" />
                     <div className="mb-2 mt-4 text-sm font-medium ">
-                      {`Aura Veritas Engineering & Consultancy Privte Limited`}
+                      {`Aura Veritas Engineering & Consultancy Private Limited`}
                     </div>
                     <p className="text-sm leading-tight text-muted-foreground">
                      {`Aura Veritas Company (AVC), an Engineering Contracting Organization managed by dedicated team.`}

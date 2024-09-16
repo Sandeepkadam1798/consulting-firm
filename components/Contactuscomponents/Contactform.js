@@ -20,7 +20,7 @@ const Contactform = () => {
     lastName: "",
     mobileNumber: "",
     email: "",
-    serviceRequired: "",
+    serviceRequired: [],
     message: "",
   });
 
@@ -43,16 +43,14 @@ const Contactform = () => {
     });
   };
 
-  const handleServiceChange = (selectedKeys) => {
-    const selectedKey = Array.from(selectedKeys)[0];
-    const selectedLabel = services.find(
-      (service) => service.key === selectedKey
-    ).label;
-    setFormData({
-      ...formData,
-      serviceRequired: selectedLabel,
-    });
-  };
+  const handleServiceChange = (selectedKeys) => {const selectedLabels = Array.from(selectedKeys).map((key) => {
+    return services.find((service) => service.key === key)?.label;
+  });
+  setFormData({
+    ...formData,
+    serviceRequired: selectedLabels,
+  });
+};
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -87,7 +85,7 @@ const Contactform = () => {
         lastName: "",
         mobileNumber: "",
         email: "",
-        serviceRequired: "",
+        serviceRequired: [],
         message: "",
       });
     };
@@ -185,15 +183,58 @@ const Contactform = () => {
                 placeholder="Select inquiry type"
                 size="lg"
                 radius="sm"
-                className="w-full mx-auto mt-4"
-                selectedKeys={new Set([formData.serviceRequired])}
-                onSelectionChange={handleServiceChange}
+                className="mt-4  w-full max-w-xl md:max-w-80 lg:max-w-xl xl:max-w-2xl 2xl:max-w-3xl mx-auto overflow-hidden"
+               selectionMode="multiple"
+               selectedKeys={new Set(
+                formData.serviceRequired.map((serviceLabel) =>
+                  services.find((service) => service.label === serviceLabel)?.key
+                )
+              )}
+
+              onSelectionChange={handleServiceChange}
+              menuClass="w-full max-w-xl md:max-w-10 overflow-auto"
+
+
               >
-                {services.map((service) => (
-                  <SelectItem key={service.key}>{service.label}</SelectItem>
+              {services.map((service) => (
+                  <SelectItem key={service.key} value={service.key} className="text-ellipsis whitespace-nowrap">
+                    {service.label}
+                  </SelectItem>
                 ))}
               </Select>
             </div>
+
+{/* <div className="w-full mt-12">
+  <Select
+    name="serviceRequired"
+    label="Inquiry"
+    variant="bordered"
+    labelPlacement="outside"
+    placeholder="Select inquiry type"
+    size="lg"
+    radius="sm"
+    className="w-full max-w-sm mx-auto mt-4 overflow-hidden" // Fixed width to make it responsive
+    selectionMode="multiple"
+    selectedKeys={new Set(
+      formData.serviceRequired.map((serviceLabel) =>
+        services.find((service) => service.label === serviceLabel)?.key
+      )
+    )}
+    onSelectionChange={handleServiceChange}
+    menuClass="w-full max-w-sm overflow-auto" // Control menu width and overflow
+  >
+    {services.map((service) => (
+      <SelectItem
+        key={service.key}
+        value={service.key}
+        className="text-ellipsis whitespace-nowrap" // Truncate long service names
+      >
+        {service.label}
+      </SelectItem>
+    ))}
+  </Select>
+</div> */}
+
             <div className="w-full mt-4">
               <Textarea
                 name="message"
