@@ -5,8 +5,17 @@ import EERASecondImage from "../../public/Images/EERASecondImage.png";
 import QRASecondImage from "../../public/Images/QRASecondImage.png";
 import QRAThiredImage from "../../public/Images/QRAThiredImage.png";
 import Image from "next/image";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from 'react'; 
 
 export default function EERAAssessment() {
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
+
   return (
     <>
       <div className="min-h-screen bg-gray-100 py-8 px-4">
@@ -23,7 +32,7 @@ export default function EERAAssessment() {
             Escape, Evacuation and Rescue Assessment (EERA) Study
           </h1>
 
-          <section className="mb-8">
+          <section  data-aos="fade-up" data-aos-duration="1000" className="mb-8">
             <h2 className="text-2xl font-semibold mb-4">
               What is Escape, Evacuation and Rescue Assessment (EERA)?
             </h2>
@@ -43,7 +52,7 @@ export default function EERAAssessment() {
               <li>{`•	Assessing opportunities to reduce risks further from fire and explosion hazards`}</li>
             </ul>
           </section>
-          <section className="mb-8">
+          <section data-aos="fade-up" data-aos-duration="1000" className="mb-8">
             <h2 className="text-2xl font-semibold mb-4">
               When to perform EERA ?
             </h2>
@@ -64,7 +73,7 @@ export default function EERAAssessment() {
             </p>
           </section>
 
-          <section className="mb-8 ">
+          <section data-aos="fade-up" data-aos-duration="1000"  className="mb-8 ">
             <h2 className="text-2xl font-semibold mb-4">
               How it is performed?{" "}
             </h2>
@@ -76,7 +85,7 @@ export default function EERAAssessment() {
             <p className="text-gray-700 mb-4">{`A typical methodology for performing EERA is presented in the following Figure. Each step of the methodology is further discussed in the following sections`}</p>
 
             <div className="flex items-center justify-center mt-5">
-              <Image src={EERAFirstImage} />
+              <Image data-aos="zoom-out-left" data-aos-duration="2000" src={EERAFirstImage} />
             </div>
 
             <p className="text-gray-700 mb-4">
@@ -106,7 +115,7 @@ export default function EERAAssessment() {
             </p>
 
             <div className="flex items-center justify-center mt-5">
-              <Image src={EERASecondImage} />
+              <Image data-aos="zoom-out-left" data-aos-duration="2000"   src={EERASecondImage} />
             </div>
 
 
@@ -134,7 +143,7 @@ export default function EERAAssessment() {
 
           </section>
 
-          <section className="mb-12">
+          <section data-aos="fade-up" data-aos-duration="1000"  className="mb-12">
             
 
             {/* Table Section */}
@@ -250,7 +259,7 @@ This goal requires that facilities are available to rescue personnel who evacuat
 
 
 
-          <section className="mb-12">
+          <section data-aos="fade-up" data-aos-duration="1000"  className="mb-12">
 
             <p className=" mb-4">{`The following performance criteria shall be used while carrying out the goal assessment.`}</p>
             
@@ -313,7 +322,7 @@ This goal requires that facilities are available to rescue personnel who evacuat
             </div>
           </section>
 
-          <section className="mb-12">
+          <section data-aos="fade-up" data-aos-duration="1000" className="mb-12">
           <h2 className="text-2xl font-semibold mb-4 text-gray-800">{`Action plan: `}</h2>
 
           {/* Table Section */}
@@ -403,7 +412,7 @@ The study will be performed only after the approval of Assumption register by th
           </div>
         </section>
 
-          <section className="mb-8">
+          <section data-aos="fade-up" data-aos-duration="1000" className="mb-8">
             <h2 className="text-2xl font-semibold mb-4">
             How Aura Veritas can help achieve your objective?
             </h2>

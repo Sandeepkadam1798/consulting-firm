@@ -2,7 +2,16 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import HazopMethodology  from "../../public/Images/HazopMethodology.png"
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from 'react';
+
 export default function HazopStudy() {
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <>
       <Head>
@@ -19,7 +28,7 @@ export default function HazopStudy() {
           </h1>
 
           {/* Introduction Section */}
-          <section className="mb-12">
+          <section data-aos="fade-up" className="mb-12">
             <h2 className="text-2xl font-semibold mb-4 text-gray-800">What is HAZOP?</h2>
             <p className="text-gray-600 leading-relaxed">
               A Hazard and Operability (HAZOP) study is a structured and systematic examination of a planned or existing 
@@ -34,7 +43,7 @@ export default function HazopStudy() {
           </section>
 
           {/* Why Perform HAZOP */}
-          <section className="mb-12">
+          <section data-aos="fade-up" className="mb-12">
             <h2 className="text-2xl font-semibold mb-4 text-gray-800">Why Perform HAZOP?</h2>
             <p className="text-gray-600 leading-relaxed">
               HAZOP studies provide a systematic way to improve plant safety by addressing technical and organizational 
@@ -44,7 +53,7 @@ export default function HazopStudy() {
           </section>
 
           {/* Industries Using HAZOP */}
-          <section className="mb-12">
+          <section data-aos="fade-up" className="mb-12">
             <h2 className="text-2xl font-semibold mb-4 text-gray-800">Which industries are employing HAZOP as an integral part in risk management?</h2>
             <ul className="list-disc list-inside text-gray-600 space-y-2">
               <li>Oil and Gas</li>
@@ -56,7 +65,7 @@ export default function HazopStudy() {
           </section>
 
           {/* Types of HAZOP */}
-          <section className="mb-12">
+          <section data-aos="fade-up" className="mb-12">
             <h2 className="text-2xl font-semibold mb-4 text-gray-800">Are there different types of HAZOP?</h2>
             <p className="text-gray-600 leading-relaxed">
               The HAZOP technique was initially developed for plants and process systems but is now used in various areas:
@@ -68,7 +77,7 @@ export default function HazopStudy() {
           </section>
 
           {/* Objectives of HAZOP */}
-          <section className="mb-12">
+          <section  data-aos="fade-up" className="mb-12">
             <h2 className="text-2xl font-semibold mb-4 text-gray-800">What are the Objectives?</h2>
             <ul className="list-disc list-inside text-gray-600 space-y-2">
               <li>Identify deviations from system design and evaluate associated hazards and operability problems.</li>
@@ -78,7 +87,7 @@ export default function HazopStudy() {
           </section>
 
           {/* When HAZOP is Performed */}
-          <section className="mb-12">
+          <section data-aos="fade-up" className="mb-12">
             <h2 className="text-2xl font-semibold mb-4 text-gray-800">When is HAZOP Performed?</h2>
             <p className="text-gray-600 leading-relaxed">
               HAZOP is generally performed during various stages of a project’s lifecycle, including Concept, FEED, 
@@ -92,7 +101,7 @@ export default function HazopStudy() {
           </section>
 
           {/* How HAZOP is Performed */}
-          <section className="mb-12">
+          <section data-aos="fade-up" className="mb-12">
             <h2 className="text-2xl font-semibold mb-4 text-gray-800">How is HAZOP Performed?</h2>
             <p className="text-gray-600 leading-relaxed">
               The HAZOP study is conducted through a team-based brainstorming technique, guided by hazard guidewords and 
@@ -101,7 +110,7 @@ export default function HazopStudy() {
             </p>
           </section>
 
-          <section className="mb-12">
+          <section  data-aos="fade-up" className="mb-12">
             <h2 className="text-2xl font-semibold mb-4 text-gray-800">HAZOP study will be executed in the following phases</h2>
 
             {/* Table Section */}
@@ -154,7 +163,7 @@ export default function HazopStudy() {
             </div>
           </section>
           {/* A Brief Methodology of Study */}
-          <section className="mb-12">
+          <section  data-aos="fade-up" className="mb-12">
 
             <div className='flex gap-4 justify-center items-center flex-col xl:flex-row sm:flex-row lg:flex-row'>
                 <div>
@@ -184,7 +193,9 @@ export default function HazopStudy() {
                 alt="HAZOP Methodology"
                 // width={400}
                 // height={400}
-                className="rounded-lg shadow-lg animate-bounce"
+                className="rounded-lg shadow-lg "
+                data-aos="zoom-out-left"
+                data-aos-duration="1000"
               />
             </div>
                 </div>
@@ -196,7 +207,7 @@ export default function HazopStudy() {
           </section>
 
           {/* Conclusion - How Aura Veritas Can Help */}
-          <section className="mb-12">
+          <section data-aos="fade-up" className="mb-12">
             <h2 className="text-2xl font-semibold mb-4 text-gray-800">How Aura Veritas Can Help</h2>
             <p className="text-gray-600 leading-relaxed">
               Aura Veritas engineers and technologists provide expertise to lead and facilitate HAZOP studies as independent 

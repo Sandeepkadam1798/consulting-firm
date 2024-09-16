@@ -106,15 +106,7 @@ const OurServices = () => {
                     </p>
                     
                   </Link>
-{/* 
-                  <Link href={"https://wa.link/f5qsnc"}>
-                      <div className="group transition-all duration-700 flex justify-center items-center rounded-md bg-[#4aaca8] w-12 h-12 hover:bg-white hover:text-[#36a39e]">
-                        <FaWhatsapp
-                          size={24}
-                          className="text-white transition-all duration-700 group-hover:text-[#36a39e]"
-                        />
-                      </div>
-                    </Link> */}
+
 
                 </div>
               </card>

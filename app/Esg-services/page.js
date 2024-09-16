@@ -1,12 +1,15 @@
 "use client";
 import Head from "next/head";
-import EERAFirstImage from "../../public/Images/EERAFirstImage.png";
-import EERASecondImage from "../../public/Images/EERASecondImage.png";
-import QRASecondImage from "../../public/Images/QRASecondImage.png";
-import QRAThiredImage from "../../public/Images/QRAThiredImage.png";
-import Image from "next/image";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from 'react';
 
 export default function ESGServices() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <>
       <div className="min-h-screen bg-gray-100 py-8 px-4">
@@ -23,7 +26,7 @@ export default function ESGServices() {
           ESG & Climate Change Services
           </h1>
 
-          <section className="mb-8">
+          <section data-aos="fade-up" data-aos-duration="1000"  className="mb-8">
             <h2 className="text-2xl font-semibold mb-4">
             ESG Services:
             </h2>
@@ -57,7 +60,7 @@ export default function ESGServices() {
        
           </section>
 
-          <section className="mb-8">
+          <section data-aos="fade-up" data-aos-duration="1000"  className="mb-8">
             <h2 className="text-2xl font-semibold mb-4">
             1. Sustainability Road Map Development :
             </h2>
@@ -97,7 +100,7 @@ export default function ESGServices() {
 
        
           </section>
-          <section className="mb-8">
+          <section data-aos="fade-up" data-aos-duration="1000"  className="mb-8">
             <h2 className="text-2xl font-semibold mb-4">
             2. Stakeholder Engagement :
             </h2>
@@ -133,7 +136,7 @@ export default function ESGServices() {
 
        
           </section>
-          <section className="mb-8">
+          <section data-aos="fade-up" data-aos-duration="1000"  className="mb-8">
             <h2 className="text-2xl font-semibold mb-4">
             3.	Materiality Assessment :
             </h2>
@@ -169,7 +172,7 @@ export default function ESGServices() {
 
        
           </section>
-          <section className="mb-8">
+          <section  data-aos="fade-up" data-aos-duration="1000" className="mb-8">
             <h2 className="text-2xl font-semibold mb-4">
             4.	Sustainability Reporting :
             </h2>
@@ -208,7 +211,7 @@ export default function ESGServices() {
 
        
           </section>
-          <section className="mb-8">
+          <section  data-aos="fade-up" data-aos-duration="1000" className="mb-8">
             <h2 className="text-2xl font-semibold mb-4">
             5. Business Responsibility and Sustainability Reporting :
             </h2>
@@ -236,7 +239,7 @@ export default function ESGServices() {
 
        
           </section>
-          <section className="mb-8">
+          <section data-aos="fade-up" data-aos-duration="1000"  className="mb-8">
             <h2 className="text-2xl font-semibold mb-4">
             6.	Carbon Disclosure Project :
             </h2>
@@ -264,7 +267,7 @@ export default function ESGServices() {
 
        
           </section>
-          <section className="mb-8">
+          <section data-aos="fade-up" data-aos-duration="1000"  className="mb-8">
             <h2 className="text-2xl font-semibold mb-4">
             	7.	TCFD Reporting  :
             </h2>

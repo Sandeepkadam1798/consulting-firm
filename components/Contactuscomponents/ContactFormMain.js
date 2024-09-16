@@ -37,7 +37,7 @@ const ContactFormMain = () => {
           let’s get started! reach out to us, we will get the work done.
         </p>
       </div>
-      <div data-aos="fade-up" data-aos-duration="1500" className="flex lg:flex-row flex-col md:w-11/12 w-full justify-center items-center gap-4 mx-auto">
+      <div  className="flex lg:flex-row flex-col md:w-11/12 w-full justify-center items-center gap-4 mx-auto">
         <Card  className="md:w-[30rem] w-11/12 transition hover:scale-105 transform  duration-300 shadow-md">
           <CardBody className="flex justify-start items-center w-full flex-row gap-4 p-3">
             <div className="flex justify-center items-center h-16 w-16 bg-greentheme rounded-full">
