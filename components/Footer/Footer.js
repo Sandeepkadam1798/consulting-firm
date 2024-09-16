@@ -79,19 +79,19 @@ const Footer = () => {
                 </Link>
                 <Link
                   className="hover:text-primary-main  text-sm  max-w-max text-gray-700 transition-colors duration-200 ease-in-out"
-                  href="/review"
+                  href="/aboutus"
                 >
                        About Us
                 </Link>
                 <Link
                   className="hover:text-primary-main  text-sm  max-w-max text-gray-700 transition-colors duration-200 ease-in-out"
-                  href="/Blogs"
+                  href="/blogs"
                 >
                   Blogs
                 </Link>
                 <Link
                   className="hover:text-primary-main  text-sm  max-w-max text-gray-700 transition-colors duration-200 ease-in-out"
-                  href="/Blogs"
+                  href="/Services"
                 >
                   Services
                 </Link>
@@ -217,7 +217,7 @@ const Footer = () => {
 
         <div className="text-center p-4">
           <h3 className="font-bold text-2xl md:text-4xl text-white">
-         {` Aura Veritas Engineering & Consultancy Privte Limited
+         {` Aura Veritas Engineering & Consultancy Private Limited
           `}</h3>
           <p className="text-xs md:text-base text-white mt-2">
           {`Plot No: 46G, Bel Nagar, Manapakkam Chennai- 600125`}
