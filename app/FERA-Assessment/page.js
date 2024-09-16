@@ -4,8 +4,16 @@ import QRAFirstImage from "../../public/Images/QRAFirstImage.png";
 import QRASecondImage from "../../public/Images/QRASecondImage.png";
 import QRAThiredImage from "../../public/Images/QRAThiredImage.png";
 import Image from "next/image";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from 'react';
 
 export default function FERAAssessment() {
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <>
     <div className="min-h-screen bg-gray-100 py-8 px-4">
@@ -22,7 +30,7 @@ export default function FERAAssessment() {
         Fire and Explosion Risk Assessment (FERA) Study
         </h1>
 
-        <section className="mb-8">
+        <section data-aos="fade-up" data-aos-duration="1000"   className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">What is Fire and Explosion Risk Assessment (FERA) ?</h2>
           <p className="text-gray-700 mb-4">
             {`Industry experience shows that fires or explosions in Oil & Gas and petrochemical facilities can result in extensive losses of property and lives. Realistic quantification of credible physical effects from accident loss of containment scenarios can be used to manage the associated risks by providing engineering solutions and procedural control.`}
@@ -42,7 +50,7 @@ export default function FERAAssessment() {
           
         </section>
 
-        <section className="mb-8">
+        <section  data-aos="fade-up" data-aos-duration="1000"  className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">
             What are the Objectives ?
           </h2>
@@ -91,7 +99,7 @@ Scope:
           </ul>
         </section>
 
-        <section className="mb-8">
+        <section  data-aos="fade-up" data-aos-duration="1000"  className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">Governing standards</h2>
           <p className="text-gray-700 mb-4">
             {`Majority of the Operators developed on the basis of methodologies and values based on the following accepted methods that are laid out in:`}
@@ -105,7 +113,7 @@ Scope:
           
         </section>
 
-        <section className="mb-8">
+        <section data-aos="fade-up" data-aos-duration="1000"   className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">When to perform FERA ?</h2>
           <p className="text-gray-700 mb-4">
             {`Typically, during concept phase, consequence modelling is carried out to assist in layout planning, determine the separation distances, etc. Comprehensive FERA is performed during the FEED Stage of the project and is later updated during the EPC (Detailed Engineering) Stage based on newly established information/data/engineering documentations etc. EPC FERA study also forms the basis for the operations and forms part of COMAJ dossier.`}
@@ -122,7 +130,7 @@ Scope:
           
         </section>
 
-        <section className="mb-8 ">
+        <section data-aos="fade-up" data-aos-duration="1000"  className="mb-8 ">
           <h2 className="text-2xl font-semibold mb-4">
           How it is performed? {" "}
           </h2>
@@ -142,7 +150,7 @@ Scope:
           
 
           <div className="flex items-center justify-center mt-5">
-            <Image src={QRAFirstImage} />
+            <Image  data-aos="zoom-out-left" data-aos-duration="2000" src={QRAFirstImage} />
           </div>
 
           <p className="text-gray-700 mb-4 ">
@@ -179,7 +187,7 @@ Scope:
          
 
           <div className="flex items-center justify-center mt-5">
-            <Image src={QRASecondImage} />
+            <Image data-aos="zoom-out-left" data-aos-duration="2000"  src={QRASecondImage} />
           </div>
 
           <p className="text-gray-700 mb-4 ">
@@ -250,7 +258,7 @@ Scope:
 
           
           <div className="flex items-center justify-center mt-5">
-            <Image src={QRAThiredImage} />
+            <Image  data-aos="zoom-out-left" data-aos-duration="2000" src={QRAThiredImage} />
           </div>
 
           
@@ -261,7 +269,7 @@ Scope:
       
       
 
-        <section className="mb-12">
+        <section data-aos="fade-up" data-aos-duration="1000"  className="mb-12">
           <h2 className="text-2xl font-semibold mb-4 text-gray-800">{`Action plan: `}</h2>
 
           {/* Table Section */}
@@ -363,7 +371,7 @@ The study will be performed only after the approval of Assumption register by th
           </div>
         </section>
 
-        <section className="mb-8">
+        <section data-aos="fade-up" data-aos-duration="1000"  className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">
             How Aura Veritas can help achieve your objective?
           </h2>

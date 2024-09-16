@@ -4,8 +4,16 @@ import SILFirstImage from "../../public/Images/SILFirstImage.png";
 import SILSecondImage from "../../public/Images/SILSecondImage.png";
 import SILThiredImage from "../../public/Images/SILThiredImage.png";
 import Image from "next/image";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from 'react';
 
 export default function SILAssessment() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
+
   return (
     <>
     <div className="min-h-screen bg-gray-100 py-8 px-4">
@@ -22,7 +30,7 @@ export default function SILAssessment() {
           Safety Integrity Level (SIL) Assessment Study
         </h1>
 
-        <section className="mb-8">
+        <section  data-aos="fade-up" data-aos-duration="1000" className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">What is SIL?</h2>
           <p className="text-gray-700 mb-4">
             {`The SIL Determination is an integral part of the risk management process performed to derive the integrity level of the Safety Instrumented Function (SIF) to ensure that the risk is managed and demonstrated to ALARP for both project activities and operations.`}
@@ -38,7 +46,7 @@ export default function SILAssessment() {
           </p>
         </section>
 
-        <section className="mb-8">
+        <section  data-aos="fade-up" data-aos-duration="1000" className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">Governing standards</h2>
           <p className="text-gray-700 mb-4">
             {`Majority of the Operators developed on the basis of methodologies and values based on the following accepted methods that are laid out in:`}
@@ -52,7 +60,7 @@ export default function SILAssessment() {
             {`However, client’s order of precedence in the project will be governing in the end and if any client specific standards available will be followed, based on client’s advise.`}
           </p>
         </section>
-        <section className="mb-8 ">
+        <section data-aos="fade-up" data-aos-duration="1000" className="mb-8 ">
           <h2 className="text-2xl font-semibold mb-4">
             What are layers of protection in process industries ?{" "}
           </h2>
@@ -70,7 +78,7 @@ export default function SILAssessment() {
           </p>
 
           <div className="flex items-center justify-center mt-5">
-            <Image src={SILFirstImage} />
+            <Image  data-aos="zoom-out-left" data-aos-duration="2000" src={SILFirstImage} />
           </div>
 
           <p className="text-gray-700 mb-4 ">
@@ -84,11 +92,11 @@ export default function SILAssessment() {
           </p>
 
           <div className="flex items-center justify-center mt-5">
-            <Image src={SILSecondImage} />
+            <Image  data-aos="zoom-out-left" data-aos-duration="2000" src={SILSecondImage} />
           </div>
         </section>
 
-        <section className="mb-8">
+        <section data-aos="fade-up" data-aos-duration="1000" className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">{`Which industries are employing SIL as an integral part in risk management?`}</h2>
           <ul className="list-disc pl-6 text-gray-700 mb-4">
             <li>Oil and Gas</li>
@@ -99,7 +107,7 @@ export default function SILAssessment() {
           </ul>
         </section>
 
-        <section className="mb-8">
+        <section data-aos="fade-up" data-aos-duration="1000" className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">
             Different types of method to determine SIL level.
           </h2>
@@ -116,7 +124,7 @@ export default function SILAssessment() {
           </p>
         </section>
 
-        <section className="mb-8">
+        <section  data-aos="fade-up" data-aos-duration="1000" className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">What are the Objectives?</h2>
           <p className="text-gray-700 mb-2">{`The SIL determination study will be undertaken with following objective:`}</p>
           <ul className="list-disc pl-6 text-gray-700 mb-4">
@@ -126,7 +134,7 @@ export default function SILAssessment() {
             
           </ul>
         </section>
-        <section className="mb-8">
+        <section data-aos="fade-up" data-aos-duration="1000"  className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">When SIL Assessment shall be performed or What would warrant a SIL Assessment study?
 
           </h2>
@@ -146,7 +154,7 @@ export default function SILAssessment() {
           </ul>
         </section>
 
-        <section className="mb-8">
+        <section  data-aos="fade-up" data-aos-duration="1000" className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">
           How it is performed? 
           </h2>
@@ -173,7 +181,7 @@ export default function SILAssessment() {
           </ol>
 
           <div className="flex items-center justify-center mt-5">
-            <Image src={SILThiredImage} />
+            <Image data-aos="zoom-out-left" data-aos-duration="2000"  src={SILThiredImage} />
           </div>
 
           <p className="text-gray-700 mb-4">{`
@@ -182,7 +190,7 @@ After completed SIL classification, SIL Verification calculations will be perfor
 
         </section>
 
-        <section className="mb-12">
+        <section data-aos="fade-up" data-aos-duration="1000" className="mb-12">
             <h2 className="text-2xl font-semibold mb-4 text-gray-800">{`SIL study will be executed in following phases,`}</h2>
 
             {/* Table Section */}
@@ -238,7 +246,7 @@ The session will be conducted only after the approval of ToR by the Subject Matt
             </div>
           </section>
 
-          <section className="mb-8">
+          <section data-aos="fade-up" data-aos-duration="1000" className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">How Aura Veritas can help achieve your objective?</h2>
           <p className="text-gray-700 mb-4">
             {`Aura Veritas engineers and technologists are an independent and experienced functional safety certified experts, who understands your business and culture, shall provide expertise to lead/facilitate SIL study as a third party auditor or HSE specialists to achieve the aim of improving safety and ensuring compliance to relevant laws, codes and standards.`}

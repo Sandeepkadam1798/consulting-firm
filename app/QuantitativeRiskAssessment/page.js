@@ -4,8 +4,17 @@ import QRAFirstImage from "../../public/Images/QRAFirstImage.png";
 import QRASecondImage from "../../public/Images/QRASecondImage.png";
 import QRAThiredImage from "../../public/Images/QRAThiredImage.png";
 import Image from "next/image";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from 'react';
 
 export default function QRAssessment() {
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
+
   return (
     <>
     <div className="min-h-screen bg-gray-100 py-8 px-4">
@@ -22,7 +31,7 @@ export default function QRAssessment() {
           Quantitative Risk Assessment (QRA) Study
         </h1>
 
-        <section className="mb-8">
+        <section data-aos="fade-up" data-aos-duration="1000"  className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">What is QRA ?</h2>
           <p className="text-gray-700 mb-4">
             {`Quantitative Risk Assessment is a formal and systematic approach of estimating the likelihood and consequences of hazardous events, and expressing the results quantitatively as risk to people, the environment, asset or reputation.`}
@@ -52,7 +61,7 @@ export default function QRAssessment() {
           </ul>
         </section>
 
-        <section className="mb-8">
+        <section data-aos="fade-up" data-aos-duration="1000"  className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">
             What are the Objectives ?
           </h2>
@@ -72,7 +81,7 @@ export default function QRAssessment() {
           </p>
         </section>
 
-        <section className="mb-8">
+        <section data-aos="fade-up" data-aos-duration="1000" className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">Governing standards</h2>
           <p className="text-gray-700 mb-4">
             {`Majority of the Operators developed on the basis of methodologies and values based on the following accepted methods that are laid out in:`}
@@ -88,7 +97,7 @@ export default function QRAssessment() {
           </p>
         </section>
 
-        <section className="mb-8">
+        <section  data-aos="fade-up" data-aos-duration="1000" className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">When to perform QRA ?</h2>
           <p className="text-gray-700 mb-4">
             {`The QRA is an integral part of the ALARP process for both project activities and operations.`}
@@ -111,7 +120,7 @@ export default function QRAssessment() {
           <p className="text-gray-700 mb-4">{`Where no significant changes are identified over five years and outcome of previous QRA report is still applicable and technically robust, no update of QRA is required. In such case, organisations shall develop technical note justifying the same with relevant supporting documents (such as HAZID, risk register review, risk assessments, MOC, etc.) and shall submit for Regulatory Approval as part of COMAH process for regulatory approval.`}</p>
         </section>
 
-        <section className="mb-8 ">
+        <section data-aos="fade-up" data-aos-duration="1000"  className="mb-8 ">
           <h2 className="text-2xl font-semibold mb-4">
           How it is performed? {" "}
           </h2>
@@ -131,7 +140,7 @@ export default function QRAssessment() {
           
 
           <div className="flex items-center justify-center mt-5">
-            <Image src={QRAFirstImage} />
+            <Image  data-aos="zoom-out-left" data-aos-duration="2000" src={QRAFirstImage} />
           </div>
 
           <p className="text-gray-700 mb-4 ">
@@ -168,7 +177,7 @@ export default function QRAssessment() {
          
 
           <div className="flex items-center justify-center mt-5">
-            <Image src={QRASecondImage} />
+            <Image data-aos="zoom-out-left" data-aos-duration="2000" src={QRASecondImage} />
           </div>
 
           <p className="text-gray-700 mb-4 ">
@@ -195,7 +204,7 @@ export default function QRAssessment() {
 
           
           <div className="flex items-center justify-center mt-5">
-            <Image src={QRAThiredImage} />
+            <Image  data-aos="zoom-out-left" data-aos-duration="2000" src={QRAThiredImage} />
           </div>
 
           <p className="text-gray-700 mb-4 ">
@@ -212,7 +221,7 @@ export default function QRAssessment() {
       
       
 
-        <section className="mb-12">
+        <section data-aos="fade-up" data-aos-duration="1000"  className="mb-12">
           <h2 className="text-2xl font-semibold mb-4 text-gray-800">{`SIL study will be executed in following phases,`}</h2>
 
           {/* Table Section */}
@@ -313,7 +322,7 @@ The study will be performed only after the approval of Assumption register by th
           </div>
         </section>
 
-        <section className="mb-8">
+        <section data-aos="fade-up" data-aos-duration="1000" className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">
             How Aura Veritas can help achieve your objective?
           </h2>
