@@ -27,8 +27,20 @@ export default function HazopStudy() {
             Hazard and Operability (HAZOP) Study
           </h1>
 
+          <Image
+          src="/service/31.png"
+          width="550"
+          height="310"
+          alt="HAZOP"
+          className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center "
+        
+           data-aos="zoom-in-up"
+            data-aos-duration="2000"
+           
+          />
+
           {/* Introduction Section */}
-          <section data-aos="fade-up" className="mb-12">
+          <section data-aos="fade-up" className="mb-12 mt-6">
             <h2 className="text-2xl font-semibold mb-4 text-gray-800">What is HAZOP?</h2>
             <p className="text-gray-600 leading-relaxed">
               A Hazard and Operability (HAZOP) study is a structured and systematic examination of a planned or existing 

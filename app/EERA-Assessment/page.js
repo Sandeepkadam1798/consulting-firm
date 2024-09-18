@@ -32,7 +32,19 @@ export default function EERAAssessment() {
             Escape, Evacuation and Rescue Assessment (EERA) Study
           </h1>
 
-          <section  data-aos="fade-up" data-aos-duration="1000" className="mb-8">
+          <Image
+            src="/service/25.png"
+            width="550"
+            height="310"
+            alt="SIL Assessment"
+            
+           data-aos="zoom-in-up"
+           data-aos-duration="2000"
+            className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center "
+          />
+
+
+          <section  data-aos="fade-up" data-aos-duration="1000" className="mb-8 mt-6">
             <h2 className="text-2xl font-semibold mb-4">
               What is Escape, Evacuation and Rescue Assessment (EERA)?
             </h2>
