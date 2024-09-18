@@ -131,7 +131,7 @@ const OurServices = () => {
             </div>
           </div>
           <Image
-            src="/placeholder.svg"
+            src="/service/24.png"
             width="550"
             height="310"
             alt="HAZID"
@@ -140,7 +140,7 @@ const OurServices = () => {
         </div>
         <div data-aos="fade-up-left" data-aos-duration="1000" className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
           <Image
-            src="/placeholder.svg"
+            src="/service/31.png"
             width="550"
             height="310"
             alt="HAZOP"
@@ -221,7 +221,7 @@ const OurServices = () => {
             </div>
           </div>
           <Image
-            src="/placeholder.svg"
+            src="/service/32.png"
             width="550"
             height="310"
             alt="SIL Assessment"
@@ -230,7 +230,7 @@ const OurServices = () => {
         </div>
         <div data-aos="fade-up-left" data-aos-duration="1000"  className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
           <Image
-            src="/placeholder.svg"
+            src="/service/29.png"
             width="550"
             height="310"
             alt="Quantitative Risk Assessment"
@@ -311,7 +311,7 @@ const OurServices = () => {
             </div>
           </div>
           <Image
-            src="/placeholder.svg"
+            src="/service/28.png"
             width="550"
             height="310"
             alt="ESG Services"
@@ -321,7 +321,7 @@ const OurServices = () => {
 
         <div  data-aos="fade-up-left" data-aos-duration="1000" className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
           <Image
-            src="/placeholder.svg"
+            src="/service/25.png"
             width="550"
             height="310"
             alt="Quantitative Risk Assessment"
@@ -404,7 +404,7 @@ const OurServices = () => {
             </div>
           </div>
           <Image
-            src="/placeholder.svg"
+            src="/service/27.png"
             width="550"
             height="310"
             alt="ESG Services"
