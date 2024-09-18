@@ -414,12 +414,23 @@ export default function Nav() {
         <NavbarItem>
           <Button
             as={Link}
-            className=" rounded-full bg-[#36a39e] text-white -mr-4 group"
-            href="#"
+            className=" rounded-full bg-[#36a39e] text-white -mr-4 group lg:flex md:flex  hidden "
+            href="/Contactus"
             variant="solid"
           >
             <FaPhone className="text-white " /> +91-9150547979 
           </Button>
+
+          <Button
+            as={Link}
+            className=" rounded-full bg-[#36a39e] text-white -mr-4 group lg:hidden md:hidden   "
+            href="/Contactus"
+            variant="solid"
+          >
+            <FaPhone className="text-white " /> Contact Us
+          </Button>
+
+
         </NavbarItem>
 
         <NavbarItem>
