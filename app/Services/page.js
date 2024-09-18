@@ -64,7 +64,7 @@ const OurServices = () => {
       <div className="container px-4 md:px-6">
         <div className="space-y-6">
           <div className="animate-fade-up flex flex-col justify-center items-center">
-            <p className="text-xl lg:text-3xl md:text-3xl font-semibold leading-7 -tracking-tight">
+            <p className="text-2xl lg:text-3xl md:text-3xl font-semibold leading-7 -tracking-tight">
               Our Services
               <span className='lucide absolute -mt-3 lucide-sparkles h-4 w-4 text-[#36a39e] shrink-0'><i className="pi pi-sparkles" style={{ fontSize: '1rem' }}></i></span>
             </p>
@@ -73,7 +73,7 @@ const OurServices = () => {
               {`We offer a wide range of sustainability and risk assessment services to help organizations achieve their goals.`}
             </p>
           </div>
-          <motion.div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-5"
+          <motion.div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3"
           
           initial={{ opacity: 0.5, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -83,7 +83,7 @@ const OurServices = () => {
             {services.map(service => (
               <card 
                 key={service.id}  
-                className="transform rounded-lg duration-300  hover:scale-105   p-4 flex flex-col justify-between h-[300px] w-full bg-white shadow-lg  transition"
+                className="transform rounded-xl border border-primary duration-300  hover:scale-105   p-8 flex flex-col justify-between h-[300px] w-full bg-white shadow-lg  transition"
               >
 
 {/* hover:bg-slate-50 */}

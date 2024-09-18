@@ -63,7 +63,7 @@ export default function BlogPage() {
       <div className="min-h-screen bg-gray-100 py-8 px-4">
         <div className="px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto bg-white p-8 shadow-lg">
           {/* Page Title */}
-          <h1 className="text-4xl font-bold text-center text-[#0b8d7c] mb-12 animate-scale-up">
+          <h1 className="text-xl lg:text-4xl md:text-3xl font-bold text-center text-primary mb-12 animate-scale-up">
             Latest Blog Posts
           </h1>
 
@@ -72,7 +72,7 @@ export default function BlogPage() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: false }}
       transition={{ duration: 1 }}>
-            <h2 className="text-3xl font-semibold mb-6 text-gray-800">Featured Post</h2>
+            <h2 className="font-semibold mb-6 text-gray-800 text-xl lg:text-4xl md:text-3xl  ">Featured Post</h2>
             <div className="grid md:grid-cols-2 gap-8 bg-gray-50 p-6 rounded-lg shadow-lg">
               <div className="flex flex-col justify-center">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{blogs[0].title}</h3>
@@ -97,7 +97,7 @@ export default function BlogPage() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: false }}
       transition={{ duration: 1 }}>
-            <h2 className="text-3xl font-semibold mb-6 text-gray-800">Recent Posts</h2>
+            <h2 className="text-xl font-semibold mb-6 text-gray-800 " >Recent Posts</h2>
             <div className="grid lg:grid-cols-2 gap-8">
               {blogs.slice(1).map((blog) => (
                 <div key={blog.id} className="flex flex-col lg:flex-row bg-white rounded-lg shadow-lg overflow-hidden">

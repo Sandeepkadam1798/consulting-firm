@@ -37,7 +37,7 @@ export function NavigationMenuDemo() {
 
         <NavigationMenuItem>
           <NavigationMenuTrigger className="bg-[#0b8d7c]  rounded-full text-white hover:bg-[#36a39e] hover:bg-transparent">
-            About us
+            <Link href="/aboutus">About us</Link>
           </NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr] bg-[#f2fdff]">
