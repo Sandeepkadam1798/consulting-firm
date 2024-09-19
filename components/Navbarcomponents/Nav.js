@@ -424,10 +424,10 @@ export default function Nav() {
           <Button
             as={Link}
             className=" rounded-full bg-[#36a39e] text-white -mr-4 group lg:hidden md:hidden   "
-            href="/Contactus"
+            href="/Services"
             variant="solid"
           >
-            <FaPhone className="text-white " /> Contact Us
+            <FaPhone className="text-white " /> Services
           </Button>
 
 

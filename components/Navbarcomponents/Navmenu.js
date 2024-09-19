@@ -66,17 +66,17 @@ export function NavigationMenuDemo() {
                 <span> Phone :9150547979 </span>
               </ListItem>
               <ListItem
-                href="/docs/primitives/typography"
+                href="/"
                 title="Connect with us"
               >
                 <div className="flex justify-center items-center w-full rounded-lg mt-2 -ml-8">
                   <div className="flex justify-around gap-2 items-center">
                     <Link
                       href={
-                        "https://www.instagram.com/vakratund_tours/?utm_source=ig_embed&ig_rid=22824f35-53c7-4967-8fe8-83f163b00532"
+                        "/"
                       }
                     >
-                    <Link href={"/Blogs"}>
+                    <Link href={"/blogs"}>
 
                       <div className="group transition-all duration-700 flex justify-center items-center rounded-md bg-[#4aaca8] w-12 h-12 hover:bg-white hover:text-[#36a39e]">
                         <FaInstagram
@@ -86,7 +86,7 @@ export function NavigationMenuDemo() {
                       </div>
                     </Link>
                     </Link>
-                    <Link href={"https://www.facebook.com/people/Vakratund-Tours-Adventures/61564626934045/?mibextid=ZbWKwL"}>
+                    <Link href={"/"}>
                     <div className="group transition-all duration-700 flex justify-center items-center rounded-md bg-[#4aaca8] w-12 h-12 hover:bg-white hover:text-[#36a39e]">
                       <SlSocialFacebook
                         size={24}
@@ -95,7 +95,7 @@ export function NavigationMenuDemo() {
                     </div>
 
                     </Link>
-                    <Link href={"https://wa.link/f5qsnc"}>
+                    <Link href={"/"}>
                       <div className="group transition-all duration-700 flex justify-center items-center rounded-md bg-[#4aaca8] w-12 h-12 hover:bg-white hover:text-[#36a39e]">
                         <FaWhatsapp
                           size={24}
