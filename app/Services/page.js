@@ -81,35 +81,28 @@ const OurServices = () => {
               transition={{ duration: 1 }}>
             
             {services.map(service => (
-              <card 
-                key={service.id}  
-                className="transform rounded-xl border-1 hover:border-2 border-primary   duration-300  hover:scale-105   p-8 flex flex-col justify-between h-[300px] w-full bg-white shadow-lg  transition"
-              >
-
-{/* hover:bg-slate-50 */}
-                <div className="flex flex-col items-center  ">
-                  {service.icon}
-                  <h3 className="text-xl font-semibold mt-4">{service.title}</h3>
-                  <p className="text-muted-foreground mt-4">{service.description}</p>
-                </div>
-                <div className="mt-auto text-center">
-                  <Link 
-                    href={service.link} 
-                    className="inline-block mt-4 px-4 py-2 bg-primary text-white rounded-md hover:bg-primary-dark  group transition-all duration-700 hover:border hover:border-primary justify-center items-center  hover:bg-white hover:text-[#36a39e]"
-                    rel="noopener noreferrer"
-                  >
-                    <div className="">
-
-                    </div>
-                    <p className='text-white transition-all duration-700 group-hover:text-[#36a39e]'>
-                    Read More
-                    </p>
-                    
-                  </Link>
-
-
-                </div>
-              </card>
+          <card 
+          key={service.id}  
+          className="hover:bg-primary-foreground hover:text-white transform rounded-xl border-1 hover:border-2 border-primary duration-300 hover:scale-105 p-8 flex flex-col justify-between h-[300px] w-full bg-white shadow-lg transition"
+        >
+          <div className="flex flex-col items-center ">
+            {service.icon}
+            <h3 className="text-xl font-semibold mt-4 ">{service.title}</h3>
+            <p className="mt-4 ">{service.description}</p>
+          </div>
+          <div className="mt-auto text-center">
+            <Link 
+              href={service.link} 
+              className="inline-block mt-4 px-4 py-2 bg-primary text-white rounded-md hover:bg-primary-dark group transition-all duration-700 hover:border hover:border-primary justify-center items-center hover:bg-white hover:text-[#36a39e]"
+              rel="noopener noreferrer"
+            >
+              <p className='transition-all duration-700 group-hover:text-[#36a39e]'>
+                Read More
+              </p>
+            </Link>
+          </div>
+        </card>
+        
             ))}
           </motion.div>
         </div>

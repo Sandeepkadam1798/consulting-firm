@@ -62,7 +62,7 @@ const ContactFormMain = () => {
               <h6 className="font-bold text-sm text-[#0b8d7c] capitalize">
                 address
               </h6>
-              <p className="text-xs">{`Plot No: 46G, Bel Nagar, Manapakkam, Chennai - 600125`}</p>
+              <p className="text-xs">{`Plot No: 46G, Bel Nagar, Manapakkam Chennai - 600125`}</p>
             </div>
           </CardBody>
         </Card>
