@@ -14,6 +14,14 @@ import { FcCallback } from "react-icons/fc";
 import { FcComments } from "react-icons/fc";
 import ContactMap from "./ContactMap";
 
+// import { toast } from 'react-toastify';
+// import { auth } from '../firebase'; // Adjust the path to your firebase config file
+// import { createUserWithEmailAndPassword, sendEmailVerification } from 'firebase/auth';
+// import 'react-toastify/dist/ReactToastify.css';
+// toast.configure();
+
+
+
 const Contactform = () => {
   const [formData, setFormData] = useState({
     firstName: "",
@@ -23,6 +31,9 @@ const Contactform = () => {
     serviceRequired: [],
     message: "",
   });
+
+  const [isVerified, setIsVerified] = useState(false);
+  // const [formData, setFormData] = useState({ serviceRequired: [] });
 
   const services = [
     { key: "Hazard Identification (HAZID)", label: "Hazard Identification (HAZID)" },
@@ -52,6 +63,31 @@ const Contactform = () => {
   });
 };
 
+
+const handleEmailVerification = async () => {
+  try {
+    const userCredential = await createUserWithEmailAndPassword(auth, email, 'temporaryPassword');
+    const user = userCredential.user;
+
+    // Send email verification
+    await sendEmailVerification(user);
+    toast.success('Verification email sent. Please check your inbox.');
+
+    // Listen for email verification state
+    auth.onAuthStateChanged((user) => {
+      if (user && user.emailVerified) {
+        setIsVerified(true);
+        toast.success('Email successfully verified!');
+      }
+    });
+  } catch (error) {
+    toast.error('Error in email verification: ' + error.message);
+  }
+};
+
+
+
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -66,6 +102,14 @@ const Contactform = () => {
       toast.error("Please fill out all required fields");
       return;
     }
+
+    if (!isVerified) {
+      toast.error('Please verify your email before submitting the form');
+      return;
+    }
+
+    // If email is verified, proceed with the form submission logic
+    toast.success('Form submitted successfully!');
 
     const sendForm = async () => {
       const response = await fetch("/api/Contactus", {
@@ -174,7 +218,20 @@ const Contactform = () => {
                 }
               />
             </div>
+
+            {/* varification */}
+            <div className="w-full flex justify-center items-center mt-4">
+              <Button
+                type="button"
+                className="w-60 rounded-full bg-[#0b8d7c] text-white text-center"
+                onClick={handleEmailVerification}
+              >
+                Send Verification Email
+              </Button>
+            </div>
+
             <div className="w-full mt-12">
+              
               <Select
                 name="serviceRequired"
                 label="inquiry"
@@ -197,11 +254,49 @@ const Contactform = () => {
 
               >
               {services.map((service) => (
-                  <SelectItem key={service.key} value={service.key} className="text-ellipsis whitespace-nowrap">
+                  <SelectItem 
+                  key={service.key} 
+                  value={service.key} 
+                  className="text-ellipsis whitespace-nowrap ">
+                     
+    
                     {service.label}
                   </SelectItem>
                 ))}
               </Select>
+{/* 
+<Select 
+  name="serviceRequired"
+  label="inquiry"
+  variant="bordered"
+  labelPlacement="outside"
+  placeholder="Select inquiry type (one or multiple)"
+  size="lg"
+  radius="sm"
+  className="mt-4  w-full max-w-xl md:max-w-80 lg:max-w-xl xl:max-w-2xl 2xl:max-w-3xl mx-auto overflow-hidden"
+  selectionMode="multiple"
+  selectedKeys={new Set(
+    formData.serviceRequired.map((serviceLabel) =>
+      services.find((service) => service.label === serviceLabel)?.key
+    )
+  )}
+  onSelectionChange={handleServiceChange}
+  menuClass="w-full max-w-xl md:max-w-10 overflow-auto"
+>
+  {services.map((service) => (
+    <SelectItem
+      key={service.key}
+      value={service.key}
+      className="flex items-center text-ellipsis whitespace-nowrap"
+    >
+      {formData.serviceRequired.includes(service.label) && (
+        <span className="mr-2 text-green-500">&#10003;</span> 
+      )}
+      {service.label}
+    </SelectItem>
+  ))}
+</Select> */}
+
             </div>
 
 {/* <div className="w-full mt-12">
@@ -250,6 +345,10 @@ const Contactform = () => {
                 }
               />
             </div>
+
+
+
+
             <div className="w-full flex justify-center items-center mt-4">
               <Button
                 type="submit"

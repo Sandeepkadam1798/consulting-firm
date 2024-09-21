@@ -423,11 +423,12 @@ export default function Nav() {
 
           <Button
             as={Link}
-            className=" rounded-full bg-[#36a39e] text-white -mr-4 group lg:hidden md:hidden   "
+            className=" rounded-full  font-medium bg-[#36a39e] text-white -mr-4 group lg:hidden md:hidden   "
             href="/Services"
             variant="solid"
           >
-            <FaPhone className="text-white " /> Services
+            {/* <FaPhone className="text-white " /> */}
+             Services
           </Button>
 
 

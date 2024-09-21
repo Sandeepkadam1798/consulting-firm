@@ -16,9 +16,24 @@ const AboutUs = () => {
           className="text-center mb-12"
         >
           <h1 className="text-5xl font-bold text-gray-800 mb-4">About Us</h1>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Consulting Firm is a leading provider of sustainability and risk assessment services. Our team of experts has decades of experience in helping organizations achieve their environmental, social, and governance (ESG) goals.
+          <p className="text-lg mb-4 text-gray-600 max-w-6xl text-justify mx-auto">
+          Aura Veritas Engineering and Consulting firm registered in Chennai, 
+India specialized in the field of Engineering Consulting Services , 
+Environment Compliance Services, Safety & Risk Management
+Consulting Services , Sustainability Consulting Services, Auditing and 
+Inspection Services, Asset Integrity Management, Training, Cyber 
+Security, Technical Resourcing for all leading Energy, Infra, Logistics,
+Health Care and Manufacturing Industries.
+
           </p>
+          <p className='text-lg text-gray-600 max-w-6xl text-justify mx-auto  '>
+          We believe in challenging ourselves and adding value to the rapidly 
+changing energy industry. We believe in an individual approach as we 
+understand each client has different needs. Together with you, we will 
+find an optimal process to identify your needs and determine the best 
+solutions.
+          </p>
+
         </motion.section>
 
         {/* Expertise Section with Slide-in Animation */}

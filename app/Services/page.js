@@ -70,7 +70,7 @@ const OurServices = () => {
             </p>
 
             <p className=" text-muted-foreground md:text-lg lg:text-lg text-sm leading-7 text-gray-500">
-              {`We offer a wide range of sustainability and risk assessment services to help organizations achieve their goals.`}
+              {`We provide a broad array of sustainability and risk assessment solutions designed to support organizations in reaching their objectives.`}
             </p>
           </div>
           <motion.div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3"
@@ -83,7 +83,7 @@ const OurServices = () => {
             {services.map(service => (
               <card 
                 key={service.id}  
-                className="transform rounded-xl border border-primary duration-300  hover:scale-105   p-8 flex flex-col justify-between h-[300px] w-full bg-white shadow-lg  transition"
+                className="transform rounded-xl border-1 hover:border-2 border-primary   duration-300  hover:scale-105   p-8 flex flex-col justify-between h-[300px] w-full bg-white shadow-lg  transition"
               >
 
 {/* hover:bg-slate-50 */}
