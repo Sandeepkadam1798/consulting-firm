@@ -78,7 +78,7 @@ export default function BlogPage() {
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{blogs[0].title}</h3>
                 <p className="text-gray-600 mb-4">{blogs[0].excerpt}</p>
                 <p className="text-gray-500 text-sm mb-2">By {blogs[0].author} | {blogs[0].date}</p>
-                <a href="#" className="text-[#0b8d7c] font-semibold hover:underline">Read More</a>
+                {/* <a href="#" className="text-[#0b8d7c] font-semibold hover:underline">Read More</a> */}
               </div>
               <div className="flex justify-center md:justify-end">
                 <Image
@@ -115,7 +115,7 @@ export default function BlogPage() {
                     </div>
                     <div>
                       <p className="text-gray-500 text-sm mb-2">By {blog.author} | {blog.date}</p>
-                      <a href="#" className="text-[#0b8d7c] font-semibold hover:underline">Read More</a>
+                      {/* <a href="#" className="text-[#0b8d7c] font-semibold hover:underline">Read More</a> */}
                     </div>
                   </div>
                 </div>
