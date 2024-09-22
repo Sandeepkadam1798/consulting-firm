@@ -16,7 +16,7 @@ export default function FERAAssessment() {
 
   return (
     <>
-    <div className="min-h-screen bg-gray-100 py-8 px-4">
+    <div className="overflow-x-hidden min-h-screen bg-gray-100 py-8 px-4">
       <Head>
         <title>Fire and Explosion Risk Assessment (FERA) Study</title>
         <meta

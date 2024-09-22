@@ -18,7 +18,7 @@ export default function EERAAssessment() {
 
   return (
     <>
-      <div className="min-h-screen bg-gray-100 py-8 px-4">
+      <div className="overflow-x-hidden  min-h-screen bg-gray-100 py-8 px-4">
         <Head>
           <title>Escape, Evacuation and Rescue Assessment (EERA) Study</title>
           <meta

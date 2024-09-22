@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import { Card, CardBody, Input } from "@nextui-org/react";
 import { Select, SelectItem, Textarea, Button } from "@nextui-org/react";
@@ -13,6 +13,11 @@ import { FcHome } from "react-icons/fc";
 import { FcCallback } from "react-icons/fc";
 import { FcComments } from "react-icons/fc";
 import ContactMap from "./ContactMap";
+// import { isSignInWithEmailLink, signInWithEmailLink } from 'firebase/auth';
+// import { auth } from '../../firebase/firebase';
+import { useEffect, useState } from 'react';
+// import VerificationModal from "../Varification/Varification";
+
 
 // import { toast } from 'react-toastify';
 // import { auth } from '../firebase'; // Adjust the path to your firebase config file
@@ -20,9 +25,22 @@ import ContactMap from "./ContactMap";
 // import 'react-toastify/dist/ReactToastify.css';
 // toast.configure();
 
-
-
 const Contactform = () => {
+
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  // useEffect(() => {
+  //   // Check if the user is returning after clicking the email OTP link
+  //   if (isSignInWithEmailLink(auth, window.location.href)) {
+  //     setIsModalOpen(true);
+  //   }
+  // }, []);
+
+  // const openModal = () => setIsModalOpen(true);
+  // const closeModal = () => setIsModalOpen(false);
+
+
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -220,7 +238,7 @@ const handleEmailVerification = async () => {
             </div>
 
             {/* varification */}
-            <div className="w-full flex justify-center items-center mt-4">
+            {/* <div className="w-full flex justify-center items-center mt-4">
               <Button
                 type="button"
                 className="w-60 rounded-full bg-[#0b8d7c] text-white text-center"
@@ -228,7 +246,8 @@ const handleEmailVerification = async () => {
               >
                 Send Verification Email
               </Button>
-            </div>
+              
+            </div> */}
 
             <div className="w-full mt-12">
               
@@ -264,71 +283,8 @@ const handleEmailVerification = async () => {
                   </SelectItem>
                 ))}
               </Select>
-{/* 
-<Select 
-  name="serviceRequired"
-  label="inquiry"
-  variant="bordered"
-  labelPlacement="outside"
-  placeholder="Select inquiry type (one or multiple)"
-  size="lg"
-  radius="sm"
-  className="mt-4  w-full max-w-xl md:max-w-80 lg:max-w-xl xl:max-w-2xl 2xl:max-w-3xl mx-auto overflow-hidden"
-  selectionMode="multiple"
-  selectedKeys={new Set(
-    formData.serviceRequired.map((serviceLabel) =>
-      services.find((service) => service.label === serviceLabel)?.key
-    )
-  )}
-  onSelectionChange={handleServiceChange}
-  menuClass="w-full max-w-xl md:max-w-10 overflow-auto"
->
-  {services.map((service) => (
-    <SelectItem
-      key={service.key}
-      value={service.key}
-      className="flex items-center text-ellipsis whitespace-nowrap"
-    >
-      {formData.serviceRequired.includes(service.label) && (
-        <span className="mr-2 text-green-500">&#10003;</span> 
-      )}
-      {service.label}
-    </SelectItem>
-  ))}
-</Select> */}
 
             </div>
-
-{/* <div className="w-full mt-12">
-  <Select
-    name="serviceRequired"
-    label="Inquiry"
-    variant="bordered"
-    labelPlacement="outside"
-    placeholder="Select inquiry type"
-    size="lg"
-    radius="sm"
-    className="w-full max-w-sm mx-auto mt-4 overflow-hidden" // Fixed width to make it responsive
-    selectionMode="multiple"
-    selectedKeys={new Set(
-      formData.serviceRequired.map((serviceLabel) =>
-        services.find((service) => service.label === serviceLabel)?.key
-      )
-    )}
-    onSelectionChange={handleServiceChange}
-    menuClass="w-full max-w-sm overflow-auto" // Control menu width and overflow
-  >
-    {services.map((service) => (
-      <SelectItem
-        key={service.key}
-        value={service.key}
-        className="text-ellipsis whitespace-nowrap" // Truncate long service names
-      >
-        {service.label}
-      </SelectItem>
-    ))}
-  </Select>
-</div> */}
 
             <div className="w-full mt-4">
               <Textarea
@@ -351,11 +307,13 @@ const handleEmailVerification = async () => {
 
             <div className="w-full flex justify-center items-center mt-4">
               <Button
+              onClick={() => setIsModalOpen(true)}
                 type="submit"
                 className="w-60 rounded-full bg-[#0b8d7c] text-white text-center"
               >
                 Submit
               </Button>
+              {/* <VerificationModal isOpen={isModalOpen} onClose={closeModal} /> */}
             </div>
           </form>
         </div>
