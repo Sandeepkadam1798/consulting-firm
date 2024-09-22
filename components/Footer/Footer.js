@@ -160,7 +160,9 @@ const Footer = () => {
                   Contact Us
                 </h3>
                 <p className="text-gray-700  mt-2">
-                  Email :<span>ceo@auraveritas.in</span>
+                  Email   :<span 
+                 
+                  >ceo@auraveritas.in</span>
                 </p>
                 <p className="text-gray-700  ">
                   Phone : +91-9150547979 | +91-8939204319
@@ -223,6 +225,7 @@ const Footer = () => {
           {`Plot No: 46G, Bel Nagar, Manapakkam Chennai - 600125`}
 
           </p>
+
           <div className="flex flex-col md:flex-row justify-between items-center text-white gap-2 md:gap-10 mt-5">
             <p className="flex items-center">
               <i className="pi pi-envelope mr-1"></i>

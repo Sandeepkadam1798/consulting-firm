@@ -294,6 +294,7 @@ import Image from "next/image";
 import Logo from "../../public/Images/Logo.png";
 
 import { NavigationMenuDemo } from "./Navmenu";
+import { FaUserTie } from "react-icons/fa";
 import { FaPhone } from "react-icons/fa6";
 import {
   Sheet,
@@ -427,7 +428,7 @@ export default function Nav() {
             href="/Services"
             variant="solid"
           >
-            {/* <FaPhone className="text-white " /> */}
+            <FaUserTie className="text-white " />
              Services
           </Button>
 

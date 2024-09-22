@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="">
+    <div className="overflow-x-hidden">
    {/* <Hero/> */}
    <Hero/>
    <OurServices/>

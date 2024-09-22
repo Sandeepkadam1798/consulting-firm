@@ -13,7 +13,7 @@ export default function ESGServices() {
 
   return (
     <>
-      <div className="min-h-screen bg-gray-100 py-8 px-4">
+      <div className="overflow-x-hidden min-h-screen bg-gray-100 py-8 px-4">
         <Head>
           <title>ESG & Climate Change Services</title>
           <meta
