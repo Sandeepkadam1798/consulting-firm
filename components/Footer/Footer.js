@@ -53,9 +53,9 @@ const Footer = () => {
         }}
       >
         <div className="max-w-[1400px]  px-4 mx-auto">
-          <div className="overflow-hidden filter bg-gradient-to-b from-slate-100/50 via-white/50 to-slate-200/50 backdrop-blur-md sticky z-10 p-10 shadow-lg border border-zinc-300 rounded-3xl px-4 md:px-6 grid grid-cols-1 lg:px-8 xl:px-12 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-8">
-            <div className="space-y-4">
-              <h3 className="text-lg md:text-xl text-gray-700 font-[500]">
+          <div className="overflow-hidden  filter bg-gradient-to-b from-slate-100/50 via-white/50 to-slate-200/50 backdrop-blur-md sticky z-10 p-10 shadow-lg border border-zinc-300 rounded-3xl px-4 md:px-6 grid grid-cols-1 lg:px-8 xl:px-12 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-8">
+            <div className="space-y-4 p-2 ">
+              <h3 className="text-lg md:text-xl font-semibold text-gray-700 font-[500]">
                 Our Vision
               </h3>
               <p className="text-gray-700  text-sm leading-6  -tracking-tight">
@@ -66,8 +66,8 @@ const Footer = () => {
               </p>
             </div>
 
-            <div className="space-y-4 md:pl-8 md:border-l-2 border-white/30">
-              <h3 className="text-lg md:text-xl text-gray-700 font-[500] ">
+            <div className="space-y-4 p-2 md:pl-8 md:border-l-2 border-white/30">
+              <h3 className="text-lg md:text-xl font-semibold  text-gray-700 font-[500] ">
                 Quick Link
               </h3>
               <div className="grid grid-cols-2 gap-2 md:grid-cols-1">
@@ -105,8 +105,9 @@ const Footer = () => {
                 
               </div>
             </div>
-            <div className="space-y-4 md:pl-8 md:border-l-2 border-white/30">
-              <h3 className="text-lg md:text-xl text-gray-700 font-[500] __className_1fc36d">
+
+            <div className="space-y-4 md:pl-8 p-2 md:border-l-2 border-white/30">
+              <h3 className="text-lg font-semibold md:text-xl text-gray-700 font-[500] __className_1fc36d">
                 Our Services
               </h3>
               <div className="grid grid-cols-2 gap-2 md:grid-cols-1 ">
@@ -154,8 +155,10 @@ const Footer = () => {
                 </Link>
               </div>
             </div>
+
             <div className="space-y-4 text-sm md:pl-8 md:border-l-2 border-white/30">
               <div>
+                {/* <div>
                 <h3 className="text-lg md:text-xl text-gray-700 font-[500]">
                   Contact Us
                 </h3>
@@ -171,13 +174,38 @@ const Footer = () => {
                   Website :<span> www.Info.com</span>
                 </p>
                 <p className="text-gray-700 ">
-                  Office :<span> Plot No: 46G, Bel Nagar, Manapakkam Chennai - 600125</span>
+                  Office :<span> Plot No: 46G, Bel Nagar, Manapakkam, Chennai - 600125.
+                  </span>
                 </p>
+                </div> */}
+<div className="max-w-lg mx-auto p-2  ">
+  <h3 className="text-xl md:text-xl text-gray-800 font-semibold mb-4">
+    Contact Us
+  </h3>
+  <p className="text-gray-700 mb-2">
+    <span className="font-medium">Email:</span> ceo@auraveritas.in
+  </p>
+  <p className="text-gray-700 mb-2 ">
+    <span className="font-medium">Phone: </span>
+     +91-9150547979 | +91-8939204319 
+  </p>
+ 
+ 
+  <p className="text-gray-700 mb-2">
+    <span className="font-medium">Website:</span> www.Info.com
+  </p>
+  <p className="text-gray-700">
+    <span className="font-medium">Office:</span> Plot No: 46G, Bel Nagar, Manapakkam, Chennai - 600125.
+  </p>
+</div>
+
+
+
                 <div className="flex justify-center items-center w-full rounded-lg h-24  mt-20">
                   <div className="flex justify-around gap-2 items-center">
                     <Link
                       href={
-                        "/"
+                        "https://www.instagram.com/aura.veritas/"
                       }
                     >
                       <div className="group transition-all duration-700 flex justify-center items-center rounded-md bg-[#4aaca8] w-12 h-12 hover:bg-white hover:text-[#36a39e]">
@@ -187,7 +215,7 @@ const Footer = () => {
                         />
                       </div>
                     </Link>
-                    <Link href={"/"}> <div className="group transition-all duration-700 flex justify-center items-center rounded-md bg-[#4aaca8] w-12 h-12 hover:bg-white hover:text-[#36a39e]">
+                    <Link href={"https://www.facebook.com/share/rd2Wt1zS74FGbqeE/?mibextid=qi2Omg"}> <div className="group transition-all duration-700 flex justify-center items-center rounded-md bg-[#4aaca8] w-12 h-12 hover:bg-white hover:text-[#36a39e]">
                       <SlSocialFacebook
                         size={24}
                         className="text-white transition-all duration-700 group-hover:text-[#36a39e]"
@@ -222,7 +250,7 @@ const Footer = () => {
          {` Aura Veritas Engineering & Consultancy Private Limited
           `}</h3>
           <p className="text-xs md:text-base text-white mt-2">
-          {`Plot No: 46G, Bel Nagar, Manapakkam Chennai - 600125`}
+          {`Plot No: 46G, Bel Nagar, Manapakkam, Chennai - 600125.`}
 
           </p>
 

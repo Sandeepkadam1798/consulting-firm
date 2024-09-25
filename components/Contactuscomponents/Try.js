@@ -1,80 +1,68 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 
-import { Card, CardBody, Input } from "@nextui-org/react";
-import {  Button } from "@nextui-org/react";
+import { Select, SelectItem, Textarea, Button } from "@nextui-org/react";
+import { motion } from "framer-motion";
+import toast, { Toaster } from "react-hot-toast";
 
-import { FcAddressBook } from "react-icons/fc";
+import { isSignInWithEmailLink, signInWithEmailLink } from 'firebase/auth';
+import { auth } from '../../firebase/firebase';
+import { useEffect, useState } from 'react';
+import VerificationModal from "../Varification/Varification";
+
 
 
 const Contactform = () => {
-  const [formData, setFormData] = useState({
-   
-    email: "",
-  
-  });
 
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
+  useEffect(() => {
+    // Check if the user is returning after clicking the email OTP link
+    if (isSignInWithEmailLink(auth, window.location.href)) {
+      setIsModalOpen(true);
+    }
+  }, []);
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
 
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (
-     
-      !formData.email 
-   
-    ) {
-      toast.error("Please fill out all required fields");
-      return;
-    }
+
+    toast.promise(sendForm(), {
+      loading: "Sending message...",
+      success: "Message sent successfully!",
+      error: "Failed to send message. Please try again.",
+    });
   };
 
   return (
     <>
       <div className="flex flex-col gap-4 justify-start items-start px-3 py-1 w-full ring-1 ring-gray-200 p-4 rounded-md ">
         <div className="flex flex-col w-full justify-start items-start p-2 py-4 gap-4">
-          <form className="w-full" onSubmit={handleSubmit}>
-            <div className="w-full grid lg:grid-cols-2 grid-cols-1 gap-6 place-content-center justify-between items-start">
-             
-              <Input
-                type="text"
-                name="email"
-                variant="bordered"
-                label="Email"
-                labelPlacement="outside"
-                radius="sm"
-                className="w-full rounded-none"
-                size="lg"
-                placeholder="Email Address"
-                value={formData.email}
-                onChange={handleChange}
-                startContent={
-                  <FcAddressBook className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
-                }
-              />
+          <form className="w-full" >
+            <div className="w-full grid lg:grid-cols-2 grid-cols-1 gap-6 place-content-center justify-between items-start">   
             </div>
 
+               {/* varification */}
             <div className="w-full flex justify-center items-center mt-4">
               <Button
-                type="submit"
+               onClick={() => setIsModalOpen(true)}
+                type="button"
                 className="w-60 rounded-full bg-[#0b8d7c] text-white text-center"
               >
-                Submit
+                Send Verification Email
               </Button>
+              <VerificationModal isOpen={isModalOpen} onClose={closeModal} />
+              
             </div>
+
           </form>
         </div>
       </div>
-
+      <Toaster />
     </>
   );
 };
