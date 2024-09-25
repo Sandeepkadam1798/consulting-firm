@@ -326,7 +326,7 @@ export default function Nav() {
   const Extendmenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-  const linkitem = ["HOME", "blog", "Services","aboutus", "CONTACT US"];
+  const linkitem = ["HOME", "blog", "Services","about us", "CONTACT US"];
 
   const handleredirect = (link) => {
     switch (link) {
@@ -557,7 +557,7 @@ export default function Nav() {
                       </div>
                     </Link>
                     </Link>
-                    <Link href="/">
+                    <Link href="https://www.facebook.com/share/rd2Wt1zS74FGbqeE/?mibextid=qi2Omg">
 
                     <div className="group transition-all duration-700 flex justify-center items-center rounded-md bg-[#4aaca8] w-12 h-12 hover:bg-white hover:text-[#36a39e]">
                       <SlSocialFacebook

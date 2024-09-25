@@ -171,13 +171,14 @@ const Footer = () => {
                   Website :<span> www.Info.com</span>
                 </p>
                 <p className="text-gray-700 ">
-                  Office :<span> Plot No: 46G, Bel Nagar, Manapakkam Chennai - 600125</span>
+                  Office :<span> Plot No: 46G, Bel Nagar, Manapakkam, Chennai - 600125.
+                  </span>
                 </p>
                 <div className="flex justify-center items-center w-full rounded-lg h-24  mt-20">
                   <div className="flex justify-around gap-2 items-center">
                     <Link
                       href={
-                        "/"
+                        "https://www.instagram.com/aura.veritas/"
                       }
                     >
                       <div className="group transition-all duration-700 flex justify-center items-center rounded-md bg-[#4aaca8] w-12 h-12 hover:bg-white hover:text-[#36a39e]">
@@ -187,7 +188,7 @@ const Footer = () => {
                         />
                       </div>
                     </Link>
-                    <Link href={"/"}> <div className="group transition-all duration-700 flex justify-center items-center rounded-md bg-[#4aaca8] w-12 h-12 hover:bg-white hover:text-[#36a39e]">
+                    <Link href={"https://www.facebook.com/share/rd2Wt1zS74FGbqeE/?mibextid=qi2Omg"}> <div className="group transition-all duration-700 flex justify-center items-center rounded-md bg-[#4aaca8] w-12 h-12 hover:bg-white hover:text-[#36a39e]">
                       <SlSocialFacebook
                         size={24}
                         className="text-white transition-all duration-700 group-hover:text-[#36a39e]"
@@ -222,7 +223,7 @@ const Footer = () => {
          {` Aura Veritas Engineering & Consultancy Private Limited
           `}</h3>
           <p className="text-xs md:text-base text-white mt-2">
-          {`Plot No: 46G, Bel Nagar, Manapakkam Chennai - 600125`}
+          {`Plot No: 46G, Bel Nagar, Manapakkam, Chennai - 600125.`}
 
           </p>
 
