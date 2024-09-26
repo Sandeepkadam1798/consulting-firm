@@ -353,112 +353,112 @@
 
 
 
-import { useState } from 'react';
+// import { useState } from 'react';
 
-const VerificationModal = ({ isOpen, onClose }) => {
-  const [email, setEmail] = useState('');
-  const [otp, setOtp] = useState('');
-  const [serverOtp, setServerOtp] = useState(''); // Store OTP from the server
-  const [step, setStep] = useState(1);
-  const [errorMessage, setErrorMessage] = useState('');
-  const [verified, setVerified] = useState(false);
+// const VerificationModal = ({ isOpen, onClose }) => {
+//   const [email, setEmail] = useState('');
+//   const [otp, setOtp] = useState('');
+//   const [serverOtp, setServerOtp] = useState(''); // Store OTP from the server
+//   const [step, setStep] = useState(1);
+//   const [errorMessage, setErrorMessage] = useState('');
+//   const [verified, setVerified] = useState(false);
 
-  const handleSendOTP = async () => {
-    try {
-      const response = await fetch('/api/send-otp', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email }),
-      });
+//   const handleSendOTP = async () => {
+//     try {
+//       const response = await fetch('/api/send-otp', {
+//         method: 'POST',
+//         headers: {
+//           'Content-Type': 'application/json',
+//         },
+//         body: JSON.stringify({ email }),
+//       });
 
-      const data = await response.json();
+//       const data = await response.json();
 
-      if (!response.ok) {
-        throw new Error(data.message || 'Failed to send OTP.');
-      }
+//       if (!response.ok) {
+//         throw new Error(data.message || 'Failed to send OTP.');
+//       }
 
-      setServerOtp(data.otp); // Save the OTP received from the server
-      setStep(2); // Move to OTP step
-    } catch (error) {
-      setErrorMessage(error.message || 'Error sending OTP. Please try again.');
-    }
-  };
+//       setServerOtp(data.otp); // Save the OTP received from the server
+//       setStep(2); // Move to OTP step
+//     } catch (error) {
+//       setErrorMessage(error.message || 'Error sending OTP. Please try again.');
+//     }
+//   };
 
-  const handleVerifyOTP = () => {
-    if (otp === serverOtp) {
-      setVerified(true);
-    } else {
-      setErrorMessage('Invalid OTP. Please try again.');
-    }
-  };
+//   const handleVerifyOTP = () => {
+//     if (otp === serverOtp) {
+//       setVerified(true);
+//     } else {
+//       setErrorMessage('Invalid OTP. Please try again.');
+//     }
+//   };
 
-  const handleVerify = () => {
-    if (step === 1) {
-      handleSendOTP();
-    } else if (step === 2) {
-      handleVerifyOTP();
-    }
-  };
+//   const handleVerify = () => {
+//     if (step === 1) {
+//       handleSendOTP();
+//     } else if (step === 2) {
+//       handleVerifyOTP();
+//     }
+//   };
 
-  if (!isOpen) return null;
+//   if (!isOpen) return null;
 
-  return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-      <div className="bg-white rounded-lg p-6 w-full max-w-md mx-auto">
-        <div className="text-right">
-          <button
-            onClick={onClose}
-            className="text-gray-500 hover:text-gray-700 transition duration-150"
-          >
-            &times;
-          </button>
-        </div>
-        <div className="text-center mb-6">
-          <h2 className="text-2xl font-semibold">
-            {step === 1 ? 'Verify Your Email' : 'Enter OTP'}
-          </h2>
-        </div>
+//   return (
+//     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+//       <div className="bg-white rounded-lg p-6 w-full max-w-md mx-auto">
+//         <div className="text-right">
+//           <button
+//             onClick={onClose}
+//             className="text-gray-500 hover:text-gray-700 transition duration-150"
+//           >
+//             &times;
+//           </button>
+//         </div>
+//         <div className="text-center mb-6">
+//           <h2 className="text-2xl font-semibold">
+//             {step === 1 ? 'Verify Your Email' : 'Enter OTP'}
+//           </h2>
+//         </div>
 
-        {errorMessage && (
-          <div className="text-red-500 text-sm mb-4">{errorMessage}</div>
-        )}
+//         {errorMessage && (
+//           <div className="text-red-500 text-sm mb-4">{errorMessage}</div>
+//         )}
 
-        {step === 1 ? (
-          <div>
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="Enter your email"
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-            />
-          </div>
-        ) : (
-          <div>
-            <input
-              type="text"
-              value={otp}
-              onChange={(e) => setOtp(e.target.value)}
-              placeholder="Enter 4-digit OTP"
-              maxLength={4}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-            />
-          </div>
-        )}
+//         {step === 1 ? (
+//           <div>
+//             <input
+//               type="email"
+//               value={email}
+//               onChange={(e) => setEmail(e.target.value)}
+//               placeholder="Enter your email"
+//               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+//             />
+//           </div>
+//         ) : (
+//           <div>
+//             <input
+//               type="text"
+//               value={otp}
+//               onChange={(e) => setOtp(e.target.value)}
+//               placeholder="Enter 4-digit OTP"
+//               maxLength={4}
+//               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+//             />
+//           </div>
+//         )}
 
-        <button
-          onClick={handleVerify}
-          className={`w-full mt-6 py-2 rounded-lg transition duration-150 ${
-            verified ? 'bg-green-500' : 'bg-blue-500 text-white'
-          } hover:bg-blue-600`}
-        >
-          {verified ? 'Verified' : step === 1 ? 'Send OTP' : 'Verify'}
-        </button>
-      </div>
-    </div>
-  );
-};
+//         <button
+//           onClick={handleVerify}
+//           className={`w-full mt-6 py-2 rounded-lg transition duration-150 ${
+//             verified ? 'bg-green-500' : 'bg-blue-500 text-white'
+//           } hover:bg-blue-600`}
+//         >
+//           {verified ? 'Verified' : step === 1 ? 'Send OTP' : 'Verify'}
+//         </button>
+//       </div>
+//     </div>
+//   );
+// };
 
-export default VerificationModal;
+// export default VerificationModal;

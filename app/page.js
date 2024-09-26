@@ -1,4 +1,7 @@
 
+
+
+import AboutUs from "@/components/AboutUs/AboutUS";
 import ContactFormMain from "@/components/Contactuscomponents/ContactFormMain";
 import Hero from "@/components/Herocomponenets/Hero";
 import Nav from "@/components/Navbarcomponents/Nav";
@@ -7,10 +10,11 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="overflow-x-hidden">
+    <div className="">
    {/* <Hero/> */}
    <Hero/>
-   <OurServices/>
+   {/* <OurServices/> */}
+   <AboutUs/>
    <ContactFormMain />
     </div>
   );
