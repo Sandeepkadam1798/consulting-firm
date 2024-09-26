@@ -91,14 +91,14 @@
 
 
 
-import nodemailer from 'nodemailer';
+// import nodemailer from 'nodemailer';
 
-export default async function handler(req, res) {
-  if (req.method === 'POST') {
-    const { email } = req.body;
+// export default async function handler(req, res) {
+//   if (req.method === 'POST') {
+//     const { email } = req.body;
 
     // Generate a 4-digit OTP
-    const otp = Math.floor(1000 + Math.random() * 9000).toString();
+    // const otp = Math.floor(1000 + Math.random() * 9000).toString();
 
     // Set up your SMTP service for sending emails
     // let transporter = nodemailer.createTransport({
@@ -111,30 +111,30 @@ export default async function handler(req, res) {
     //   },
     // });
 
-    const transporter = nodemailer.createTransport({
-      host: 'smtp.ethereal.email',
-      port: 587,
+  //   const transporter = nodemailer.createTransport({
+  //     host: 'smtp.ethereal.email',
+  //     port: 587,
 
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-      }
-  });
+  //     auth: {
+  //       user: process.env.EMAIL_USER,
+  //       pass: process.env.EMAIL_PASS,
+  //     }
+  // });
 
     // Send the email
-    try {
-      await transporter.sendMail({
-        from: '"pankaj j" <pankajdehariya.seo@gmail.com>',
-        to: email,
-        subject: 'Your OTP Code',
-        text: `Your OTP code is ${otp}`,
-      });
+//     try {
+//       await transporter.sendMail({
+//         from: '"pankaj j" <pankajdehariya.seo@gmail.com>',
+//         to: email,
+//         subject: 'Your OTP Code',
+//         text: `Your OTP code is ${otp}`,
+//       });
 
-      res.status(200).json({ message: 'OTP sent successfully', otp }); // Send OTP back to frontend
-    } catch (error) {
-      res.status(500).json({ message: 'Error sending OTP', error });
-    }
-  } else {
-    res.status(405).json({ message: 'Method not allowed' });
-  }
-}
+//       res.status(200).json({ message: 'OTP sent successfully', otp }); // Send OTP back to frontend
+//     } catch (error) {
+//       res.status(500).json({ message: 'Error sending OTP', error });
+//     }
+//   } else {
+//     res.status(405).json({ message: 'Method not allowed' });
+//   }
+// }
