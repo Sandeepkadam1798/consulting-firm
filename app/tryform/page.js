@@ -1,13 +1,13 @@
-import Contactform from '@/components/Contactuscomponents/Try'
-import React from 'react'
+// import Contactform from '@/components/Contactuscomponents/Try'
+// import React from 'react'
 
 
-function page() {
-  return (
-    <div>
-        <Contactform/>
-    </div>
-  )
-}
+// function page() {
+//   return (
+//     <div>
+//         <Contactform/>
+//     </div>
+//   )
+// }
 
-export default page
+// export default page
