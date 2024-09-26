@@ -1,4 +1,7 @@
 
+
+
+import AboutUs from "@/components/AboutUs/AboutUS";
 import ContactFormMain from "@/components/Contactuscomponents/ContactFormMain";
 import Hero from "@/components/Herocomponenets/Hero";
 import Nav from "@/components/Navbarcomponents/Nav";
@@ -10,7 +13,8 @@ export default function Home() {
     <div className="">
    {/* <Hero/> */}
    <Hero/>
-   <OurServices/>
+   {/* <OurServices/> */}
+   <AboutUs/>
    <ContactFormMain />
     </div>
   );

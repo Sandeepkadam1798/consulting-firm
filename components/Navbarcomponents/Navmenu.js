@@ -86,7 +86,7 @@ export function NavigationMenuDemo() {
                       </div>
                     </Link>
                     </Link>
-                    <Link href={"/"}>
+                    <Link href={"https://www.facebook.com/share/rd2Wt1zS74FGbqeE/?mibextid=qi2Omg"}>
                     <div className="group transition-all duration-700 flex justify-center items-center rounded-md bg-[#4aaca8] w-12 h-12 hover:bg-white hover:text-[#36a39e]">
                       <SlSocialFacebook
                         size={24}

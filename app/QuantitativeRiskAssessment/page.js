@@ -17,7 +17,7 @@ export default function QRAssessment() {
 
   return (
     <>
-    <div className="min-h-screen bg-gray-100 py-8 px-4">
+    <div className="min-h-screen overflow-x-hidden bg-gray-100 py-8 px-4">
       <Head>
         <title>Quantitative Risk Assessment (QRA) Study</title>
         <meta

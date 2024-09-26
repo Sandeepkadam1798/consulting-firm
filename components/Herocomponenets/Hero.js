@@ -89,9 +89,13 @@ import React, { useState } from "react";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import Image from "next/image";
 import windmill from "../../public/Images/windmill.png";
+import GradualSpacing from "@/components/magicui/gradual-spacing";
 import 'primeicons/primeicons.css';
+import ShineBorder from "@/components/magicui/shine-border";
+import { useTheme } from "next-themes";
 
 const Hero = () => {
+  const theme = useTheme();
   const [videoError, setVideoError] = useState(false); // State to track video load error
 
   const [text] = useTypewriter({
@@ -105,13 +109,14 @@ const Hero = () => {
     loop: false,
   });
 
+  // Services array with corresponding links
   const services = [
-    "Safety & Risk Assessment",
-    "ESG Decarbonisation",
-    "Climate Change Services",
-    "Service 4",
-    "Service 5",
-    
+    { name: "Safety & Risk Assessment", link: "/SafetyRiskAssessment" },
+    { name: "ESG Decarbonisation", link: "/services/esg-decarbonisation" },
+    { name: "Climate Change Services", link: "/services/climate-change" },
+    { name: "Service 4", link: "/services/service-4" },
+    { name: "Service 5", link: "/services/service-5" },
+    { name: "Service 6", link: "/services/service-6" },
   ];
 
   return (
@@ -139,29 +144,42 @@ const Hero = () => {
       {/* Overlay content */}
       <div className="absolute inset-0 bg-black/50 flex flex-col justify-center items-center px-4 text-center gap-4">
         {/* Company Name */}
-        <h1
+        {/* <h1
           data-aos="fade-down"
           className="text-white font-bold text-2xl sm:text-4xl md:text-5xl lg:text-3xl capitalize leading-tight"
         >
           Aura Veritas Engineering & Consultancy Pvt. Ltd.
-        </h1>
-        {/* <p className="text-white">Empowering organizations to navigate the complexities of sustainability, risk assessment, and beyond.</p> */}
+        </h1> */}
+
+        <GradualSpacing
+      className="text-white font-bold text-xl sm:text-4xl whitespace-wrap md:text-5xl lg:text-4xl capitalize leading-tight"
+      text=" Aura Veritas Engineering & Consultancy Pvt. Ltd."
+    />
 
         {/* Typewriter effect for tagline */}
         <h2 className="text-[#fee60b] text-lg sm:text-xl md:text-2xl lg:text-xl font-medium">
           {text} <Cursor cursorColor="white" />
         </h2>
 
-        {/* Services */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-8 max-w-5xl">
+        {/* Services with links */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 items-center gap-4 mt-8 max-w-5xl">
           {services.map((service, index) => (
-            <div
+             
+            <Link
               key={index}
-              className="bg-white/10 backdrop-blur-md rounded-lg p-4 border border-white/20 text-white text-lg sm:text-xl font-semibold hover:bg-white/20 hover:scale-105 transition-all duration-300 ease-in-out"
+              href={service.link}
+              className="bg-white/10 backdrop-blur-md rounded-lg p-4 border border-white/20 text-white text-small sm:text-xl font-semibold hover:bg-white/20 hover:scale-105 transition-all duration-300 ease-in-out"
             >
-              {service}
-              <span className="pi pi-arrow-right ml-2 text-sm"></span></div>
+              <ShineBorder
+             className=" capitalize flex whitespace-nowrap justify-between"
+             color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
+           > 
+             {service.name}
+             <span className="pi pi-arrow-right ml-2 text-sm"></span>
+           </ShineBorder>
             
+            </Link>
+           
           ))}
         </div>
 
@@ -188,3 +206,4 @@ const Hero = () => {
 };
 
 export default Hero;
+
