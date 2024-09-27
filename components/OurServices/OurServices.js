@@ -1,13 +1,13 @@
 "use client";
 import React from "react";
-import { ard } from "../ui/card";
+
 import Link from "next/link";
 import { motion } from "framer-motion";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-import Image from "next/image";
+
 import ShineBorder from "@/components/magicui/shine-border";
 
 // Array of services with title, description, icon, and link
@@ -43,27 +43,7 @@ const OurServices = () => {
             </p>
           </div>
         </motion.div>
-{/*      
-        <div className="flex flex-col justify-start items-start gap-4 mt-8 ">
-          {services.map((service, index) => (
-             
-            <Link
-              key={index}
-              href={service.link}
-              className="bg-white/10 backdrop-blur-md rounded-lg p-4 border border-white/20 text-white text-small sm:text-xl font-semibold hover:bg-white/20 hover:scale-105 transition-all duration-300 ease-in-out "
-            >
-              <ShineBorder
-             className=" capitalize flex whitespace-nowrap justify-between"
-             color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
-           > 
-             {service.name}
-             <span className="pi pi-arrow-right ml-2 text-sm"></span>
-           </ShineBorder>
-            
-            </Link>
-           
-          ))}
-        </div>  */}
+
 
 <div data-aos="fade-up"  data-aos-duration="3000" className="flex flex-col mt-8 justify-center items-center space-y-2 mx-8">
           {services.map((service, index) => (
