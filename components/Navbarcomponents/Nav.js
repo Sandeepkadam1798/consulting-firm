@@ -326,7 +326,7 @@ export default function Nav() {
   const Extendmenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-  const linkitem = ["HOME", "blog", "Services","about us", "CONTACT US"];
+  const linkitem = ["HOME", "blog", "Services","aboutus", "CONTACTUS"];
 
   const handleredirect = (link) => {
     switch (link) {
@@ -354,7 +354,7 @@ export default function Nav() {
       case "Services":
         router.push("/Services");
         break;
-      case "CONTACT US":
+      case "CONTACTUS":
         router.push("/Contactus");
         break;
 
@@ -378,10 +378,10 @@ export default function Nav() {
       //   setactiveitem("packages");
         break;
       case "/Contactus":
-        setactiveitem("CONTACT US");
+        setactiveitem("CONTACTUS");
         break;
       case "/aboutus":
-        setactiveitem("About us");
+        setactiveitem("Aboutus");
         break;
 
       // case pathname.startsWith("/Jobdetails"):

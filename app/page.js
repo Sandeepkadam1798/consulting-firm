@@ -13,8 +13,8 @@ export default function Home() {
     <div className="">
    {/* <Hero/> */}
    <Hero/>
-   {/* <OurServices/> */}
-   <AboutUs/>
+   <OurServices/>
+   {/* <AboutUs/> */}
    <ContactFormMain />
     </div>
   );
