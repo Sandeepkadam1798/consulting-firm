@@ -8,47 +8,12 @@ import { motion } from "framer-motion";
 const services = [
   {
     id: 1,
-    title: 'Hazard Identification (HAZID) Study',
+    title: 'Carbon Disclosure Project',
     // description: 'Comprehensive hazard identification to proactively manage risks.',
     icon: <HazeIcon className="w-12 h-12 text-primary" />,
     link: '/HazardIdentification', // Link to specific page
   },
-  {
-    id: 2,
-    title: 'Safety Integrity Level Assessment',
-    description: 'Determine the required Safety Integrity Level for your systems.',
-    icon: <HazeIcon className="w-12 h-12 text-primary" />,
-    link: '/SILAssessment',
-  },
-  {
-    id: 3,
-    title: 'Carbon Disclosure Project',
-    description: 'Helping organizations achieve their environmental, social, and governance goals.',
-    icon: <HazeIcon className="w-12 h-12 text-primary" />,
-    link: '/',
-  },
-  {
-    id: 4,
-    title: 'Quantitative Risk Assessment',
-    description: 'Comprehensive analysis of risks and their potential impacts.',
-    icon: <HazeIcon className="w-12 h-12 text-primary" />,
-    link: '/QuantitativeRiskAssessment',
-  },
-  {
-    id: 5,
-    title: 'Fire and Explosion Risk Assessment',
-    description: 'Industry experience shows that fires or explosions in Oil & Gas',
-    icon: <HazeIcon className="w-12 h-12 text-primary" />,
-    link: '/FERA-Assessment ',
-  },
-  
-  {
-    id: 6,
-    title: 'Escape, Evacuation & Rescue Assessment',
-    description: 'Industry experience shows that fires or explosions in Oil & Gas',
-    icon: <HazeIcon className="w-12 h-12 text-primary" />,
-    link: '/EERA-Assessment ',
-  },
+ 
 ];
 
 const page = () => {
@@ -58,7 +23,7 @@ const page = () => {
         <div className="space-y-6">
           <div className="animate-fade-up flex flex-col justify-center items-center">
             <p className="text-2xl lg:text-3xl md:text-3xl font-semibold leading-7 -tracking-tight">
-            Safety And RiskAssessment
+           Climate Change Services
               <span className='lucide absolute -mt-3 lucide-sparkles h-4 w-4 text-[#36a39e] shrink-0'><i className="pi pi-sparkles" style={{ fontSize: '1rem' }}></i></span>
             </p>
 
