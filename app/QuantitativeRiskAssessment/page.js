@@ -17,7 +17,7 @@ export default function QRAssessment() {
 
   return (
     <>
-    <div className="min-h-screen bg-gray-100 py-8 px-4">
+    <div className="min-h-screen overflow-x-hidden bg-gray-100 py-8 px-4">
       <Head>
         <title>Quantitative Risk Assessment (QRA) Study</title>
         <meta
@@ -30,8 +30,18 @@ export default function QRAssessment() {
         <h1 className="text-4xl font-bold text-center mb-8 text-[#0b8d7c] animate-scale-up">
           Quantitative Risk Assessment (QRA) Study
         </h1>
+        <Image
+            src="/service/29.png"
+            width="550"
+            height="310"
+            alt="SIL Assessment"
+            
+           data-aos="zoom-in-up"
+           data-aos-duration="2000"
+            className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center "
+          />
 
-        <section data-aos="fade-up" data-aos-duration="1000"  className="mb-8">
+        <section data-aos="fade-up" data-aos-duration="1000"  className="mb-8 mt-6">
           <h2 className="text-2xl font-semibold mb-4">What is QRA ?</h2>
           <p className="text-gray-700 mb-4">
             {`Quantitative Risk Assessment is a formal and systematic approach of estimating the likelihood and consequences of hazardous events, and expressing the results quantitatively as risk to people, the environment, asset or reputation.`}

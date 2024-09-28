@@ -4,6 +4,7 @@ import Head from "next/head";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from 'react';
+import Image from "next/image";
 
 export default function ESGServices() {
   useEffect(() => {
@@ -12,7 +13,7 @@ export default function ESGServices() {
 
   return (
     <>
-      <div className="min-h-screen bg-gray-100 py-8 px-4">
+      <div className="overflow-x-hidden min-h-screen bg-gray-100 py-8 px-4">
         <Head>
           <title>ESG & Climate Change Services</title>
           <meta
@@ -26,7 +27,19 @@ export default function ESGServices() {
           ESG & Climate Change Services
           </h1>
 
-          <section data-aos="fade-up" data-aos-duration="1000"  className="mb-8">
+          <Image
+            src="/service/27.png"
+            width="550"
+            height="310"
+            alt="SIL Assessment"
+            
+           data-aos="zoom-in-up"
+           data-aos-duration="2000"
+            className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center "
+          />
+
+
+          <section data-aos="fade-up" data-aos-duration="1000"  className="mb-8 mt-6">
             <h2 className="text-2xl font-semibold mb-4">
             ESG Services:
             </h2>

@@ -16,7 +16,7 @@ export default function FERAAssessment() {
 
   return (
     <>
-    <div className="min-h-screen bg-gray-100 py-8 px-4">
+    <div className="overflow-x-hidden min-h-screen bg-gray-100 py-8 px-4">
       <Head>
         <title>Fire and Explosion Risk Assessment (FERA) Study</title>
         <meta
@@ -30,7 +30,19 @@ export default function FERAAssessment() {
         Fire and Explosion Risk Assessment (FERA) Study
         </h1>
 
-        <section data-aos="fade-up" data-aos-duration="1000"   className="mb-8">
+        <Image
+            src="/service/28.png"
+            width="550"
+            height="310"
+            alt="SIL Assessment"
+            
+           data-aos="zoom-in-up"
+           data-aos-duration="2000"
+            className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center "
+          />
+
+
+        <section data-aos="fade-up" data-aos-duration="1000"   className="mb-8 mt-6">
           <h2 className="text-2xl font-semibold mb-4">What is Fire and Explosion Risk Assessment (FERA) ?</h2>
           <p className="text-gray-700 mb-4">
             {`Industry experience shows that fires or explosions in Oil & Gas and petrochemical facilities can result in extensive losses of property and lives. Realistic quantification of credible physical effects from accident loss of containment scenarios can be used to manage the associated risks by providing engineering solutions and procedural control.`}

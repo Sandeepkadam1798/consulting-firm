@@ -294,6 +294,7 @@ import Image from "next/image";
 import Logo from "../../public/Images/Logo.png";
 
 import { NavigationMenuDemo } from "./Navmenu";
+import { FaUserTie } from "react-icons/fa";
 import { FaPhone } from "react-icons/fa6";
 import {
   Sheet,
@@ -325,7 +326,7 @@ export default function Nav() {
   const Extendmenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-  const linkitem = ["HOME", "blog", "Services","aboutus", "CONTACT US"];
+  const linkitem = ["HOME", "blog", "Services","aboutus", "CONTACTUS"];
 
   const handleredirect = (link) => {
     switch (link) {
@@ -353,7 +354,7 @@ export default function Nav() {
       case "Services":
         router.push("/Services");
         break;
-      case "CONTACT US":
+      case "CONTACTUS":
         router.push("/Contactus");
         break;
 
@@ -377,10 +378,10 @@ export default function Nav() {
       //   setactiveitem("packages");
         break;
       case "/Contactus":
-        setactiveitem("CONTACT US");
+        setactiveitem("CONTACTUS");
         break;
       case "/aboutus":
-        setactiveitem("About us");
+        setactiveitem("Aboutus");
         break;
 
       // case pathname.startsWith("/Jobdetails"):
@@ -423,11 +424,12 @@ export default function Nav() {
 
           <Button
             as={Link}
-            className=" rounded-full bg-[#36a39e] text-white -mr-4 group lg:hidden md:hidden   "
-            href="/Contactus"
+            className=" rounded-full  font-medium bg-[#36a39e] text-white -mr-4 group lg:hidden md:hidden   "
+            href="/Services"
             variant="solid"
           >
-            <FaPhone className="text-white " /> Contact Us
+            <FaUserTie className="text-white " />
+             Services
           </Button>
 
 
@@ -436,10 +438,22 @@ export default function Nav() {
         <NavbarItem>
           <Sheet>
             <SheetTrigger>
+
+{/* 
+                  <div onClick={()=>setIsMenuOpen(!isMenuOpen)} className="hidden lg:flex md:flex uppercase items-center gap-2 group hover:text-[#0b8d7c] hover:bg-white py-2 px-3 h-10  rounded-full bg-[#36a39e] text-xs text-white ">
+        <NavbarMenuToggle
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          className="hidden lg:flex md:flex text-white text-xs group-hover:text-[#0b8d7c]"
+        ></NavbarMenuToggle>
+          Menu
+           </div>  */}
+           
               <IoMdMenu
                 size={24}
-                className="md:hidden lg:hidden flex text-white"
+                className=" flex text-white"
+                
               />
+              {/* md:hidden lg:hidden */}
             </SheetTrigger>
             <SheetContent side="right" className=" bg-[#0b8d7c]">
               <SheetHeader>
@@ -458,7 +472,7 @@ export default function Nav() {
                   </div>
                 </SheetTitle>
                 <SheetDescription>
-                  <div className="flex flex-col justify-between sm:gap-24 gap-16  items-start mt-8 overflow-scroll">
+                  <div className="flex flex-col justify-between sm:gap-24 gap-16  items-start mt-8 overflow-hidden">
                     <div className="flex justify-center items-start gap-4 flex-col w-full">
                       {linkitem.map((value, index) => (
                         <div
@@ -485,7 +499,7 @@ export default function Nav() {
                       <SheetClose>
                         <button
                           onClick={() => router.push("/Contactus")}
-                          className=" h-8 bg-[#36a39e] text-white rounded-full  w-52 font-bold"
+                          className=" h-8 bg-[#36a39e] text-white rounded-full  w-52 font-bold md:hidden lg:hidden"
                         >
                           +91-9150547979 
                         </button>
@@ -497,13 +511,13 @@ export default function Nav() {
             </SheetContent>
           </Sheet>
         </NavbarItem>
-           <div onClick={()=>setIsMenuOpen(!isMenuOpen)} className="hidden lg:flex md:flex uppercase items-center gap-2 group hover:text-[#0b8d7c] hover:bg-white py-2 px-3 h-10  rounded-full bg-[#36a39e] text-xs text-white ">
+           {/* <div onClick={()=>setIsMenuOpen(!isMenuOpen)} className="hidden lg:flex md:flex uppercase items-center gap-2 group hover:text-[#0b8d7c] hover:bg-white py-2 px-3 h-10  rounded-full bg-[#36a39e] text-xs text-white ">
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           className="hidden lg:flex md:flex text-white text-xs group-hover:text-[#0b8d7c]"
         ></NavbarMenuToggle>
           Menu
-           </div>
+           </div> */}
       </NavbarContent>
 
       <NavbarMenu className="bg-[#0b8d7c] flex flex-col gap-4 pt-4">
@@ -530,10 +544,10 @@ export default function Nav() {
                   <div className="flex justify-around gap-2 items-center">
                     <Link
                       href={
-                        "https://www.instagram.com/vakratund_tours/?utm_source=ig_embed&ig_rid=22824f35-53c7-4967-8fe8-83f163b00532"
+                        "/"
                       }
                     >
-                    <Link href={"/Blogs"}>
+                    <Link href={"/blogs"}>
 
                       <div className="group transition-all duration-700 flex justify-center items-center rounded-md bg-[#4aaca8] w-12 h-12 hover:bg-white hover:text-[#36a39e]">
                         <FaInstagram
@@ -543,7 +557,7 @@ export default function Nav() {
                       </div>
                     </Link>
                     </Link>
-                    <Link href="https://www.facebook.com/people/Vakratund-Tours-Adventures/61564626934045/?mibextid=ZbWKwL">
+                    <Link href="https://www.facebook.com/share/rd2Wt1zS74FGbqeE/?mibextid=qi2Omg">
 
                     <div className="group transition-all duration-700 flex justify-center items-center rounded-md bg-[#4aaca8] w-12 h-12 hover:bg-white hover:text-[#36a39e]">
                       <SlSocialFacebook
@@ -552,7 +566,7 @@ export default function Nav() {
                       />
                     </div>
                     </Link>
-                    <Link href={"https://wa.link/f5qsnc"}>
+                    <Link href={"/"}>
                       <div className="group transition-all duration-700 flex justify-center items-center rounded-md bg-[#4aaca8] w-12 h-12 hover:bg-white hover:text-[#36a39e]">
                         <FaWhatsapp
                           size={24}

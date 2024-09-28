@@ -1,4 +1,7 @@
 
+
+
+import AboutUs from "@/components/AboutUs/AboutUS";
 import ContactFormMain from "@/components/Contactuscomponents/ContactFormMain";
 import Hero from "@/components/Herocomponenets/Hero";
 import Nav from "@/components/Navbarcomponents/Nav";
@@ -11,6 +14,7 @@ export default function Home() {
    {/* <Hero/> */}
    <Hero/>
    <OurServices/>
+   {/* <AboutUs/> */}
    <ContactFormMain />
     </div>
   );

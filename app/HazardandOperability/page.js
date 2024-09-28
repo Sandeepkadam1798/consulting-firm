@@ -20,15 +20,27 @@ export default function HazopStudy() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className=" min-h-screen bg-gray-100 py-8 px-4">
+      <div className="   overflow-x-hidden  min-h-screen bg-gray-100 py-8 px-4">
         <div className=" px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto bg-white p-8 shadow-lg">
           {/* Heading */}
           <h1 className="text-4xl font-bold text-center text-[#0b8d7c] mb-8 animate-scale-up">
             Hazard and Operability (HAZOP) Study
           </h1>
 
+          <Image
+          src="/service/31.png"
+          width="550"
+          height="310"
+          alt="HAZOP"
+          className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center "
+        
+           data-aos="zoom-in-up"
+            data-aos-duration="2000"
+           
+          />
+
           {/* Introduction Section */}
-          <section data-aos="fade-up" className="mb-12">
+          <section data-aos="fade-up" className="mb-12 mt-6">
             <h2 className="text-2xl font-semibold mb-4 text-gray-800">What is HAZOP?</h2>
             <p className="text-gray-600 leading-relaxed">
               A Hazard and Operability (HAZOP) study is a structured and systematic examination of a planned or existing 
@@ -110,7 +122,7 @@ export default function HazopStudy() {
             </p>
           </section>
 
-          <section  data-aos="fade-up" className="mb-12">
+          <section  data-aos="fade-up" className="  mb-12">
             <h2 className="text-2xl font-semibold mb-4 text-gray-800">HAZOP study will be executed in the following phases</h2>
 
             {/* Table Section */}
@@ -118,7 +130,7 @@ export default function HazopStudy() {
               <table className="min-w-full table-auto border-collapse border border-gray-300">
                 <thead className="bg-gray-200">
                   <tr>
-                    <th className="border border-gray-300 px-4 py-2 text-left text-gray-800 font-semibold">Phase</th>
+                    <th className="border  border-gray-300 px-4 py-2 text-left text-gray-800 font-semibold">Phase</th>
                     <th className="border border-gray-300 px-4 py-2 text-left text-gray-800 font-semibold">Steps</th>
                   </tr>
                 </thead>

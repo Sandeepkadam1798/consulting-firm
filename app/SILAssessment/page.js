@@ -16,7 +16,7 @@ export default function SILAssessment() {
 
   return (
     <>
-    <div className="min-h-screen bg-gray-100 py-8 px-4">
+    <div className="min-h-screen overflow-x-hidden bg-gray-100 py-8 px-4">
       <Head>
         <title>SIL Assessment Study</title>
         <meta
@@ -30,7 +30,18 @@ export default function SILAssessment() {
           Safety Integrity Level (SIL) Assessment Study
         </h1>
 
-        <section  data-aos="fade-up" data-aos-duration="1000" className="mb-8">
+        <Image
+            src="/service/32.png"
+            width="550"
+            height="310"
+            alt="HAZID"
+           data-aos="zoom-in-up"
+            data-aos-duration="2000"
+            className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center  "
+            // lg:order-last
+          />
+
+        <section  data-aos="fade-up" data-aos-duration="1000" className="mb-8 mt-6">
           <h2 className="text-2xl font-semibold mb-4">What is SIL?</h2>
           <p className="text-gray-700 mb-4">
             {`The SIL Determination is an integral part of the risk management process performed to derive the integrity level of the Safety Instrumented Function (SIF) to ensure that the risk is managed and demonstrated to ALARP for both project activities and operations.`}

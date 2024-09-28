@@ -15,7 +15,7 @@ const Getintouch = () => {
           <span className='lucide absolute -mt-3 lucide-sparkles h-4 w-4 text-[#36a39e] shrink-0'><i className="pi pi-sparkles" style={{ fontSize: '1rem' }}></i></span>
         </p>
       </div>
-      <div className="lg:text-lg md:text-sm text-sm leading-7 text-justify break-all tracking-tight  text-gray-500 lg:w-96 md:w-96">
+      <div className="lg:text-lg md:text-sm text-sm leading-7 text-justify text-gray-500 lg:w-100 md:w-96">
         <p>{`Need assistance or have any queries? We're here to help! Simply fill out the form below, and our dedicated team will get back to you shortly.`}</p>
       </div>
       <div className="flex flex-col justify-start items-start gap-4">
@@ -32,7 +32,7 @@ const Getintouch = () => {
         <div className="flex justify-around gap-2 items-center">
         <Link
                       href={
-                        "/"
+                        "https://www.instagram.com/aura.veritas/"
                       }
                     >
                       <div className="group transition-all duration-700 flex justify-center items-center rounded-md bg-[#4aaca8] w-12 h-12 hover:bg-white hover:text-[#36a39e]">
@@ -42,7 +42,7 @@ const Getintouch = () => {
                         />
                       </div>
                     </Link>
-                    <Link  href={"/"}>
+                    <Link  href={"https://www.facebook.com/share/rd2Wt1zS74FGbqeE/?mibextid=qi2Omg"}>
                     <div className="group transition-all duration-700 flex justify-center items-center rounded-md bg-[#4aaca8] w-12 h-12 hover:bg-white hover:text-[#36a39e]">
                       <SlSocialFacebook
                         size={24}

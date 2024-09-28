@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import { Card, CardBody, Input } from "@nextui-org/react";
 import { Select, SelectItem, Textarea, Button } from "@nextui-org/react";
@@ -12,9 +12,35 @@ import { FcAddressBook } from "react-icons/fc";
 import { FcHome } from "react-icons/fc";
 import { FcCallback } from "react-icons/fc";
 import { FcComments } from "react-icons/fc";
-import ContactMap from "./ContactMap";
+// import ContactMap from "./ContactMap";
+// import { isSignInWithEmailLink, signInWithEmailLink } from 'firebase/auth';
+// import { auth } from '../../firebase/firebase';
+import {  useState } from 'react';
+import VerificationModal from "../Varification/Varification";
+
+
+// import { toast } from 'react-toastify';
+// import { auth } from '../firebase'; // Adjust the path to your firebase config file
+// import { createUserWithEmailAndPassword, sendEmailVerification } from 'firebase/auth';
+// import 'react-toastify/dist/ReactToastify.css';
+// toast.configure();
 
 const Contactform = () => {
+
+
+  // const [isModalOpen, setIsModalOpen] = useState(false);
+
+  // useEffect(() => {
+  //   // Check if the user is returning after clicking the email OTP link
+  //   if (isSignInWithEmailLink(auth, window.location.href)) {
+  //     setIsModalOpen(true);
+  //   }
+  // }, []);
+
+  // const openModal = () => setIsModalOpen(true);
+  // const closeModal = () => setIsModalOpen(false);
+
+
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -23,6 +49,9 @@ const Contactform = () => {
     serviceRequired: [],
     message: "",
   });
+
+  const [isVerified, setIsVerified] = useState(false);
+  // const [formData, setFormData] = useState({ serviceRequired: [] });
 
   const services = [
     { key: "Hazard Identification (HAZID)", label: "Hazard Identification (HAZID)" },
@@ -52,6 +81,31 @@ const Contactform = () => {
   });
 };
 
+
+// const handleEmailVerification = async () => {
+//   try {
+//     const userCredential = await createUserWithEmailAndPassword(auth, email, 'temporaryPassword');
+//     const user = userCredential.user;
+
+//     // Send email verification
+//     await sendEmailVerification(user);
+//     toast.success('Verification email sent. Please check your inbox.');
+
+//     // Listen for email verification state
+//     auth.onAuthStateChanged((user) => {
+//       if (user && user.emailVerified) {
+//         setIsVerified(true);
+//         toast.success('Email successfully verified!');
+//       }
+//     });
+//   } catch (error) {
+//     toast.error('Error in email verification: ' + error.message);
+//   }
+// };
+
+
+
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -66,6 +120,14 @@ const Contactform = () => {
       toast.error("Please fill out all required fields");
       return;
     }
+
+    // if (!isVerified) {
+    //   toast.error('Please verify your email before submitting the form');
+    //   return;
+    // }
+
+    // If email is verified, proceed with the form submission logic
+    // toast.success('Form submitted successfully!');
 
     const sendForm = async () => {
       const response = await fetch("/api/Contactus", {
@@ -174,7 +236,11 @@ const Contactform = () => {
                 }
               />
             </div>
+
+           
+
             <div className="w-full mt-12">
+              
               <Select
                 name="serviceRequired"
                 label="inquiry"
@@ -197,43 +263,18 @@ const Contactform = () => {
 
               >
               {services.map((service) => (
-                  <SelectItem key={service.key} value={service.key} className="text-ellipsis whitespace-nowrap">
+                  <SelectItem 
+                  key={service.key} 
+                  value={service.key} 
+                  className="text-ellipsis whitespace-nowrap ">
+                     
+    
                     {service.label}
                   </SelectItem>
                 ))}
               </Select>
-            </div>
 
-{/* <div className="w-full mt-12">
-  <Select
-    name="serviceRequired"
-    label="Inquiry"
-    variant="bordered"
-    labelPlacement="outside"
-    placeholder="Select inquiry type"
-    size="lg"
-    radius="sm"
-    className="w-full max-w-sm mx-auto mt-4 overflow-hidden" // Fixed width to make it responsive
-    selectionMode="multiple"
-    selectedKeys={new Set(
-      formData.serviceRequired.map((serviceLabel) =>
-        services.find((service) => service.label === serviceLabel)?.key
-      )
-    )}
-    onSelectionChange={handleServiceChange}
-    menuClass="w-full max-w-sm overflow-auto" // Control menu width and overflow
-  >
-    {services.map((service) => (
-      <SelectItem
-        key={service.key}
-        value={service.key}
-        className="text-ellipsis whitespace-nowrap" // Truncate long service names
-      >
-        {service.label}
-      </SelectItem>
-    ))}
-  </Select>
-</div> */}
+            </div>
 
             <div className="w-full mt-4">
               <Textarea
@@ -250,13 +291,33 @@ const Contactform = () => {
                 }
               />
             </div>
+
+
+              
+               {/* varification */}
+            {/* <div className="w-full flex justify-center items-center mt-4">
+              <Button
+               onClick={() => setIsModalOpen(true)}
+                type="button"
+                className="w-60 rounded-full bg-[#0b8d7c] text-white text-center"
+              >
+                Send Verification Email
+              </Button>
+              <VerificationModal isOpen={isModalOpen} onClose={closeModal} />
+              
+            </div> */}
+            
+
             <div className="w-full flex justify-center items-center mt-4">
               <Button
+              // onClick={() => setIsModalOpen(true)}
                 type="submit"
                 className="w-60 rounded-full bg-[#0b8d7c] text-white text-center"
               >
                 Submit
               </Button>
+             
+              
             </div>
           </form>
         </div>
