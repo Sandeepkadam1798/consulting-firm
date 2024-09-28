@@ -25,7 +25,7 @@ const services = [
     title: 'Carbon Disclosure Project',
     description: 'Helping organizations achieve their environmental, social, and governance goals.',
     icon: <HazeIcon className="w-12 h-12 text-primary" />,
-    link: '/',
+    link: '/CarbonDisclosureProject',
   },
   {
     id: 4,

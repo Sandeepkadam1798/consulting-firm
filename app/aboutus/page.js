@@ -241,9 +241,10 @@ const AboutUs = () => {
           transition={{ duration: 0.8 }}
           className="bg-white rounded-lg  p-8  text-center"
         >
+          {/* klk */}
           <h2 className="text-4xl font-semibold text-gray-800 mb-6">Our Mission</h2>
-          <p className="text-lg text-gray-600 max-w-xl mx-auto">
-            Our mission is to guide organizations toward a sustainable and socially responsible future, ensuring that they thrive in an evolving market. We aim to create lasting positive impacts for both our clients and the planet.
+          <p className="text-lg  text-gray-600 max-w-[1100px] mx-auto">
+          Our mission at Aura Veritas is to revolutionize the energy landscape through cutting-edge engineering and consultancy services that prioritize safety and sustainability. We leverage advanced analytics and innovative technologies to deliver tailored solutions across oil and gas, renewable energy, hydrogen, and carbon management. Our goal is to help clients navigate the complexities of the energy sector while ensuring operational excellence and environmental responsibility.
           </p>
         </motion.section>
 

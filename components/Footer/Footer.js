@@ -59,7 +59,8 @@ const Footer = () => {
                 Our Vision
               </h3>
               <p className="text-gray-700  text-sm leading-6  -tracking-tight">
-              {`Discover the world with Aura Veritas Engineering – we integrate industry-leading practices, including Hazard Identification (HAZID) Studies, Hazard & Operability (HAZOP) Studies, Safety Integrity Level Assessments, and Quantitative Risk Assessments `}
+             {'At Aura Veritas Engineering and Consultancy, we envision a dynamic energy future where innovative technologies and sustainable practices converge to create a harmonious balance between energy needs and environmental protection. By integrating diverse energy sources—including fossil fuels, renewables, hydrogen, and carbon capture—we aim to empower industries to drive positive change and foster a thriving planet for future generations.'}
+              {/* {`Discover the world with Aura Veritas Engineering – we integrate industry-leading practices, including Hazard Identification (HAZID) Studies, Hazard & Operability (HAZOP) Studies, Safety Integrity Level Assessments, and Quantitative Risk Assessments `} */}
                 <Link className="text-[#36a39e] hover:text-[#0b8d7c]" href="/aboutus">
                   More
                 </Link>{" "}
