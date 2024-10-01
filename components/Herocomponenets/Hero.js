@@ -41,7 +41,7 @@ const Hero = () => {
           loop
           autoPlay
           className="absolute top-0 left-0 w-full h-full object-cover brightness-50"
-          src="/Images/MainVideo.MP4"
+          src="https://res.cloudinary.com/diifdlgwr/video/upload/v1727805262/ambdsnyxfjmrdujdlj2i.mp4"
           onError={() => setVideoError(true)} // Set videoError to true if video fails to load
         />
       )}
