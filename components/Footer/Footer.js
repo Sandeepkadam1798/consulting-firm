@@ -1,14 +1,3 @@
-// import React from 'react'
-
-// const Footer = () => {
-//   return (
-//     <footer className="bg-primary text-white py-6 text-center">
-//     <p>&copy; 2024 Aura Veritas. All Rights Reserved.</p>
-//   </footer>
-//   )
-// }
-
-// export default Footer
 
 
 "use client";
@@ -184,7 +173,7 @@ const Footer = () => {
     Contact Us
   </h3>
   <p className="text-gray-700 mb-2">
-    <span className="font-medium">Email:</span> ceo@auraveritas.in
+    <span className="font-medium">Email :</span> ceo@auraveritas.in
   </p>
   <p className="text-gray-700 mb-2 ">
     <span className="font-medium">Phone: </span>
