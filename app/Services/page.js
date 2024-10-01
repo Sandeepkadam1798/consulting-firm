@@ -12,36 +12,36 @@ const services = [
     id: 1,
     title: "ESG & Decarbonisation",
     image:
-      "https://res.cloudinary.com/ddysmgao7/video/upload/v1725819706/1725818324627990_mkfrpn.mov",
+      "/Images/HeroVideo.MP4",
     link: "/ESG&Decarbonisation",
   },
   {
     id: 2,
     title: "Climate Change Services",
     image:
-      "https://res.cloudinary.com/ddysmgao7/video/upload/v1725819706/1725818324627990_mkfrpn.mov",
+      "/Images/HeroVideo.MP4",
     link: "/ClimateChange",
   },
   {
     id: 3,
     title: "Safety & Risk Assessment",
     image:
-      "https://res.cloudinary.com/ddysmgao7/video/upload/v1725819706/1725818324627990_mkfrpn.mov",
+      "/Images/HeroVideo.MP4",
     link: "/SafetyRiskAssessment",
   },
   {
     id: 4,
-    title: "Service 4",
+    title: "Trainings & Auditing",
     image:
-      "https://res.cloudinary.com/ddysmgao7/video/upload/v1725819706/1725818324627990_mkfrpn.mov",
-    link: "/",
+      "/Images/HeroVideo.MP4",
+    link: "/Trainings&Auditing",
   },
   {
     id: 5,
-    title: "Service 4",
+    title: "Fire & Gas Mapping Study Methodology",
     image:
-      "https://res.cloudinary.com/ddysmgao7/video/upload/v1725819706/1725818324627990_mkfrpn.mov",
-    link: "/",
+      "/Images/HeroVideo.MP4",
+    link: "/Fire&GasMappingStudyMethodology",
   },
   
 ];
