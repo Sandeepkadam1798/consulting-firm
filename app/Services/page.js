@@ -12,36 +12,36 @@ const services = [
     id: 1,
     title: "ESG & Decarbonisation",
     image:
-      "/Images/HeroVideo.MP4",
+      "/Images/ESGVideo.MP4",
     link: "/ESG&Decarbonisation",
   },
   {
     id: 2,
     title: "Climate Change Services",
     image:
-      "/Images/HeroVideo.MP4",
+      "/Images/ClimateChangeVideo.MP4",
     link: "/ClimateChange",
   },
   {
     id: 3,
     title: "Safety & Risk Assessment",
     image:
-      "/Images/HeroVideo.MP4",
+      "/Images/SafetyVideo.MP4",
     link: "/SafetyRiskAssessment",
   },
   {
     id: 4,
     title: "Trainings & Auditing",
     image:
-      "/Images/HeroVideo.MP4",
+      "/Images/TrainingVideo.MP4",
     link: "/Trainings&Auditing",
   },
   {
     id: 5,
-    title: "Fire & Gas Mapping Study Methodology",
+    title: "Engineering Services",
     image:
-      "/Images/HeroVideo.MP4",
-    link: "/Fire&GasMappingStudyMethodology",
+      "/Images/EngineeringVideo.MP4",
+    link: "/EngineeringServices",
   },
   
 ];
