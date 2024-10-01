@@ -22,10 +22,10 @@ const services = [
   },
   {
     id: 3,
-    title: 'Carbon Disclosure Project',
+    title: 'Fire & Gas Mapping study Methodology',
     description: 'Helping organizations achieve their environmental, social, and governance goals.',
     icon: <HazeIcon className="w-12 h-12 text-primary" />,
-    link: '/',
+    link: '/SafetyRiskAssessment/Fire&GasMappingStudyMethodology',
   },
   {
     id: 4,
