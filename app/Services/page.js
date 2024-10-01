@@ -11,36 +11,31 @@ const services = [
   {
     id: 1,
     title: "ESG & Decarbonisation",
-    image:
-      "/Images/ESGVideo.MP4",
+    image:"https://res.cloudinary.com/diifdlgwr/video/upload/v1727805403/wm7crahpavrjza1iopzr.mp4",
     link: "/ESG&Decarbonisation",
   },
   {
     id: 2,
     title: "Climate Change Services",
-    image:
-      "/Images/ClimateChangeVideo.MP4",
+    image:"https://res.cloudinary.com/diifdlgwr/video/upload/v1727805450/q6cygrgjy7oaxsswyxxe.mp4",
     link: "/ClimateChange",
   },
   {
     id: 3,
     title: "Safety & Risk Assessment",
-    image:
-      "/Images/SafetyVideo.MP4",
+    image:"https://res.cloudinary.com/diifdlgwr/video/upload/v1727805495/vy3vp5w2gfru7ua6soag.mp4",
     link: "/SafetyRiskAssessment",
-  },
+    },
   {
     id: 4,
     title: "Trainings & Auditing",
-    image:
-      "/Images/TrainingVideo.MP4",
+    image:"https://res.cloudinary.com/diifdlgwr/video/upload/v1727805532/p1yzhjymkcpm0tv6oc5p.mp4",
     link: "/Trainings&Auditing",
   },
   {
     id: 5,
     title: "Engineering Services",
-    image:
-      "/Images/EngineeringVideo.MP4",
+    image:"https://res.cloudinary.com/diifdlgwr/video/upload/v1727805567/ekgkyjntsvqgnxebotwv.mp4",
     link: "/EngineeringServices",
   },
   
@@ -97,7 +92,7 @@ const OurServices = () => {
                   autoPlay
                   src={service.image}
                   alt={service.title}
-                  className="mx-auto aspect-video overflow-hidden rounded-xl object-cover h-96 object-center "
+                  className="mx-auto aspect-video overflow-hidden rounded-xl object-cover h-96 object-center brightness-50 "
 
                   //  data-aos="zoom-in-up"
                   //   data-aos-duration="2000"
