@@ -33,13 +33,12 @@ const Contactform = () => {
   const [isVerified, setIsVerified] = useState(false);
 
   const services = [
-    { key: "Hazard Identification (HAZID)", label: "Hazard Identification (HAZID)" },
-    { key: "Hazard & Operability (HAZOP)", label: "Hazard & Operability (HAZOP)" },
-    { key: "Safety Integrity Level Assessment", label: "Safety Integrity Level Assessment" },
-    { key: "Quantitative Risk Assessment", label: "Quantitative Risk Assessment" },
+    { key: "ESG & Decarbonisation", label: "ESG & Decarbonisation" },
+    { key: "Climate Change Services", label: "Climate Change Services" },
+    { key: "Safety & Risk Assessment", label: "Safety & Risk Assessment" },
+    { key: "Trainings & Auditing ", label: "Trainings & Auditing " },
     { key: "Fire and Explosion Risk Assessment", label: "Fire and Explosion Risk Assessment" },
-    { key: "ESG & Climate Change Services", label: "ESG & Climate Change Services" },
-    { key: "Escape, Evacuation & Rescue Assessment", label: "Escape, Evacuation & Rescue Assessment" },
+    { key: "Engineering Services", label: "Engineering Services" },
     { key: "Other", label: "Other" },
   ];
 

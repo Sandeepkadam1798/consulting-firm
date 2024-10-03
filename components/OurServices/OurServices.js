@@ -16,7 +16,7 @@ const services = [
   { name: "ESG Decarbonisation", link: "/ESG&Decarbonisation" },
   { name: "Climate Change Services", link: "/ClimateChange" },
   { name: "Trainings & Auditing", link: "/Trainings&Auditing" },
-  { name: "Fire & Gas Mapping Study Methodology", link: "/Fire&GasMappingStudyMethodology" },
+  { name: "Engineering and Services", link: "/EngineeringServices" },
 
 ];
 
