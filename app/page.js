@@ -2,6 +2,7 @@
 
 
 import AboutUs from "@/components/AboutUs/AboutUS";
+import Chatbot from "@/components/Chatbot/Chatbot";
 import ContactFormMain from "@/components/Contactuscomponents/ContactFormMain";
 import Hero from "@/components/Herocomponenets/Hero";
 import Nav from "@/components/Navbarcomponents/Nav";
@@ -16,6 +17,7 @@ export default function Home() {
    <OurServices/>
    {/* <AboutUs/> */}
    <ContactFormMain />
+   <Chatbot/>
     </div>
   );
 }

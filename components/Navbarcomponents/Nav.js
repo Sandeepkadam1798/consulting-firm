@@ -326,7 +326,7 @@ export default function Nav() {
   const Extendmenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-  const linkitem = ["HOME", "blog", "Services","about us", "CONTACT US"];
+  const linkitem = ["HOME", "blog", "Services","aboutus", "CONTACTUS"];
 
   const handleredirect = (link) => {
     switch (link) {
