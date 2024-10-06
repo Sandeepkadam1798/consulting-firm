@@ -37,7 +37,6 @@ const Contactform = () => {
     { key: "Climate Change Services", label: "Climate Change Services" },
     { key: "Safety & Risk Assessment", label: "Safety & Risk Assessment" },
     { key: "Trainings & Auditing ", label: "Trainings & Auditing " },
-    { key: "Fire and Explosion Risk Assessment", label: "Fire and Explosion Risk Assessment" },
     { key: "Engineering Services", label: "Engineering Services" },
     { key: "Other", label: "Other" },
   ];

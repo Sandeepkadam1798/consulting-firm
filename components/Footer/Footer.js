@@ -101,48 +101,39 @@ const Footer = () => {
                 Our Services
               </h3>
               <div className="grid grid-cols-2 gap-2 md:grid-cols-1 ">
-                <Link
+                
+              <Link
                   className="hover:text-primary flex gap-1 -mt-1 items-center  text-sm  max-w-max text-gray-700 transition-colors duration-200 ease-in-out"
-                  href="/HazardIdentification"
-                > Hazard Identification Study 
+                  href="/SafetyRiskAssessment"
+                > Safety & Risk Assessment
                 
                 </Link>
                 <Link
                   className="hover:text-primary  text-sm  max-w-max text-gray-700 transition-colors duration-200 ease-in-out"
-                  href="/HazardandOperability"
+                  href="/ESG&Decarbonisation"
                 >
-                 Hazard & Operability Study
+                 ESG Decarbonisation
                 </Link>
                 <Link
                   className="hover:text-primary  text-sm  max-w-max text-gray-700 transition-colors duration-200 ease-in-out"
                   href="/SILAssessment"
                 >
-                 Safety Integrity Level Assessment
+                 Climate Change Services
                 </Link>
                 <Link
                   className="hover:text-primary  text-sm  max-w-max text-gray-700 transition-colors duration-200 ease-in-out"
-                  href="/QuantitativeRiskAssessment"
+                  href="/Trainings&Auditing"
                 >
-                 Quantitative Risk Assessment
+                Trainings & Auditing
                 </Link>
                 <Link
                   className="hover:text-primary  text-sm  max-w-max text-gray-700 transition-colors duration-200 ease-in-out"
-                  href="/FERA-Assessment"
+                  href="/EngineeringServices"
                 >
-                Fire and Explosion Risk Assessment
+                Engineering and Services
                 </Link>
-                <Link
-                  className="hover:text-primary  text-sm  max-w-max text-gray-700 transition-colors duration-200 ease-in-out"
-                  href="/Esg-services"
-                >
-               ESG & Climate Change Services
-                </Link>
-                <Link
-                  className="hover:text-primary  text-sm  max-w-max text-gray-700 transition-colors duration-200 ease-in-out"
-                  href="/EERA-Assessment"
-                >
-              Escape, Evacuation & Rescue Assessment
-                </Link>
+
+
               </div>
             </div>
 
@@ -182,7 +173,7 @@ const Footer = () => {
  
  
   <p className="text-gray-700 mb-2">
-    <span className="font-medium">Website:</span> www.Info.com
+    <span className="font-medium">Website:</span> www.auraveritas.co.in
   </p>
   <p className="text-gray-700">
     <span className="font-medium">Office:</span> Plot No: 46G, Bel Nagar, Manapakkam, Chennai - 600125.
