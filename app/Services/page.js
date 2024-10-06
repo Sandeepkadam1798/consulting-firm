@@ -92,7 +92,7 @@ const OurServices = () => {
                   autoPlay
                   src={service.image}
                   alt={service.title}
-                  className="mx-auto aspect-video overflow-hidden rounded-xl object-cover h-96 object-center brightness-50 "
+                  className="mx-auto w-full overflow-hidden rounded-xl object-cover h-96 object-center brightness-50 "
 
                   //  data-aos="zoom-in-up"
                   //   data-aos-duration="2000"
