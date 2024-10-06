@@ -11,7 +11,7 @@ const services = [
     title: 'Carbon Disclosure Project',
     // description: 'Comprehensive hazard identification to proactively manage risks.',
     icon: <HazeIcon className="w-12 h-12 text-primary" />,
-    link: '/HazardIdentification', // Link to specific page
+    link: '/CarbonDisclosureProject', // Link to specific page
   },
  
 ];

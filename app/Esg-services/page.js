@@ -60,11 +60,11 @@ export default function ESGServices() {
             <li>
               {`5.	Business Responsibility and Sustainable Reporting `}
             </li>
-            <li>
+            {/* <li>
               {`6.	Carbon Disclosure Project `}
-            </li>
+            </li> */}
             <li>
-              {`7.	TCFD & SASB Reporting `}
+              {`6.	TCFD & SASB Reporting `}
             </li>
           </ul>
 
@@ -252,37 +252,12 @@ export default function ESGServices() {
 
        
           </section>
+         
+
+
           <section data-aos="fade-up" data-aos-duration="1000"  className="mb-8">
             <h2 className="text-2xl font-semibold mb-4">
-            6.	Carbon Disclosure Project :
-            </h2>
-
-            <p className="text-gray-700 mb-4">
-              {`Carbon Disclosure Project is a Environment disclosure focuses mainly on Sustainable economy by measuring and acting upon their Environmental Impacts. CDP can be processed through the below  channels for your Organisation. CDP reveals Climate Change, Forests, and Water Security through disclosures.   `}
-            </p>
-            
-
-          <ul>
-            <li>
-              {`1.	CDP Assessment `}
-            </li>
-            <li>
-              {`2.	CDP Strategy and Implement`}
-            </li>
-            <li>
-              {`3.	CDP Disclosures `}
-            </li>
-           
-            
-          </ul>
-
-
-
-       
-          </section>
-          <section data-aos="fade-up" data-aos-duration="1000"  className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4">
-            	7.	TCFD Reporting  :
+            	6.	TCFD Reporting  :
             </h2>
 
             <p className="text-gray-700 mb-4">

@@ -2,14 +2,15 @@
 
 "use client";
 import Link from "next/link";
-import React, { useState, useEffect } from "react";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import Image from "next/image";
 import windmill from "../../public/Images/windmill.png";
+import React, { useState, useEffect } from "react";
+
 import GradualSpacing from "@/components/magicui/gradual-spacing";
 
 const Hero = () => {
-  const [videoError, setVideoError] = useState(false); // State to track video load error
+  // const [videoError, setVideoError] = useState(false); // State to track video load error
 
   const [text] = useTypewriter({
     words: [
@@ -25,9 +26,9 @@ const Hero = () => {
 
   
   return (
-    <div className="h-screen relative w-full overflow-hidden">
+    <div className="h-screen  relative w-full overflow-hidden">
       {/* Background video or fallback image */}
-      {videoError ? (
+      {/* {videoError ? (
         <Image
           src={windmill}
           alt="Fallback image"
@@ -44,7 +45,7 @@ const Hero = () => {
           src="https://res.cloudinary.com/diifdlgwr/video/upload/v1727889444/jyh1jj0bj45qbvk3iss6.mov"
           onError={() => setVideoError(true)} // Set videoError to true if video fails to load
         />
-      )}
+      )} */}
 
       {/* Overlay content */}
       <div className="absolute inset-0 flex flex-col justify-center items-center gap-4 px-4 text-center">

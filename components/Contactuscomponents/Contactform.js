@@ -12,33 +12,13 @@ import { FcAddressBook } from "react-icons/fc";
 import { FcHome } from "react-icons/fc";
 import { FcCallback } from "react-icons/fc";
 import { FcComments } from "react-icons/fc";
-// import ContactMap from "./ContactMap";
-// import { isSignInWithEmailLink, signInWithEmailLink } from 'firebase/auth';
-// import { auth } from '../../firebase/firebase';
+
 import {  useState } from 'react';
-import VerificationModal from "../Varification/Varification";
 
 
-// import { toast } from 'react-toastify';
-// import { auth } from '../firebase'; // Adjust the path to your firebase config file
-// import { createUserWithEmailAndPassword, sendEmailVerification } from 'firebase/auth';
-// import 'react-toastify/dist/ReactToastify.css';
-// toast.configure();
+
 
 const Contactform = () => {
-
-
-  // const [isModalOpen, setIsModalOpen] = useState(false);
-
-  // useEffect(() => {
-  //   // Check if the user is returning after clicking the email OTP link
-  //   if (isSignInWithEmailLink(auth, window.location.href)) {
-  //     setIsModalOpen(true);
-  //   }
-  // }, []);
-
-  // const openModal = () => setIsModalOpen(true);
-  // const closeModal = () => setIsModalOpen(false);
 
 
   const [formData, setFormData] = useState({
@@ -51,7 +31,6 @@ const Contactform = () => {
   });
 
   const [isVerified, setIsVerified] = useState(false);
-  // const [formData, setFormData] = useState({ serviceRequired: [] });
 
   const services = [
     { key: "ESG & Decarbonisation", label: "ESG & Decarbonisation" },
@@ -81,30 +60,6 @@ const Contactform = () => {
 };
 
 
-// const handleEmailVerification = async () => {
-//   try {
-//     const userCredential = await createUserWithEmailAndPassword(auth, email, 'temporaryPassword');
-//     const user = userCredential.user;
-
-//     // Send email verification
-//     await sendEmailVerification(user);
-//     toast.success('Verification email sent. Please check your inbox.');
-
-//     // Listen for email verification state
-//     auth.onAuthStateChanged((user) => {
-//       if (user && user.emailVerified) {
-//         setIsVerified(true);
-//         toast.success('Email successfully verified!');
-//       }
-//     });
-//   } catch (error) {
-//     toast.error('Error in email verification: ' + error.message);
-//   }
-// };
-
-
-
-
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -120,13 +75,6 @@ const Contactform = () => {
       return;
     }
 
-    // if (!isVerified) {
-    //   toast.error('Please verify your email before submitting the form');
-    //   return;
-    // }
-
-    // If email is verified, proceed with the form submission logic
-    // toast.success('Form submitted successfully!');
 
     const sendForm = async () => {
       const response = await fetch("/api/Contactus", {
@@ -248,7 +196,7 @@ const Contactform = () => {
                 placeholder="Select inquiry type (one or multiple)"
                 size="lg"
                 radius="sm"
-                className="mt-4  w-full max-w-xl md:max-w-80 lg:max-w-xl xl:max-w-2xl 2xl:max-w-3xl mx-auto overflow-hidden"
+                className="mt-4   w-3/4 max-w-xl md:max-w-80 lg:max-w-xl xl:max-w-2xl 2xl:max-w-3xl overflow-hidden"
                selectionMode="multiple"
                selectedKeys={new Set(
                 formData.serviceRequired.map((serviceLabel) =>
@@ -257,15 +205,16 @@ const Contactform = () => {
               )}
 
               onSelectionChange={handleServiceChange}
-              menuClass="w-full max-w-xl md:max-w-10 overflow-auto"
+              menuClass="w-full max-w-xl md:max-w-10 overflow-auto "
 
 
               >
               {services.map((service) => (
                   <SelectItem 
+                  
                   key={service.key} 
                   value={service.key} 
-                  className="text-ellipsis whitespace-nowrap ">
+                  className="text-ellipsis  whitespace-nowrap ">
                      
     
                     {service.label}
@@ -293,18 +242,7 @@ const Contactform = () => {
 
 
               
-               {/* varification */}
-            {/* <div className="w-full flex justify-center items-center mt-4">
-              <Button
-               onClick={() => setIsModalOpen(true)}
-                type="button"
-                className="w-60 rounded-full bg-[#0b8d7c] text-white text-center"
-              >
-                Send Verification Email
-              </Button>
-              <VerificationModal isOpen={isModalOpen} onClose={closeModal} />
-              
-            </div> */}
+        
             
 
             <div className="w-full flex justify-center items-center mt-4">
