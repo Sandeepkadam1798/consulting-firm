@@ -47,8 +47,8 @@ const OurServices = () => {
   }, []);
 
   return (
-    <section id="services" className="bg-white py-12 md:py-24 lg:py-10">
-      <div className="container px-4 md:px-6">
+    <section id="services" className="bg-white py-12 md:py-24 lg:py-10 ">
+      <div className=" lg:mx-2 ">
       <motion.div
           data-aos="fade-down"
           className="flex flex-col items-center justify-center space-y-6 text-center"
@@ -69,9 +69,9 @@ const OurServices = () => {
         </motion.div>
 
         {/* Service Cards */}
-        <div className="flex flex-col gap-8 mt-8 mx-4 ">
+        <div className="flex flex-col gap-8 mt-8 ">
           {services.map((service) => (
-            <Link href={service.link} key={service.id} className="  duration-300 hover:scale-105 transform ">
+            <Link href={service.link} key={service.id} className="   ">
               <motion.div
                 // whileHover={{ scale: 1.05 }}
                 className="relative rounded-lg overflow-hidden cursor-pointer "
