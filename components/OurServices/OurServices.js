@@ -26,19 +26,20 @@ const OurServices = () => {
   }, []);
 
   return (
-    <section id="services" className="bg-white py-12 md:py-24 lg:py-24">
+    <section id="services" className=" py-12 md:py-24 lg:py-24">
       <div className="container px-4 md:px-6">
-        <motion.div  data-aos="fade-down"  className="flex flex-col items-center justify-center space-y-6 text-center" >
+        <motion.div  data-aos="fade-down"  className="flex text-white flex-col items-center justify-center space-y-6 text-center" >
           <div className="space-y-2" >
             {/* <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Key Services</div> */}
-            <h2 className="text-xl lg:text-4xl md:text-3xl font-semibold leading-7 -tracking-tight">
+            <h2 className="text-xl lg:text-4xl md:text-3xl font-semibold leading-7   -tracking-tight">
               {" "}
               Our Services{" "}
               <span className="lucide absolute -mt-3 lucide-sparkles h-4 w-4 text-[#36a39e] shrink-0">
                 <i className="pi pi-sparkles" style={{ fontSize: "1rem" }}></i>
               </span>
             </h2>
-            <p className="max-w-[600px] text-muted-foreground md:text-lg lg:text-lg text-sm leading-7 text-gray-500">
+            {/* text-gray-500 */}
+            <p className="max-w-[600px] text-muted-foreground md:text-lg lg:text-lg text-sm leading-7 text-white ">
               {`We offer a wide range of sustainability and risk assessment services to help organizations achieve their goals.`}
             </p>
           </div>

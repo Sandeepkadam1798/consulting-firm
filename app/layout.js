@@ -6,8 +6,6 @@ import { Poppins } from "next/font/google";
 import Footer from "@/components/Footer/Footer";
 import SpeedDials from "./SpeedDials";
 
-
-
 const inter = Poppins({ subsets: ["latin"] ,weight: ['100','300','400','500','700','900']});
 
 const geistSans = localFont({
