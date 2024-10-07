@@ -11,42 +11,42 @@ const services = [
     title: 'Process',
     // description: 'Comprehensive hazard identification to proactively manage risks.',
     icon: <HazeIcon className="w-12 h-12 text-primary" />,
-    link: '/', // Link to specific page
+    link: '/EngineeringServices/Process', // Link to specific page
   },
   {
     id: 2,
     title: 'Piping',
     // description: 'Comprehensive hazard identification to proactively manage risks.',
     icon: <HazeIcon className="w-12 h-12 text-primary" />,
-    link: '/', // Link to specific page
+    link: '/EngineeringServices/Piping', // Link to specific page
   },
   {
     id: 3,
     title: 'Civil, Structural & Architecture',
     // description: 'Comprehensive hazard identification to proactively manage risks.',
     icon: <HazeIcon className="w-12 h-12 text-primary" />,
-    link: '/', // Link to specific page
+    link: '/EngineeringServices/CivilStructuralArchitecture', // Link to specific page
   },
   {
     id: 4,
     title: 'Electrical Engineering',
     // description: 'Comprehensive hazard identification to proactively manage risks.',
     icon: <HazeIcon className="w-12 h-12 text-primary" />,
-    link: '/', // Link to specific page
+    link: '/EngineeringServices/ElectricalEngineering', // Link to specific page
   },
   {
     id: 5,
     title: 'Instrumentation Engineering',
     // description: 'Comprehensive hazard identification to proactively manage risks.',
     icon: <HazeIcon className="w-12 h-12 text-primary" />,
-    link: '/', // Link to specific page
+    link: '/EngineeringServices/InstrumentationEngineering', // Link to specific page
   },
   {
     id: 6,
     title: 'Telecommunications Systems',
     // description: 'Comprehensive hazard identification to proactively manage risks.',
     icon: <HazeIcon className="w-12 h-12 text-primary" />,
-    link: '/', // Link to specific page
+    link: '/EngineeringServices/TelecommunicationsSystems', // Link to specific page
   },
  
   {
@@ -54,14 +54,14 @@ const services = [
     title: 'HVAC',
     // description: 'Comprehensive hazard identification to proactively manage risks.',
     icon: <HazeIcon className="w-12 h-12 text-primary" />,
-    link: '/', // Link to specific page
+    link: '/EngineeringServices/HVAC', // Link to specific page
   },
   {
     id: 8,
     title: 'Environment',
     // description: 'Comprehensive hazard identification to proactively manage risks.',
     icon: <HazeIcon className="w-12 h-12 text-primary" />,
-    link: '/', // Link to specific page
+    link: '/EngineeringServices/Environment', // Link to specific page
   },
  
   

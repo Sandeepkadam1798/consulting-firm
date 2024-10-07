@@ -1,19 +1,46 @@
 "use client";
-import React from 'react';
+import React from "react";
 
-import Link from 'next/link';
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 // Array of services with title, description, icon, and link
 const services = [
   {
     id: 1,
-    title: 'Carbon Disclosure Project',
+    title: "	Carbon Footprint ",
     // description: 'Comprehensive hazard identification to proactively manage risks.',
     icon: <HazeIcon className="w-12 h-12 text-primary" />,
-    link: '/CarbonDisclosureProject', // Link to specific page
+    link: "/ClimateChange/CarbonFootprint", // Link to specific page
   },
- 
+  {
+    id: 2,
+    title: "		Quantitative and Qualitative Climate Risk Assessment ",
+    // description: 'Comprehensive hazard identification to proactively manage risks.',
+    icon: <HazeIcon className="w-12 h-12 text-primary" />,
+    link: "/ClimateChange/QuantitativeandQualitativeClimateRiskAssessment", // Link to specific page
+  },
+  {
+    id: 3,
+    title: "		Task Force on Climate -Related Financial Disclosures ",
+    // description: 'Comprehensive hazard identification to proactively manage risks.',
+    icon: <HazeIcon className="w-12 h-12 text-primary" />,
+    link: "/ClimateChange/TaskForceonClimate", // Link to specific page
+  },
+  {
+    id: 4,
+    title: "	Life Cycle Assessment of Products and Services ",
+    // description: 'Comprehensive hazard identification to proactively manage risks.',
+    icon: <HazeIcon className="w-12 h-12 text-primary" />,
+    link: "/ClimateChange/LifeCycleAssessment", // Link to specific page
+  },
+  {
+    id: 4,
+    title: "	Renewable Energy Strategies ",
+    // description: 'Comprehensive hazard identification to proactively manage risks.',
+    icon: <HazeIcon className="w-12 h-12 text-primary" />,
+    link: "/ClimateChange/RenewableEnergyStrategies", // Link to specific page
+  },
 ];
 
 const page = () => {
@@ -23,44 +50,46 @@ const page = () => {
         <div className="space-y-6">
           <div className="animate-fade-up flex flex-col justify-center items-center">
             <p className="text-2xl lg:text-3xl md:text-3xl font-semibold leading-7 -tracking-tight">
-           Climate Change Services
-              <span className='lucide absolute -mt-3 lucide-sparkles h-4 w-4 text-[#36a39e] shrink-0'><i className="pi pi-sparkles" style={{ fontSize: '1rem' }}></i></span>
+              Climate Change Services
+              <span className="lucide absolute -mt-3 lucide-sparkles h-4 w-4 text-[#36a39e] shrink-0">
+                <i className="pi pi-sparkles" style={{ fontSize: "1rem" }}></i>
+              </span>
             </p>
 
             {/* <p className=" text-muted-foreground md:text-lg lg:text-lg text-sm leading-7 text-gray-500">
               {`We provide a broad array of sustainability and risk assessment solutions designed to support organizations in reaching their objectives.`}
             </p> */}
           </div>
-          <motion.div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3 py-4"
-          
-          initial={{ opacity: 0.5, y: 100 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false }}
-              transition={{ duration: 1 }}>
-            
-            {services.map(service => (
-          <card 
-          key={service.id}  
-          className="hover:bg-primary-foreground hover:text-white transform rounded-xl border-1 hover:border-2 border-primary duration-300 hover:scale-105 p-8 flex flex-col justify-between h-[300px] w-full bg-white shadow-lg transition"
-        >
-          <div className="flex flex-col items-center gap-4 ">
-            {service.icon}
-            <h3 className="text-xl font-semibold mt-4 text-center ">{service.title}</h3>
+          <motion.div
+            className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3 py-4"
+            initial={{ opacity: 0.5, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 1 }}
+          >
+            {services.map((service) => (
+              <card
+                key={service.id}
+                className="hover:bg-primary-foreground hover:text-white transform rounded-xl border-1 hover:border-2 border-primary duration-300 hover:scale-105 p-8 flex flex-col justify-between h-[300px] w-full bg-white shadow-lg transition"
+              >
+                <div className="flex flex-col items-center gap-4 ">
+                  {service.icon}
+                  <h3 className="text-xl font-semibold mt-4 text-center ">
+                    {service.title}
+                  </h3>
 
-            <Link 
-              href={service.link} 
-              className="inline-block mt-4 px-4 py-2 bg-primary text-white rounded-md hover:bg-primary-dark group transition-all duration-700 hover:border hover:border-primary justify-center items-center hover:bg-white hover:text-[#36a39e]"
-              rel="noopener noreferrer"
-            >
-              <p className='transition-all duration-700 group-hover:text-[#36a39e]'>
-                Read More
-              </p>
-            </Link>
-            {/* <p className="mt-4 ">{service.description}</p> */}
-          </div>
-    
-        </card>
-        
+                  <Link
+                    href={service.link}
+                    className="inline-block mt-4 px-4 py-2 bg-primary text-white rounded-md hover:bg-primary-dark group transition-all duration-700 hover:border hover:border-primary justify-center items-center hover:bg-white hover:text-[#36a39e]"
+                    rel="noopener noreferrer"
+                  >
+                    <p className="transition-all duration-700 group-hover:text-[#36a39e]">
+                      Read More
+                    </p>
+                  </Link>
+                  {/* <p className="mt-4 ">{service.description}</p> */}
+                </div>
+              </card>
             ))}
           </motion.div>
         </div>
