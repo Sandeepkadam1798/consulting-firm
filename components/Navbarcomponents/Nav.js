@@ -326,14 +326,14 @@ export default function Nav() {
   const Extendmenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-  const linkitem = ["HOME", "blog", "Services","aboutus", "CONTACTUS"];
+  const linkitem = ["HOME", "blog", "Services","about us", "CONTACT US"];
 
   const handleredirect = (link) => {
     switch (link) {
       case "HOME":
         router.push("/");
         break;
-      case "aboutus":
+      case "about us":
         router.push("/aboutus");
         break;
       // case "Domestic Trips":
@@ -354,7 +354,7 @@ export default function Nav() {
       case "Services":
         router.push("/Services");
         break;
-      case "CONTACTUS":
+      case "CONTACT US":
         router.push("/Contactus");
         break;
 
@@ -378,10 +378,10 @@ export default function Nav() {
       //   setactiveitem("packages");
         break;
       case "/Contactus":
-        setactiveitem("CONTACTUS");
+        setactiveitem("CONTACT US");
         break;
       case "/aboutus":
-        setactiveitem("Aboutus");
+        setactiveitem("About us");
         break;
 
       // case pathname.startsWith("/Jobdetails"):
