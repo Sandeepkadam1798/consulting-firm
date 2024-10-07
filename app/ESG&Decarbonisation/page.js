@@ -11,43 +11,50 @@ const services = [
     title: 'Sustainability Road Map Development',
     // description: 'Comprehensive hazard identification to proactively manage risks.',
     icon: <HazeIcon className="w-12 h-12 text-primary hover:text-white" />,
-    link: '/HazardIdentification', // Link to specific page
+    link: '/ESG&Decarbonisation/SustainabilityRoadMapDevelopment', // Link to specific page
   },
   {
     id: 2,
     title: 'Stakeholder Engagement',
     description: 'In-depth analysis of potential hazards and operability issues.',
     icon: <HazeIcon className="w-12 h-12 text-primary" />,
-    link: '/HazardandOperability',
+    link: '/ESG&Decarbonisation/StakeholderEngagement',
   },
   {
     id: 3,
     title: 'Materiality Assessment',
     description: 'Determine the required Safety Integrity Level for your systems.',
     icon: <HazeIcon className="w-12 h-12 text-primary" />,
-    link: '/SILAssessment',
+    link: '/ESG&Decarbonisation/MaterialityAssessment',
   },
   {
     id: 4,
     title: 'Sustainability Reporting',
     description: 'Comprehensive analysis of risks and their potential impacts.',
     icon: <HazeIcon className="w-12 h-12 text-primary" />,
-    link: '/QuantitativeRiskAssessment',
+    link: '/ESG&Decarbonisation/SustainabilityReporting',
   },
   {
     id: 5,
-    title: 'Business Responsibility Sustainability Reporting',
+    title: 'Business Responsibility & Sustainability Reporting',
     description: 'Industry experience shows that fires or explosions in Oil & Gas',
     icon: <HazeIcon className="w-12 h-12 text-primary" />,
-    link: '/FERA-Assessment ',
+    link: '/ESG&Decarbonisation/BusinessResponsibilityAndSustainabilityReporting',
   },
   
   {
     id: 6,
-    title: 'TCFD & SASB Reporting',
+    title: '	TCFD Reporting',
     description: 'Helping organizations achieve their environmental, social, and governance goals.',
     icon: <HazeIcon className="w-12 h-12 text-primary" />,
-    link: '/Esg-services',
+    link: '/ESG&Decarbonisation/TCFD&SASBReporting',
+  },
+  {
+    id: 7,
+    title: 'Carbon Disclosure Project ',
+    description: 'Helping organizations achieve their environmental, social, and governance goals.',
+    icon: <HazeIcon className="w-12 h-12 text-primary" />,
+    link: '/ESG&Decarbonisation/CarbonDisclosureProject',
   },
  
 ];
