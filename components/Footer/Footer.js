@@ -167,16 +167,16 @@ const Footer = () => {
     <span className="font-medium">Email :</span> ceo@auraveritas.in
   </p>
   <p className="text-gray-700 mb-2 ">
-    <span className="font-medium">Phone: </span>
+    <span className="font-medium">Phone : </span>
      +91-9150547979 | +91-8939204319 
   </p>
  
  
   <p className="text-gray-700 mb-2">
-    <span className="font-medium">Website:</span> www.auraveritas.co.in
+    <span className="font-medium">Website :</span> www.auraveritas.co.in
   </p>
   <p className="text-gray-700">
-    <span className="font-medium">Office:</span> Plot No: 46G, Bel Nagar, Manapakkam, Chennai - 600125.
+    <span className="font-medium">Office :</span> Plot No: 46G, Bel Nagar, Manapakkam, Chennai - 600125.
   </p>
 </div>
 
