@@ -49,6 +49,20 @@ const services = [
     icon: <HazeIcon className="w-12 h-12 text-primary" />,
     link: '/EERA-Assessment ',
   },
+  {
+    id: 7,
+    title: 'Hazard and Operability (HAZOP) Study',
+    description: 'Industry experience shows that fires or explosions in Oil & Gas',
+    icon: <HazeIcon className="w-12 h-12 text-primary" />,
+    link: '/HazardandOperability ',
+  },
+  {
+    id: 8,
+    title: 'Emergency Systems Survivability Assessment (ESSA) Study',
+    description: 'Industry experience shows that fires or explosions in Oil & Gas',
+    icon: <HazeIcon className="w-12 h-12 text-primary" />,
+    link: '/SafetyRiskAssessment/EmergencySystemsSurvivabilityAssessment ',
+  },
 ];
 
 const page = () => {

@@ -232,7 +232,7 @@ export default function QRAssessment() {
       
 
         <section data-aos="fade-up" data-aos-duration="1000"  className="mb-12">
-          <h2 className="text-2xl font-semibold mb-4 text-gray-800">{`SIL study will be executed in following phases,`}</h2>
+          <h2 className="text-2xl font-semibold mb-4 text-gray-800">{`Action plan: `}</h2>
 
           {/* Table Section */}
           <div className="overflow-x-auto">
@@ -257,10 +257,10 @@ export default function QRAssessment() {
                     <ol className="list-decimal list-inside">
                       <li>
                         <strong>Understanding the scope:</strong>
-                        {`Scope of the study i.e. SIF list identified from HAZOP shall be finalized as a first step`}
+                        {`Scope of the study i.e. the physical limits of study shall be finalized as first `}
                       </li>
                       <li>
-                        <strong>Data collection:</strong>{" "}
+                        <strong>Site visit/data collection</strong>{" "}
                         {`to gather off site population, ignition sources and on-site data collection `}
                       </li>
                       <li>
