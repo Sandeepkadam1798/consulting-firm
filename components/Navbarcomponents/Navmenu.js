@@ -76,7 +76,7 @@ export function NavigationMenuDemo() {
                         "/"
                       }
                     >
-                    <Link href={"/blogs"}>
+                    <Link href={"https://www.instagram.com/aura.veritas/?igsh=MXRlMm5mdml6eHVjMg%3D%3D"}>
 
                       <div className="group transition-all duration-700 flex justify-center items-center rounded-md bg-[#4aaca8] w-12 h-12 hover:bg-white hover:text-[#36a39e]">
                         <FaInstagram
@@ -95,7 +95,7 @@ export function NavigationMenuDemo() {
                     </div>
 
                     </Link>
-                    <Link href={"/"}>
+                    <Link href={"https://wa.me/9150547979"}>
                       <div className="group transition-all duration-700 flex justify-center items-center rounded-md bg-[#4aaca8] w-12 h-12 hover:bg-white hover:text-[#36a39e]">
                         <FaWhatsapp
                           size={24}

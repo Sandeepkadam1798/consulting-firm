@@ -32,7 +32,7 @@ export default function SpeedDials() {
           label: "Whatsapp",
           icon: "pi pi-whatsapp",
           command: () => {
-            window.open("https://web.whatsapp.com/", "_blank");
+            window.open("https://wa.me/9150547979", "_blank");
             // window.open("https://wa.link/f5qsnc", "_blank");
           },
           className:
