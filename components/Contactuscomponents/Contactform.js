@@ -30,7 +30,9 @@ const Contactform = () => {
     message: "",
   });
 
-  const [isVerified, setIsVerified] = useState(false);
+  const [errors, setErrors] = useState({mobileNumber:""});
+
+  // const [isVerified, setIsVerified] = useState(false);
 
   const services = [
     { key: "ESG & Decarbonisation", label: "ESG & Decarbonisation" },
@@ -41,12 +43,30 @@ const Contactform = () => {
     { key: "Other", label: "Other" },
   ];
 
+// validate number
+
+const validateNumber = (number) =>{
+  const mobileRegex = /^[0-9]{10}$/   
+  if(!mobileRegex.test(number)){
+    return "Please enter a valid 10-digit mobile number"
+  }
+  return "";
+}
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
       [name]: value,
     });
+
+    //validate mobile number when user types;
+    if(name === 'mobileNumber'){
+      const mobileError = validateNumber(value);
+      setErrors((prev)=>({
+        ...prev, mobileNumber:mobileError
+      }))
+    }
   };
 
   const handleServiceChange = (selectedKeys) => {const selectedLabels = Array.from(selectedKeys).map((key) => {
@@ -74,8 +94,15 @@ const Contactform = () => {
       return;
     }
 
+    // const mobileError = validateMobileNumber(formData.mobileNumber);
+    // if (mobileError) {
+    //   setErrors((prev) => ({ ...prev, mobileNumber: mobileError }));
+    //   return;
+    // }
+
 
     const sendForm = async () => {
+
       const response = await fetch("/api/Contactus", {
         method: "POST",
         headers: {
@@ -104,9 +131,6 @@ const Contactform = () => {
       error: "Failed to send message. Please try again.",
     });
   };
-
-
-
 
   return (
     <>
@@ -148,6 +172,9 @@ const Contactform = () => {
                   <FcBusinessman className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
                 }
               />
+              <div>
+
+              
               <Input
                 type="text"
                 name="mobileNumber"
@@ -165,6 +192,11 @@ const Contactform = () => {
                   <FcCallback className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
                 }
               />
+               {errors.mobileNumber && (
+          <p className="mt-2 text-sm text-red-600">{errors.mobileNumber}</p>
+        )}
+
+          </div>
               <Input
                 type="text"
                 name="email"
