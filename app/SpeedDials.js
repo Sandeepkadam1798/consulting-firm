@@ -43,7 +43,7 @@ export default function SpeedDials() {
           label: "Mail",
           icon: "pi pi-envelope",
           command: () => {
-            window.open("mailto:Info@gmail.com", "_blank");
+            window.open("mailto:ceo@auraveritas.in", "_blank");
           },
           className:
             "rounded-full transition-all duration-[0.2s] ease-out group-hover:-translate-x-1 group-hover:-translate-y-40 flex  bg-red-500 hover:opacity-90 text-white p-3 text-2xl",
