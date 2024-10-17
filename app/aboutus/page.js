@@ -207,7 +207,7 @@ const AboutUs = () => {
         </motion.div>
 
         </div>
-        <section className="flex flex-wrap justify-center mb-12 mt-8">
+        {/* <section className="flex flex-wrap justify-center mb-12 mt-8">
           {[
             { title: 'Sustainability Services', text: 'We help implement sustainable practices for long-term success.' },
             { title: 'Risk Assessment', text: 'We provide risk assessments for smooth business operations.' },
@@ -232,7 +232,7 @@ const AboutUs = () => {
               </ShineBorder>
             </motion.div>
           ))}
-        </section>
+        </section> */}
 
         {/* Mission Section with Scale Animation */}
         <motion.section
@@ -258,7 +258,7 @@ const AboutUs = () => {
          
 
           <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl">
-          <h2 className="text-3xl font-bold text-gray-800 text-center mb-8">Meet Our client</h2>
+          <h2 className="text-3xl  font-bold text-gray-800 text-center mb-8">{ `Brands Our Team Works With`}</h2>
       <Marquee pauseOnHover className="[--duration:20s]">
         {firstRow.map((review) => (
           <ReviewCard key={review.username} {...review} />

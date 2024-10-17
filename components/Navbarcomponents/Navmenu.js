@@ -141,23 +141,23 @@ export function NavigationMenuDemo() {
         </NavigationMenuItem> */}
 
         <NavigationMenuItem>
-          <Link href="/blogs" legacyBehavior passHref>
+          <Link href="/Services" legacyBehavior passHref>
             <NavigationMenuLink className={"text-sm font-medium text-white hover:underline"}>
-              Blogs
+            Services
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-          <Link href="/Services" legacyBehavior passHref>
+          <Link href="/Contactus" legacyBehavior passHref>
             <NavigationMenuLink
               className={"text-sm font-medium text-white ml-5 hover:underline " }
             >
-              Services
+             Contact Us
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
-        <NavigationMenuItem>
+        {/* <NavigationMenuItem>
           <Link href="/Contactus" legacyBehavior passHref>
             <NavigationMenuLink
               className={"text-sm font-medium text-white ml-5 hover:underline"}
@@ -165,7 +165,7 @@ export function NavigationMenuDemo() {
               Contact Us
             </NavigationMenuLink>
           </Link>
-        </NavigationMenuItem>
+        </NavigationMenuItem> */}
       </NavigationMenuList>
     </NavigationMenu>
   );

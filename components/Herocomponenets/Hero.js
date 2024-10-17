@@ -60,9 +60,9 @@ const Hero = () => {
         </p>
 
         {/* Typewriter effect */}
-        {/* <h2 className="text-[#fee60b] text-base sm:text-lg md:text-2xl lg:text-2xl xl:text-2xl font-medium">
+        <h2 className="text-[#fee60b] text-base sm:text-lg md:text-2xl lg:text-2xl xl:text-2xl font-medium">
           {text} <Cursor cursorColor="white" />
-        </h2> */}
+        </h2>
 
         {/* Buttons */}
         <div className="flex sm:flex-row gap-4 sm:gap-4 mt-4">
