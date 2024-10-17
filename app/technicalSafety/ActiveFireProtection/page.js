@@ -5,7 +5,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from 'react';
 import HazardousArea from "../../../public/Images/HazardousArea.png"
-export default function page() {
+export default function Page() {
 
   useEffect(() => {
     AOS.init();

@@ -6,7 +6,7 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 import PFA1 from "../../../public/Images/PFA1.png";
 import PFP2 from "../../../public/Images/PFP2.png";
-export default function page() {
+export default function Page() {
   useEffect(() => {
     AOS.init();
   }, []);
