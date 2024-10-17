@@ -40,7 +40,6 @@ export default function page() {
             data-aos-duration="2000"
            
           /> */}
-
           <section
             data-aos="fade-up"
             data-aos-duration="1000"
