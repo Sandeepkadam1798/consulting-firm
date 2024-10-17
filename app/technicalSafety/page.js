@@ -8,68 +8,32 @@ import { motion } from "framer-motion";
 const services = [
   {
     id: 1,
-    title: 'Process',
+    title: 'Fire and Gas Detection',
     // description: 'Comprehensive hazard identification to proactively manage risks.',
     icon: <HazeIcon className="w-12 h-12 text-primary" />,
-    link: '/EngineeringServices/Process', // Link to specific page
+    link: '/firegasdetection', // Link to specific page
   },
   {
     id: 2,
-    title: 'Piping',
+    title: 'Hazardous Area Classification',
     // description: 'Comprehensive hazard identification to proactively manage risks.',
     icon: <HazeIcon className="w-12 h-12 text-primary" />,
-    link: '/EngineeringServices/Piping', // Link to specific page
+    link: '/technicalSafety/HazardousAreaClassification', // Link to specific page
   },
   {
     id: 3,
-    title: 'Civil, Structural & Architecture',
+    title: 'Active Fire Protection',
     // description: 'Comprehensive hazard identification to proactively manage risks.',
     icon: <HazeIcon className="w-12 h-12 text-primary" />,
-    link: '/EngineeringServices/CivilStructuralArchitecture', // Link to specific page
+    link: '/technicalSafety/ActiveFireProtection', // Link to specific page
   },
   {
     id: 4,
-    title: 'Electrical Engineering',
+    title: 'Passive Fire Proofing',
     // description: 'Comprehensive hazard identification to proactively manage risks.',
     icon: <HazeIcon className="w-12 h-12 text-primary" />,
-    link: '/EngineeringServices/ElectricalEngineering', // Link to specific page
-  },
-  {
-    id: 5,
-    title: 'Instrumentation Engineering',
-    // description: 'Comprehensive hazard identification to proactively manage risks.',
-    icon: <HazeIcon className="w-12 h-12 text-primary" />,
-    link: '/EngineeringServices/InstrumentationEngineering', // Link to specific page
-  },
-  {
-    id: 6,
-    title: 'Telecommunications Systems',
-    // description: 'Comprehensive hazard identification to proactively manage risks.',
-    icon: <HazeIcon className="w-12 h-12 text-primary" />,
-    link: '/EngineeringServices/TelecommunicationsSystems', // Link to specific page
-  },
- 
-  {
-    id: 7,
-    title: 'HVAC',
-    // description: 'Comprehensive hazard identification to proactively manage risks.',
-    icon: <HazeIcon className="w-12 h-12 text-primary" />,
-    link: '/EngineeringServices/HVAC', // Link to specific page
-  },
-  {
-    id: 8,
-    title: 'Environment',
-    // description: 'Comprehensive hazard identification to proactively manage risks.',
-    icon: <HazeIcon className="w-12 h-12 text-primary" />,
-    link: '/EngineeringServices/Environment', // Link to specific page
-  },
-  {
-    id: 9,
-    title: 'Technical Safety',
-    // description: 'Comprehensive hazard identification to proactively manage risks.',
-    icon: <HazeIcon className="w-12 h-12 text-primary" />,
-    link: '/technicalSafety', // Link to specific page
-  },
+    link: '/technicalSafety/PassiveFireProofing', // Link to specific page
+  }
  
   
 ];
@@ -81,7 +45,7 @@ const page = () => {
         <div className="space-y-6">
           <div className="animate-fade-up flex flex-col justify-center items-center">
             <p className="text-2xl lg:text-3xl md:text-3xl font-semibold leading-7 -tracking-tight">
-            Engineering Services
+            Technical Safety
               <span className='lucide absolute -mt-3 lucide-sparkles h-4 w-4 text-[#36a39e] shrink-0'><i className="pi pi-sparkles" style={{ fontSize: '1rem' }}></i></span>
             </p>
 

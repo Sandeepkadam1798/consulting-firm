@@ -326,7 +326,7 @@ export default function Nav() {
   const Extendmenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-  const linkitem = ["HOME", "blog", "Services","about us", "CONTACT US"];
+  const linkitem = ["HOME",  "Services","about us", "CONTACT US"];
 
   const handleredirect = (link) => {
     switch (link) {
@@ -348,9 +348,9 @@ export default function Nav() {
       // case "Romantic Escapes":
       //   router.push("/destination/honeymoonTrip");
       //   break;
-      case "blog":
-        router.push("/blogs");
-        break;
+      // case "blog":
+      //   router.push("/blogs");
+      //   break;
       case "Services":
         router.push("/Services");
         break;
@@ -368,9 +368,9 @@ export default function Nav() {
       case "/":
         setactiveitem("HOME");
         break;
-      case "/blogs":
-        setactiveitem("blog");
-        break;
+      // case "/blogs":
+      //   setactiveitem("blog");
+      //   break;
       case "/Services":
         setactiveitem("Services");
         break;

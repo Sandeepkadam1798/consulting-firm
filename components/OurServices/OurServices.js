@@ -48,27 +48,28 @@ const OurServices = () => {
 
 <div data-aos="fade-up"  data-aos-duration="3000" className="flex flex-col mt-8 justify-center items-center space-y-2 mx-8">
           {services.map((service, index) => (
-            <ShineBorder
-            className="w-full  lg:w-[850px] mx-8 "
-            color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
+            <div
+            className="w-full  lg:w-[850px]  mx-8 bg-transparent "
+            // color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
+             
             key={index}
           > 
             <Link
               
               href={service.link}
-              className="  backdrop-blur-md rounded-lg p-4 border border-white/20 text-white text-small sm:text-xl font-semibold  hover:scale-105 transition-all duration-300 ease-in-out w-full flex justify-between items-center py-2 my-2 group"
+              className="  backdrop-blur-md h-24 rounded-lg p-4 border border-white/20 text-white text-small sm:text-xl font-semibold  hover:scale-105 transition-all duration-300 ease-in-out w-full flex justify-between items-center py-2 my-2 group"
             >
-              <span className="text-gray-900  font-bold text-lg group-hover:text-black">
+              <span className="text-white  font-bold text-lg group-hover:text-white">
               
                 {service.name}
                 
               </span>
-              <span className="text-gray-500 group-hover:text-black">
+              <span className="text-gray-500 group-hover:text-white">
                 <i className="pi pi-arrow-right"></i>
               </span>
             </Link>
 
-            </ShineBorder>
+            </div>
           ))}
         </div>
 
