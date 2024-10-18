@@ -4,6 +4,7 @@ import Head from "next/head";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import Image from "next/image";
 
 export default function Page() {
   useEffect(() => {
@@ -26,6 +27,18 @@ export default function Page() {
           	TCFD Reporting
           </h1>
 
+
+          <Image
+          src="/images/ESG-Decarbonisation/ESG-TCFD.jpg"
+          width="550"
+          height="310"
+          alt="HAZOP"
+          className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center "
+        
+           data-aos="zoom-in-up"
+            data-aos-duration="2000"
+           
+          />
       
 
           <section
