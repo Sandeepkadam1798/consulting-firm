@@ -5,7 +5,7 @@ import Nav from "@/components/Navbarcomponents/Nav";
 import { Poppins } from "next/font/google";
 import Footer from "@/components/Footer/Footer";
 import SpeedDials from "./SpeedDials";
-
+import Chatbot from "@/components/Chatbot/Chatbot";
 const inter = Poppins({ subsets: ["latin"] ,weight: ['100','300','400','500','700','900']});
 
 const geistSans = localFont({
@@ -35,6 +35,7 @@ export default function RootLayout({ children }) {
          <div className="fixed bottom-8 right-8 z-50">
           <SpeedDials />
         </div>
+        <Chatbot />
           {children}
           
           <Footer/>

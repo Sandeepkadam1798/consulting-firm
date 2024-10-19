@@ -28,7 +28,7 @@ export default function Page() {
           </h1>
 
           <Image
-          src="/images/ESG-Decarbonisation/ESG-Road Development Plan.jpg"
+          src="/ESG-Decarbonisation/ESG-Road Development Plan.jpg"
           width="550"
           height="310"
           alt="HAZOP"

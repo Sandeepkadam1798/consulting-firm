@@ -32,7 +32,7 @@ export default function Page() {
           </h1>
 
           <Image
-          src="/images/Trainings/Trainings-ISO Management.jpg"
+          src="/Trainings/Trainings-ISO Management.jpg"
           width="550"
           height="310"
           alt="HAZOP"

@@ -29,7 +29,7 @@ export default function Page() {
 
 
           <Image
-          src="/images/ESG-Decarbonisation/ESG-TCFD.jpg"
+          src="/ESG-Decarbonisation/ESG-TCFD.jpg"
           width="550"
           height="310"
           alt="HAZOP"

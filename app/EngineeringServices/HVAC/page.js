@@ -28,7 +28,7 @@ export default function Page() {
           </h1>
 
           <Image
-          src="/images/engineeringPics/EngineeringHVAC.jpg"
+          src="/engineeringPics/EngineeringHVAC.jpg"
           width="550"
           height="310"
           alt="HAZOP"

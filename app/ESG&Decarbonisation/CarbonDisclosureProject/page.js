@@ -27,7 +27,7 @@ export default function Page() {
           	Carbon Disclosure Project 
           </h1>
           <Image
-          src="/images/ESG-Decarbonisation/ESG-CDP.jpg"
+          src="/ESG-Decarbonisation/ESG-CDP.jpg"
           width="550"
           height="310"
           alt="HAZOP"
