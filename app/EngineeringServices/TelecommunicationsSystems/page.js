@@ -29,7 +29,7 @@ export default function Page() {
 
 
           <Image
-          src="/images/engineeringPics/Engineering Telecommunications.jpg"
+          src="/engineeringPics/Engineering Telecommunications.jpg"
           width="550"
           height="310"
           alt="HAZOP"
