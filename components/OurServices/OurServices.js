@@ -48,9 +48,9 @@ const OurServices = () => {
 
 <div data-aos="fade-up"  data-aos-duration="3000" className="flex flex-col mt-8 justify-center items-center space-y-2 mx-8">
           {services.map((service, index) => (
-            <div
+            <ShineBorder
             className="w-full  lg:w-[850px]  mx-8 bg-transparent "
-            // color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
+            color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
              
             key={index}
           > 
@@ -70,7 +70,7 @@ const OurServices = () => {
               </span>
             </Link>
 
-            </div>
+            </ShineBorder>
           ))}
         </div>
 
