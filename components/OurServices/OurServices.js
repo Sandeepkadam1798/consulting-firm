@@ -132,8 +132,10 @@ const OurServices = () => {
         >
           {services.map((service, index) => (
             <Link href={service.link} key={index} className="w-full lg:w-[850px]  mx-8 hover:scale-105 transition-all duration-300 ease-in-out ">
-              <ShineBorder className="w-full bg-transparent mb-4  " color={["#A07CFE", "#FE8FB5", "#FFBE7B"]} >
-                <div className="h-24 rounded-lg p-4 border border-white/20 text-white text-small  sm:text-xl font-semibold w-full flex justify-between items-center py-2 my-2 group">
+              <ShineBorder className="w-full  bg-transparent mb-4  " color={["#A07CFE", "#FE8FB5", "#FFBE7B"]} >
+                <div 
+                className="h-12 rounded-lg p-4  border-white/20 text-white text-small  sm:text-xl font-semibold w-full flex justify-between items-center py-2 my-2 group"
+                >
                   <span className="text-white font-bold text-lg group-hover:text-white">
                     {service.name}
                   </span>

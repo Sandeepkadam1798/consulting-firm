@@ -115,6 +115,8 @@ const validateNumber = (number) =>{
 
     }
 
+    console.log("form::",formData)
+
     const sendForm = async () => {
 
       const response = await fetch("/api/Contactus", {
@@ -128,16 +130,16 @@ const validateNumber = (number) =>{
       if (!response.ok) {
         throw new Error("Failed to send message");
       }
-      console.log("form::")
+      
 
-      // setFormData({
-      //   firstName: "",
-      //   lastName: "",
-      //   mobileNumber: "",
-      //   email: "",
-      //   serviceRequired: [],
-      //   message: "",
-      // });
+      setFormData({
+        firstName: "",
+        lastName: "",
+        mobileNumber: "",
+        email: "",
+        serviceRequired: [],
+        message: "",
+      });
     };
 
     toast.promise(sendForm(), {
