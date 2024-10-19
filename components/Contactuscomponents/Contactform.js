@@ -15,11 +15,7 @@ import { FcComments } from "react-icons/fc";
 
 import {  useState } from 'react';
 
-
-
-
 const Contactform = () => {
-
 
   const [formData, setFormData] = useState({
     firstName: "",
@@ -85,21 +81,39 @@ const validateNumber = (number) =>{
     // Check if any required field is empty
     if (
       !formData.firstName ||
-      !formData.lastName ||
+      // !formData.lastName ||
       !formData.mobileNumber ||
-      !formData.email ||
+      // !formData.email ||
       !formData.serviceRequired
     ) {
       toast.error("Please fill out all required fields");
       return;
     }
-
     // const mobileError = validateMobileNumber(formData.mobileNumber);
     // if (mobileError) {
     //   setErrors((prev) => ({ ...prev, mobileNumber: mobileError }));
     //   return;
     // }
 
+    const sendtoSheet = async () => {
+      try {
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+        });
+  
+        const result = await response.json();
+        console.log('Success:', result);
+        alert("Form Submitted Successfully")
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    
+
+    }
 
     const sendForm = async () => {
 
@@ -114,15 +128,16 @@ const validateNumber = (number) =>{
       if (!response.ok) {
         throw new Error("Failed to send message");
       }
+      console.log("form::")
 
-      setFormData({
-        firstName: "",
-        lastName: "",
-        mobileNumber: "",
-        email: "",
-        serviceRequired: [],
-        message: "",
-      });
+      // setFormData({
+      //   firstName: "",
+      //   lastName: "",
+      //   mobileNumber: "",
+      //   email: "",
+      //   serviceRequired: [],
+      //   message: "",
+      // });
     };
 
     toast.promise(sendForm(), {
@@ -136,6 +151,7 @@ const validateNumber = (number) =>{
     <>
       <div className="flex flex-col gap-4 justify-start items-start px-3 py-1 w-full ring-1 ring-gray-200 p-4 rounded-md ">
         <div className="flex flex-col w-full justify-start items-start p-2 py-4 gap-4">
+          {/* <form className="w-full" onSubmit={handleSubmit}> */}
           <form className="w-full" onSubmit={handleSubmit}>
             <div className="w-full grid lg:grid-cols-2 grid-cols-1 gap-6 place-content-center justify-between items-start">
               <Input

@@ -22,7 +22,7 @@ export default function HazopStudy() {
 
       <div className="   overflow-x-hidden  min-h-screen bg-gray-100 py-8 px-4">
         <div className=" px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto bg-white p-8 shadow-lg">
-          {/* Heading */}
+         
           <h1 className="text-4xl font-bold text-center text-[#0b8d7c] mb-8 animate-scale-up">
             Hazard and Operability (HAZOP) Study
           </h1>

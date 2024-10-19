@@ -54,10 +54,11 @@ const OurServices = () => {
              
             key={index}
           > 
+          {/* backdrop-blur-sm */}
             <Link
               
               href={service.link}
-              className="  backdrop-blur-md h-24 rounded-lg p-4 border border-white/20 text-white text-small sm:text-xl font-semibold  hover:scale-105 transition-all duration-300 ease-in-out w-full flex justify-between items-center py-2 my-2 group"
+              className="     h-24 rounded-lg p-4 border border-white/20 text-white text-small sm:text-xl font-semibold  hover:scale-105 transition-all duration-300 ease-in-out w-full flex justify-between items-center py-2 my-2 group"
             >
               <span className="text-white  font-bold text-lg group-hover:text-white">
               

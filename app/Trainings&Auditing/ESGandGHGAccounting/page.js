@@ -31,16 +31,17 @@ export default function Page() {
           ESG and GHG Accounting
           </h1>
 
-          {/* <Image
-            src="/service/25.png"
-            width="550"
-            height="310"
-            alt="SIL Assessment"
-            
+          <Image
+          src="/images/Trainings/Trainings-ESG.jpg"
+          width="550"
+          height="310"
+          alt="HAZOP"
+          className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center "
+        
            data-aos="zoom-in-up"
-           data-aos-duration="2000"
-            className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center "
-          /> */}
+            data-aos-duration="2000"
+           
+          />
 
 
           <section  data-aos="fade-up" data-aos-duration="1000" className="mb-8 mt-6">
