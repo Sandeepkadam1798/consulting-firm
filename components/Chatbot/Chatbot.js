@@ -23,7 +23,7 @@ const Chatbot = () => {
   return (
     <div
       id="voiceflow-chat"
-      className="fixed bottom-0 right-0 m-4 p- bg-transparent   shadow-lg rounded-lg"
+      className="fixed bottom-0 right-0 m-4 p- bg-transparent  shadow-lg rounded-lg"
     ></div>
   );
 };
