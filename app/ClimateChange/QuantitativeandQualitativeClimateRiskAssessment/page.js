@@ -4,6 +4,8 @@ import Head from "next/head";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import Image from "next/image";
+
 
 export default function Page() {
   useEffect(() => {
@@ -25,6 +27,18 @@ export default function Page() {
           <h1 className="text-4xl font-bold text-center mb-8 text-[#0b8d7c] animate-scale-up">
           Quantitative and Qualitative Climate Risk Assessment
           </h1>
+
+          <Image
+          src="/Climate/Climate Change- Quantitative Risk.jpg"
+          width="550"
+          height="310"
+          alt="HAZOP"
+          className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center "
+        
+           data-aos="zoom-in-up"
+            data-aos-duration="2000"
+           
+          />
 
       
 

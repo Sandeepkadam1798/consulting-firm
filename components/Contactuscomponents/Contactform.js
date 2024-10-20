@@ -56,6 +56,8 @@ const validateNumber = (number) =>{
       [name]: value,
     });
 
+    // console.log("formdata 00: ",formData)
+
     //validate mobile number when user types;
     if(name === 'mobileNumber'){
       const mobileError = validateNumber(value);
@@ -75,34 +77,55 @@ const validateNumber = (number) =>{
 };
 
 
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Check if any required field is empty
-    if (
-      !formData.firstName ||
-      // !formData.lastName ||
-      !formData.mobileNumber ||
-      // !formData.email ||
-      !formData.serviceRequired
-    ) {
-      toast.error("Please fill out all required fields");
-      return;
+
+    try {
+      // Send to Google Sheets
+      await sendToSheet(formData);
+      
+      // Send via email
+      await sendEmail(formData);
+  
+      alert("Form Submitted Successfully");
+    } catch (error) {
+      console.error("Error submitting form:", error);
     }
+
+
+    // Check if any required field is empty
+    // if (
+    //   !formData.firstName ||
+    //   !formData.lastName ||
+    //   !formData.mobileNumber ||
+    //   !formData.email ||
+    //   !formData.serviceRequired
+    // ) 
+    // {
+    //   toast.error("Please fill out all required fields");
+    //   return;
+    // }
+
+
+
+
     // const mobileError = validateMobileNumber(formData.mobileNumber);
     // if (mobileError) {
     //   setErrors((prev) => ({ ...prev, mobileNumber: mobileError }));
     //   return;
     // }
 
-    const sendtoSheet = async () => {
+    const sendToSheet = async (formData) => {
+      // console.log("formdata 1: ",formData)
       try {
         const response = await fetch('/api/contact', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify(data),
+          body: JSON.stringify(formData),
         });
   
         const result = await response.json();
@@ -111,12 +134,17 @@ const validateNumber = (number) =>{
       } catch (error) {
         console.error('Error:', error);
       }
-    
+      
 
     }
 
-    console.log("form::",formData)
+    // toast.promise(sendtoSheet(), {
+    //   loading: "Sending message...",
+    //   success: "Message sheet sent successfully!",
+    //   error: "Failed to send message. Please try again.",
+    // });
 
+    
     const sendForm = async () => {
 
       const response = await fetch("/api/Contactus", {
@@ -130,7 +158,6 @@ const validateNumber = (number) =>{
       if (!response.ok) {
         throw new Error("Failed to send message");
       }
-      
 
       setFormData({
         firstName: "",
@@ -162,7 +189,7 @@ const validateNumber = (number) =>{
                 variant="bordered"
                 labelPlacement="outside"
                 label="First Name"
-
+                required
                 radius="sm"
                 className="w-full rounded-none"
                 size="lg"
@@ -200,7 +227,7 @@ const validateNumber = (number) =>{
                 label="Mobile Number"
                 radius="sm"
                 labelPlacement="outside"
-
+                required
                 className="w-full rounded-none"
                 size="lg"
                 placeholder="Mobile Number"
@@ -245,6 +272,7 @@ const validateNumber = (number) =>{
                 placeholder="Select inquiry type (one or multiple)"
                 size="lg"
                 radius="sm"
+                required
                 className="mt-4   w-3/4 max-w-xl md:max-w-80 lg:max-w-xl xl:max-w-2xl 2xl:max-w-3xl overflow-hidden"
                selectionMode="multiple"
                selectedKeys={new Set(
