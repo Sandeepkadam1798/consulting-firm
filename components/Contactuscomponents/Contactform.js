@@ -13,10 +13,9 @@ import { FcHome } from "react-icons/fc";
 import { FcCallback } from "react-icons/fc";
 import { FcComments } from "react-icons/fc";
 
-import {  useState } from 'react';
+import { useState } from "react";
 
 const Contactform = () => {
-
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -26,7 +25,7 @@ const Contactform = () => {
     message: "",
   });
 
-  const [errors, setErrors] = useState({mobileNumber:""});
+  const [errors, setErrors] = useState({ mobileNumber: "" });
 
   // const [isVerified, setIsVerified] = useState(false);
 
@@ -39,15 +38,15 @@ const Contactform = () => {
     { key: "Other", label: "Other" },
   ];
 
-// validate number
+  // validate number
 
-const validateNumber = (number) =>{
-  const mobileRegex = /^[0-9]{10}$/   
-  if(!mobileRegex.test(number)){
-    return "Please enter a valid 10-digit mobile number"
-  }
-  return "";
-}
+  const validateNumber = (number) => {
+    const mobileRegex = /^[0-9]{10}$/;
+    if (!mobileRegex.test(number)) {
+      return "Please enter a valid 10-digit mobile number";
+    }
+    return "";
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -59,41 +58,39 @@ const validateNumber = (number) =>{
     // console.log("formdata 00: ",formData)
 
     //validate mobile number when user types;
-    if(name === 'mobileNumber'){
+    if (name === "mobileNumber") {
       const mobileError = validateNumber(value);
-      setErrors((prev)=>({
-        ...prev, mobileNumber:mobileError
-      }))
+      setErrors((prev) => ({
+        ...prev,
+        mobileNumber: mobileError,
+      }));
     }
   };
 
-  const handleServiceChange = (selectedKeys) => {const selectedLabels = Array.from(selectedKeys).map((key) => {
-    return services.find((service) => service.key === key)?.label;
-  });
-  setFormData({
-    ...formData,
-    serviceRequired: selectedLabels,
-  });
-};
-
-
+  const handleServiceChange = (selectedKeys) => {
+    const selectedLabels = Array.from(selectedKeys).map((key) => {
+      return services.find((service) => service.key === key)?.label;
+    });
+    setFormData({
+      ...formData,
+      serviceRequired: selectedLabels,
+    });
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-
     try {
       // Send to Google Sheets
       await sendToSheet(formData);
-      
+
       // Send via email
       await sendEmail(formData);
-  
+
       alert("Form Submitted Successfully");
     } catch (error) {
       console.error("Error submitting form:", error);
     }
-
 
     // Check if any required field is empty
     // if (
@@ -102,14 +99,11 @@ const validateNumber = (number) =>{
     //   !formData.mobileNumber ||
     //   !formData.email ||
     //   !formData.serviceRequired
-    // ) 
+    // )
     // {
     //   toast.error("Please fill out all required fields");
     //   return;
     // }
-
-
-
 
     // const mobileError = validateMobileNumber(formData.mobileNumber);
     // if (mobileError) {
@@ -120,23 +114,21 @@ const validateNumber = (number) =>{
     const sendToSheet = async (formData) => {
       // console.log("formdata 1: ",formData)
       try {
-        const response = await fetch('/api/contact', {
-          method: 'POST',
+        const response = await fetch("/api/contact", {
+          method: "POST",
           headers: {
-            'Content-Type': 'application/json',
+            "Content-Type": "application/json",
           },
           body: JSON.stringify(formData),
         });
-  
-        const result = await response.json();
-        console.log('Success:', result);
-        alert("Form Submitted Successfully")
-      } catch (error) {
-        console.error('Error:', error);
-      }
-      
 
-    }
+        const result = await response.json();
+        console.log("Success:", result);
+        alert("Form Submitted Successfully");
+      } catch (error) {
+        console.error("Error:", error);
+      }
+    };
 
     // toast.promise(sendtoSheet(), {
     //   loading: "Sending message...",
@@ -144,9 +136,7 @@ const validateNumber = (number) =>{
     //   error: "Failed to send message. Please try again.",
     // });
 
-    
     const sendForm = async () => {
-
       const response = await fetch("/api/Contactus", {
         method: "POST",
         headers: {
@@ -205,11 +195,11 @@ const validateNumber = (number) =>{
                 name="lastName"
                 label="Last Name"
                 variant="bordered"
+                required
                 radius="sm"
                 className="w-full rounded-none"
                 size="lg"
                 labelPlacement="outside"
-
                 placeholder="Last Name"
                 value={formData.lastName}
                 onChange={handleChange}
@@ -218,36 +208,36 @@ const validateNumber = (number) =>{
                 }
               />
               <div>
-
-              
-              <Input
-                type="text"
-                name="mobileNumber"
-                variant="bordered"
-                label="Mobile Number"
-                radius="sm"
-                labelPlacement="outside"
-                required
-                className="w-full rounded-none"
-                size="lg"
-                placeholder="Mobile Number"
-                value={formData.mobileNumber}
-                onChange={handleChange}
-                startContent={
-                  <FcCallback className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
-                }
-              />
-               {errors.mobileNumber && (
-          <p className="mt-2 text-sm text-red-600">{errors.mobileNumber}</p>
-        )}
-
-          </div>
+                <Input
+                  type="text"
+                  name="mobileNumber"
+                  variant="bordered"
+                  label="Mobile Number"
+                  radius="sm"
+                  labelPlacement="outside"
+                  required
+                  className="w-full rounded-none"
+                  size="lg"
+                  placeholder="Mobile Number"
+                  value={formData.mobileNumber}
+                  onChange={handleChange}
+                  startContent={
+                    <FcCallback className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
+                  }
+                />
+                {errors.mobileNumber && (
+                  <p className="mt-2 text-sm text-red-600">
+                    {errors.mobileNumber}
+                  </p>
+                )}
+              </div>
               <Input
                 type="text"
                 name="email"
                 variant="bordered"
                 label="Email"
                 labelPlacement="outside"
+                required
                 radius="sm"
                 className="w-full rounded-none"
                 size="lg"
@@ -260,10 +250,7 @@ const validateNumber = (number) =>{
               />
             </div>
 
-           
-
             <div className="w-full mt-12">
-              
               <Select
                 name="serviceRequired"
                 label="inquiry"
@@ -274,31 +261,30 @@ const validateNumber = (number) =>{
                 radius="sm"
                 required
                 className="mt-4   w-3/4 max-w-xl md:max-w-80 lg:max-w-xl xl:max-w-2xl 2xl:max-w-3xl overflow-hidden"
-               selectionMode="multiple"
-               selectedKeys={new Set(
-                formData.serviceRequired.map((serviceLabel) =>
-                  services.find((service) => service.label === serviceLabel)?.key
-                )
-              )}
-
-              onSelectionChange={handleServiceChange}
-              menuClass="w-full max-w-xl md:max-w-10 overflow-auto "
-
-
+                selectionMode="multiple"
+                selectedKeys={
+                  new Set(
+                    formData.serviceRequired.map(
+                      (serviceLabel) =>
+                        services.find(
+                          (service) => service.label === serviceLabel
+                        )?.key
+                    )
+                  )
+                }
+                onSelectionChange={handleServiceChange}
+                menuClass="w-full max-w-xl md:max-w-10 overflow-auto "
               >
-              {services.map((service) => (
-                  <SelectItem 
-                  
-                  key={service.key} 
-                  value={service.key} 
-                  className="text-ellipsis  whitespace-nowrap ">
-                     
-    
+                {services.map((service) => (
+                  <SelectItem
+                    key={service.key}
+                    value={service.key}
+                    className="text-ellipsis  whitespace-nowrap "
+                  >
                     {service.label}
                   </SelectItem>
                 ))}
               </Select>
-
             </div>
 
             <div className="w-full mt-4">
@@ -317,21 +303,14 @@ const validateNumber = (number) =>{
               />
             </div>
 
-
-              
-        
-            
-
             <div className="w-full flex justify-center items-center mt-4">
               <Button
-              // onClick={() => setIsModalOpen(true)}
+                // onClick={() => setIsModalOpen(true)}
                 type="submit"
                 className="w-60 rounded-full bg-[#0b8d7c] text-white text-center"
               >
                 Submit
               </Button>
-             
-              
             </div>
           </form>
         </div>
